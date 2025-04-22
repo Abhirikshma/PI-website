@@ -10,4 +10,8 @@
     --border-width: 2px;
     --border-radius: 5px; /* Determines how round the corners are */
     --vertical-offset: 10px; /* Use this variable when the position of something below something else should be set as bottom (something else) +  offset*/
+    --pad-top: 30px;
+    --pad-bottom: 30px;
+    --pad-left: 20px;
+    --pad-right: 20px;
 }

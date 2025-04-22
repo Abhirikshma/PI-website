@@ -32,13 +32,13 @@ include($headerInc);
         <h1 class="western">Mu3e @ HD-PI</h1> 
 
         <h2 class="western">The Mu3e Experiment</h2> 
-        <ul> 
+        <ul style="text-align: justify;"> 
             The Mu3e Experiment aims to search for the decay of an anti-muon into an electron and a pair of positrons, \(\small{\mu^+~\rightarrow~e^+ e^- e^+}\),
             which is only foreseen in the Standard Model at a very low branching ratio \(\small{(\sim 10^{-54})}\).
             Any observations in this decay channel above the branching ratio will be a clear indicator of the violation of charged lepton flavour conservation. 
             The experiment is under commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
         </ul>
-        <ul style="text-indent:30px;"> 
+        <ul style="text-indent:30px;text-align: justify;"> 
             While the current experimental limit for the branching ratio of \(\small\mu^+~\rightarrow~e^+ e^- e^+\) is around \(\small 10^{-12}\), the Mu3e Experiment aims to further exclude, or observe,
             it at a sensitivity of \(\small 10^{-16}\).
             To accomplish this goal, new solutions must be developed, which implement the latest technologies available in the field of High Energy Physics. 
@@ -46,7 +46,7 @@ include($headerInc);
             The Heidelberg PI group plays a leading role in the development of the experimental concept, the technical solutions and the detector design. 
             The group is responsible for the vertex detector, the innermost component of the experiment, and for many of the external services necessary for the operation of the whole system.
         </ul>
-        <ul style="text-indent:30px;"> 
+        <ul style="text-indent:30px;text-align: justify;"> 
             At the moment, the Phase 1 of the experiment is under construction. 
             After the construction and commissioning, physics data will be taken for two years. 
             Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
@@ -55,22 +55,20 @@ include($headerInc);
         <h2 class="western">Group Activites</h2> 
         <ul> 
             <h3 class="western">MuPix Design & Testing</h3>
-            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
+            <div class="sub-block-content">
+            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
+            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
                 The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
                 This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
                 The MuPix, in particular, implements a minimal number of connections for powering and readout, a strategy that requires novel design features for the communication with the chip itself.
                 The Heidelberg group contributed significantly to the design of the chip and to the characterization of the several prototypes produced in the years. 
-                <br>
                 </br>
-                <button onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';"  style="background-color:var(--PI-darkred);border:0;color:var(--PI-sand);padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                    To HV-MAPS Group >>
+                </br>
+                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
+                onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">To HV-MAPS Group >>
                 </button>
-                <br>
-                </br>
-                <div style="text-align: center;">
-                    <img src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix" style="width:30%;min-width:200px;height:auto;">
-                </div>
-            </ul>
+            </p>
+            </div>
 
             <h3 class="western">Vertex Detector</h3>
             <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
