@@ -1,199 +1,266 @@
-/* Define colors */
 @import "common_vars.css";
 
-/* Base styles */
-.tab-bar {
-    background-color: var(--PI-red);
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* --- Bootstrap Navbar Customization --- */
+
+/* Navbar background and base padding */
+.navbar {
+    background-color: var(--PI-red) !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1030; /* Ensure it's above most content (Bootstrap default for navbars) */
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Logo */
-.logo img {
-    height: 60px;
-    width: auto;
+/* Navbar Brand (Logo) */
+.navbar-brand img {
+    height: 60px; /* Match original logo height */
+    transition: height 0.3s ease-in-out; /* Smooth transition for logo */
 }
 
-/* Menu */
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
+/* --- Scrolled State --- */
+.navbar-scrolled {
+    padding-top: 5px !important; /* Reduced padding when scrolled */
+    padding-bottom: 5px !important; /* Reduced padding when scrolled */
 }
 
-/* Menu items */
-.menu li {
-    position: relative;
-    padding: 10px 20px;
-    /*display: inline-block;*/
-    align-items: center;
-    white-space: nowrap;
+.navbar-scrolled .navbar-brand img {
+    height: 40px !important; /* Reduced logo height when scrolled */
 }
 
-/* Vertical separators */
-.menu li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60%;
-    width: 2px;
-    background-color: var(--PI-lightred);
-}
-
-/* Dropdown */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: var(--PI-darkred); /* Light red dropdown */
-    border: 2px solid white;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 100%;
-    left: 0; /* Default position */
-    min-width: 180px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Ensure rightmost dropdown stays inside the page */
-.dropdown:last-child .dropdown-menu {
-    left: auto;
-    right: 0;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-}
-
-/* 🟢 RESPONSIVE DESIGN: Hides menu & shows hamburger */
-.hamburger {
-    display: none;
-    font-size: 50px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-
-/* Mobile dropdown adjustments */
-@media (max-width: 968px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: var(--PI-darkred);
-        width: 100%;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        z-index: 1000;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .menu li {
-        text-align: left;
-        width: 100%;
-        border-bottom: 2px solid var(--PI-red);
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: static; /* Ensures dropdown appears below */
-        background-color: var(--PI-red); /* Light red */
-        border: 2px solid var(--PI-red);
-        width: 100%;
-        padding: 0px 0;
-        text-align: left;
-        border-top: 2px solid var(--PI-darkred);
-        max-height: none;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    /* Expand dropdown when active */
-    .dropdown.active .dropdown-menu {
-        display: block;
-        max-height: 500px; /* Large enough to fit content */
-        z-index: 1010;
-    }
-
-    .dropdown-menu li {
-        padding: 10px;
-        border-bottom: 2px solid var(--PI-darkred);
-    }
-
-    .dropdown-menu li:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Desktop dropdown styling (opens on hover) */
-@media (min-width: 969px) {
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: var(--PI-darkred);
-        border: 2px solid white;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        top: 100%;
-        left: 0;
-        min-width: 180px;
-        z-index: 1000;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-
-    /* Ensure the dropdowns are horizontal on desktop */
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: auto;
-        min-width: auto;  /* Default width */
-        width: auto; /* This ensures the dropdown is not forced to fill the entire screen */
-    }
-
-    .dropdown-menu li {
-        padding: 10px 15px;
-        display: inline-block; /* This makes the dropdown horizontal */
-    }
-}
-
-/* Style the links inside the menu */
-.menu li a {
-    text-decoration: none; /* Removes underline */
-    color: white; /* White text */
+/* Navbar Link base styles (Desktop and Mobile) */
+.navbar .navbar-nav .nav-link {
+    color: white !important;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 18px;
-    padding: 10px 15px;
-    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;  /* Padding-left adjusted per view */
+    padding-right: 20px; /* Padding-right adjusted per view */
+    /* Padding-left/right adjusted per view */
 }
 
-/* Change color on hover */
-.menu li a:hover {
-    color: var(--PI-lightred); /* Light red hover effect */
+/* Navbar Link hover/focus color - remove underline and exclude dropdown-toggle */
+.navbar .navbar-nav .nav-link:not(.dropdown-toggle):hover,
+.navbar .navbar-nav .nav-link:not(.dropdown-toggle):focus,
+.navbar .navbar-nav .dropdown-item:hover,
+.navbar .navbar-nav .dropdown-item:focus {
+    color: var(--PI-lightred) !important;
+    background-color: transparent !important; /* Prevent Bootstrap default hover bg */
+    text-decoration: none !important; /* Remove underline on focus/hover */
+}
+
+/* Keep dropdown toggle color static and disable pointer events */
+.navbar .navbar-nav .nav-link.dropdown-toggle,
+.navbar .navbar-nav .nav-link.dropdown-toggle:hover,
+.navbar .navbar-nav .nav-link.dropdown-toggle:focus {
+    color: white !important; /* Keep original color */
+    pointer-events: none; /* Disable click/hover events */
+    cursor: default; /* Change cursor to default */
+    text-decoration: none !important; /* Ensure no underline */
+}
+
+/* Navbar Link active state */
+.navbar .navbar-nav .nav-link.active {
+    color: var(--PI-lightred) !important;
+}
+
+/* Hamburger Button Color (Mobile view) */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Remove dropdown arrow globally */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* --- Desktop View Styling (>= 992px) --- */
+@media (min-width: 992px) {
+    /* Standard padding for links */
+    .navbar .navbar-nav .nav-link {
+        padding-left: 20px;  /* Reset to original padding */
+        padding-right: 20px; /* Reset to original padding */
+        text-align: center;
+    }
+
+    /* Add margin to nav-items for increased spacing */
+    .navbar-nav .nav-item {
+        position: relative; /* Needed for ::after positioning */
+        margin-left: 15px; /* Add space between items */
+        margin-right: 15px; /* Add space between items */
+    }
+
+    /* Make dropdown toggle clickable again only for desktop hover */
+    .navbar .navbar-nav .nav-link.dropdown-toggle {
+         pointer-events: auto; /* Re-enable pointer events for hover */
+         cursor: pointer; /* Optional: show pointer cursor */
+    }
+
+    /* Add vertical separator using ::after on the nav-item */
+    .navbar-nav .nav-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        /* Adjust right position due to margin */
+        right: -15px; /* Position between items (half of margin) */
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 2px;
+        background-color: var(--PI-lightred);
+    }
+
+    /* Dropdown Menu Styling (Desktop) */
+    .navbar .dropdown-menu {
+        background-color: var(--PI-darkred) !important;
+        border: 2px solid white !important;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: none; /* Hide by default */
+        position: absolute; /* Ensure proper positioning */
+        top: 100%; /* Position below the parent item */
+        left: 0; /* Align with the left edge of the parent */
+        min-width: 100%; /* Ensure dropdown is at least as wide as the parent */
+        z-index: 1000; /* Ensure dropdown appears above other content */
+    }
+
+    /* Show dropdown on hover */
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .dropdown-menu .dropdown-item {
+        color: white !important;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-bottom: 1px solid var(--PI-lightred); /* Separator inside dropdown */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+     .navbar .dropdown-menu .dropdown-item:last-child {
+         border-bottom: none;
+     }
+}
+
+/* --- Mobile View Styling (< 992px) --- */
+@media (max-width: 991.98px) {
+    /* Ensure left alignment in collapsed state */
+    .navbar-collapse .navbar-nav {
+        align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    /* Reset padding/borders for nav items in the collapse menu */
+    .navbar-collapse .navbar-nav .nav-item {
+        padding: 10px 20px; /* Base padding for spacing */
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Separator line */
+        width: 100%; /* Ensure items take full width initially */
+        text-align: left; /* Ensure text within items is left-aligned */
+        /* Ensure consistent vertical alignment for non-flex items */
+        display: flex; /* Use flex for all items for consistency */
+        align-items: center; /* Vertically center content */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+    .navbar-collapse .navbar-nav .nav-item:first-child {
+        border-top: none; /* Remove border from the very first item */
+    }
+
+    /* Style non-dropdown links */
+    .navbar-collapse .navbar-nav > .nav-item:not(.dropdown) > .nav-link {
+        color: white !important;
+        font-size: 18px;
+        font-weight: lighter;
+        padding: 0; /* Remove extra padding, handled by nav-item flex */
+        display: block;
+        text-align: left; /* Explicitly align left */
+        width: 100%; /* Take full width within the flex container */
+    }
+
+    /* Style the dropdown container (.nav-item) using Flexbox */
+    .navbar-collapse .nav-item.dropdown {
+        /* display: flex; */ /* Already set on all .nav-item */
+        /* flex-wrap: wrap; */ /* Already set on all .nav-item */
+        align-items: center; /* Vertically center items */
+        /* padding: 10px 20px; */ /* Already set on all .nav-item */
+        justify-content: flex-start; /* Align content to the left */
+    }
+
+    /* Style the dropdown toggle link within the flex container */
+    .navbar-collapse .dropdown > .nav-link {
+        display: inline-block;
+        width: auto;
+        border-top: none;
+        padding: 0; /* Remove padding */
+        margin-right: 10px; /* Space before items */
+        position: relative;
+        padding-right: 12px; /* Space for separator */
+        color: white !important;
+        font-size: 18px;
+        font-weight: lighter;
+        pointer-events: none; /* Ensure disabled in mobile */
+        cursor: default; /* Ensure default cursor in mobile */
+        text-align: left; /* Explicitly align left */
+    }
+
+     /* Separator AFTER the dropdown toggle link */
+    .navbar-collapse .dropdown > .nav-link::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1em;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Style the dropdown menu container (inline within flex) */
+    .navbar-collapse .dropdown-menu {
+        display: contents; /* Treat children as direct flex items of .nav-item.dropdown */
+    }
+
+    /* Style individual dropdown items for horizontal layout */
+    .navbar-collapse .navbar-nav .dropdown-item {
+        display: inline-block; /* Keep inline-block for spacing/separator */
+        padding: 3px 8px; /* Adjust padding for height */
+        margin-right: 5px; /* Reduced space between items */
+        margin-bottom: 5px; /* Space if wrapping */
+        width: auto;
+        border: none;
+        color: white !important;
+        font-size: 16px; /* Slightly smaller for horizontal fit */
+        font-weight: lighter;
+        position: relative;
+        padding-right: 10px; /* Space for separator */
+        background-color: var(--PI-darkred); /* Darker background */
+        border-radius: 3px; /* Optional: slightly rounded corners */
+        text-align: left; /* Explicitly align left */
+        text-decoration: none !important; /* Ensure no underline */
+    }
+
+    /* Add separator after each dropdown item except the last - Corrected selector */
+    .navbar-collapse .navbar-nav .dropdown-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1em; /* Adjust height to match font size better */
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.4); /* Slightly lighter separator */
+    }
+
+    /* Adjust hover/focus for dropdown items */
+    .navbar-collapse .navbar-nav .dropdown-item:hover,
+    .navbar-collapse .navbar-nav .dropdown-item:focus {
+        background-color: var(--PI-red) !important; /* Use main red for hover */
+        color: white !important;
+        text-decoration: none !important; /* Ensure no underline */
+    }
 }
