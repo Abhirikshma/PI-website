@@ -59,7 +59,6 @@ include($headerInc);
         <ul> 
             <h3 class="western">MuPix Design & Testing</h3>
             <div class="sub-block-content">
-            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
             <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
                 The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
                 This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
@@ -71,40 +70,38 @@ include($headerInc);
                 onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">To HV-MAPS Group >>
                 </button>
             </p>
+            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
             </div>
 
             <h3 class="western">Vertex Detector Development</h3>
-            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
-                The HD-PI Mu3e group is responsible for the <b> construction and commissioning of the vertex detector </b>. 
+            <div class="sub-block-content">
+            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
+                The HD-PI Mu3e group is responsible for the <b>construction and commissioning of the vertex detector</b>. 
                 In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
                 A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
-                <br>
-                </br>
-                <div style="text-align: center;">
-                    <img src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex" style="width:30%;min-width:200px;height:auto;">
-                </div>
-            </ul>
+            </p>
+            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex">
+            </div>
 
             <h3 class="western">Simulation Studies & Data Analysis</h3>
-            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+            <div class="sub-block-content">
+            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">                       
                 Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
-                The group is also actively participating in improving track reconstruction under the Multiple-Scattering and <b> General Triplet Track Fit </b> frameworks, while preparing the groundwork for the upcoming analysis of first data.
-                <br>
-                </br>
-                <div style="text-align: center;">
-                    <img src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks" style="width:30%;min-width:200px;height:auto;">
-                </div>
-            </ul>
+                The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
+            </p>
+            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks">
+            </div>
 
             <h3 class="western">Future-Related Research Activites</h3>
-            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+            <div class="sub-block-content">
+            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
                 While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode, the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed. Multiple projects related to simulation studies, MuPix development and Vertex detector design are available for participation.
-                <br>
                 </br>
-                <button onclick="location.href='./mu3e_phase2.php';"  style="background-color:var(--PI-darkred);border:0;color:var(--PI-sand);padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
-                    More Details >>
+                </br>
+                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
+                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_phase2.php';">More Details >>
                 </button>
-            </ul>
+            </p>
         </ul>
 <!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
 
