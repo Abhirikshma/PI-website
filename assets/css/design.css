@@ -36,6 +36,7 @@ ul {
     padding-left: 5 px;
     padding-right: 5 px;
     margin: 10px 0;
+    text-align: justify;
 }
 
 li {
@@ -94,7 +95,26 @@ a:hover {
     font-size: 0.9em;
     color: gray;
 }
-
+/* Blocks in sub-pages */
+.sub-block-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--PI-sand);
+    padding-top: var(--pad-top)!important;
+    padding-bottom: var(--pad-bottom);
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
+    border-block: var(--border-width) solid var(--PI-darkred);
+    text-align: justify;
+    flex-wrap: wrap;
+}
+.sub-block-image{
+    margin: auto;
+    width: 40%;
+    min-width: calc(0.1*var(--page-width));
+    padding-left: var(--pad-left)!important;
+    flex-grow: 1;
+}
 /* Dropdown button */
 .dropdown-btn {
     height: var(--dropdown-button-height);
