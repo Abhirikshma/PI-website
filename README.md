@@ -86,6 +86,19 @@ The rest of the variables are then correctly taken care in config.php.
 
 href="<?php echo $designCss;?>
 ```
+### Icluding Latex code in php using MathJax
+LaTex code can be included by including the MathJax library in the header of the page.
+```
+	<script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+	</script>
+```
+Then the following syntax can be used to render LaTex code inline `\( ... \)` or in block mode `\[ ... \]` and `$$ ... $$`.
+For example, to include the decay of a muon into three electrons, you can use:
+```
+\( \mu^+ \rightarrow e^+ e^- e^+ \)
+```
+
 ## Authors:
 - Tamasi Kar (<a href="mailto:kar@physi.uni-heidelberg.de">kar@physi.uni-heidelberg.de</a>)
 - Giulia Fazzino (<a href="mailto:gfazzino@physi.uni-heidelberg.de">gfazzino@physi.uni-heidelberg.de</a>)

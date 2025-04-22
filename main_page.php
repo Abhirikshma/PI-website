@@ -13,7 +13,9 @@ include($headerInc);
     <title>PI Main webpage</title>
 	<!-- Include style file -->
     <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
-
+	<script type="text/javascript" async
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+	</script>
 </head>
 
 <body lang="en-US" dir="ltr">
@@ -67,14 +69,16 @@ include($headerInc);
 			<div class="dropdown", style="width:  33%;" >
 				<button class="dropdown-btn">Mu3e</button>
 				<div class="dropdown-content">
-					<a href="https://www.physi.uni-heidelberg.de/Forschung/he/mu3e/">
+					<a href="<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
 							<img src="<?php echo $figures;?>/mu3e.jpg" alt="mu3e-exp" style="width:40%; object-fit: caution;">
-							<p style="text-align: right; width: 55%;object-fit: caution;">
+							<p style="text-align: justify; width: 55%;object-fit: caution;">
 								Mu3e is an experiment under construction at the Paul Scherrer Institute (PSI), in Villigen, Switzerland.
-								The goal is to search for the anti-muon decay into two positrons and one electron. 
+								Its goal is to search for an anti-muon decaying into two positrons and one electron, \(\small \mu^+~\rightarrow~e^+ e^- e^+\). 
 								This decay channel would violate the conservation of the Charge Lepton Flavour, which is foreseen in the Standard Model only
-								at very low branching ratios. While the current limit for the branching ratio is about, Mu3e aims to exclude it, or observe it, at a sensitivity of.
+								at very low branching ratios \(\small\mathcal{O}(10^{-50})\).
+								While the current limit for the branching ratio is about \(\small 10^{-12}\), Mu3e aims to exclude it,
+								or observe it, at a sensitivity of \(\small 10^{-16}\).
 							</p>
 						</div>
 					</a>
@@ -83,7 +87,7 @@ include($headerInc);
 			  <div class="dropdown", style="width: 33%;" >
     			<button class="dropdown-btn">ATLAS</button>
     			<div class="dropdown-content">
-					<a href="https://www.physi.uni-heidelberg.de/Forschung/he/ATLAS/">
+				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
 							<img src="<?php echo $figures;?>/atlas.png" alt="atlas-exp" style="width:40%">
 							<p style="text-align: right; width: 55%;">
@@ -98,9 +102,9 @@ include($headerInc);
 			<div class="dropdown", style="width:  33%;" >
     			<button class="dropdown-btn">HV-MAPS</button>
     			<div class="dropdown-content">
-					<a href="https://www.physi.uni-heidelberg.de/Forschung/he/HVMAPS/">
-						<div style="display: flex; align-items: center; justify-content: space-between; align-items: center;">
-							<img src="<?php echo $figures;?>/mu3e.jpg" alt="hvmaps-exp" style="width:40%;">
+				<a href="<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php">
+						<div style="display: flex; align-items: center; justify-content: space-between;">
+							<img src="<?php echo $figures;?>/mu3e.jpg" alt="hvmaps-exp" style="width:40%">
 							<p style="text-align: right; width: 55%;">
 								Mu3e is an experiment under construction at the Paul Scherrer Institute (PSI), in Villigen, Switzerland.
 								The goal is to search for the anti-muon decay into two positrons and one electron. 
