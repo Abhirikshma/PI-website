@@ -36,11 +36,11 @@ include($headerInc);
             The Mu3e Experiment aims to search for the decay of an anti-muon into an electron and a pair of positrons, \(\small{\mu^+~\rightarrow~e^+ e^- e^+}\),
             which is only foreseen in the Standard Model at a very low branching ratio \(\small{(\sim 10^{-54})}\).
             Any observations in this decay channel above the branching ratio will be a clear indicator of the violation of charged lepton flavour conservation. 
-            The experiment is under commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
+            The experiment is actively undergoing commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
         </ul>
         <ul style="text-indent:30px;text-align: justify;"> 
             While the current experimental limit for the branching ratio of \(\small\mu^+~\rightarrow~e^+ e^- e^+\) is around \(\small 10^{-12}\), the Mu3e Experiment aims to further exclude, or observe,
-            it at a sensitivity of \(\small 10^{-16}\).
+            it down to a sensitivity level of \(\small 10^{-16}\).
             To accomplish this goal, new solutions must be developed, which implement the latest technologies available in the field of High Energy Physics. 
             In particular, the tracking system is made of ultra-thin pixel silicon sensors, which can reconstruct the tracks of the decayed electrons and positrons with minimal interference. 
             The Heidelberg PI group plays a leading role in the development of the experimental concept, the technical solutions and the detector design. 
@@ -51,6 +51,9 @@ include($headerInc);
             After the construction and commissioning, physics data will be taken for two years. 
             Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
             This will require a general upgrade of the Mu3e experiment, the Phase 2.
+        </ul>
+        <ul style="text-align: justify;"> 
+            Mu3e PSI Website: <a href="https://www.psi.ch/en/mu3e">Link</a>
         </ul>
         <h2 class="western">Group Activites</h2> 
         <ul> 
@@ -70,8 +73,8 @@ include($headerInc);
             </p>
             </div>
 
-            <h3 class="western">Vertex Detector</h3>
-            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
+            <h3 class="western">Vertex Detector Development</h3>
+            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
                 The HD-PI Mu3e group is responsible for the <b> construction and commissioning of the vertex detector </b>. 
                 In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
                 A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
@@ -82,10 +85,10 @@ include($headerInc);
                 </div>
             </ul>
 
-            <h3 class="western">Simulation Studies</h3>
-            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
-                Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping understanding the effects of the detector's configuration on signal sensitivity.
-                The group is also actively participating in improving track reconstruction under the <b> General Triplet Track Fit framework </b>.
+            <h3 class="western">Simulation Studies & Data Analysis</h3>
+            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+                Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
+                The group is also actively participating in improving track reconstruction under the Multiple-Scattering and <b> General Triplet Track Fit </b> frameworks, while preparing the groundwork for the upcoming analysis of first data.
                 <br>
                 </br>
                 <div style="text-align: center;">
@@ -94,9 +97,10 @@ include($headerInc);
             </ul>
 
             <h3 class="western">Future-Related Research Activites</h3>
-            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget tristique neque. Aliquam erat volutpat. Aenean laoreet neque in efficitur ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eleifend dui diam, vel eleifend tortor accumsan in. Donec sed lorem purus. Cras malesuada magna at nisl ultrices viverra. Morbi orci justo, tincidunt ac condimentum ac, pellentesque et libero. Aliquam rutrum rutrum mauris a cursus. Nam facilisis orci lectus. Curabitur id enim eu elit tempor porttitor. Nulla facilisi. Nulla facilisi. Maecenas finibus iaculis mi, ut tempor sapien efficitur vestibulum.
-                <br></br>
+            <ul style="text-align: justify;background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+                While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode, the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed. Multiple projects related to simulation studies, MuPix development and Vertex detector design are available for participation.
+                <br>
+                </br>
                 <button onclick="location.href='./mu3e_phase2.php';"  style="background-color:var(--PI-darkred);border:0;color:var(--PI-sand);padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
                     More Details >>
                 </button>
