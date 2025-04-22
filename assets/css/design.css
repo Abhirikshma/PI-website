@@ -189,7 +189,7 @@ a:hover {
         /* The following two lines keep the content centered  in mobile view*/
         left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
         transform: translateX(-50%); /* Shift box back by half its width to center */
-        height: calc(0.4*var(--page-width)); /* here page width is low, so increase multiplication factor */
+        height: calc(1.4*var(--page-width)); /* here page width is low, so increase multiplication factor */
         width: 90vw; /* Keeps empty space on the left and right */
         z-index: 1;
         border: var(--border-width) solid var(--PI-darkred);

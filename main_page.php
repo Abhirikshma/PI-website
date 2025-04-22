@@ -119,10 +119,10 @@ include($headerInc);
     
 		<div class="content"> <!-- Put in a new div to ensure this is pushed down when the buttons are opened -->
 			<h2 style="text-align: center;"> News</h2>
-			<ul style="list-style-type: none; margin-left: 20px;"> 
+			<ul style="list-style-type: none; "> 
 				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 31 - Apr 4, 2025</b> Abhi, David F. and Giulia present their work at the <a href = "https://goettingen25.dpg-tagungen.de">DPG Spring Meeting</a></li>
 				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 17 - 20, 2025</b> The mu3e group has its annual retreat in Wengen, Switzerland </li>
-					<div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
+					<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px;">
 						<img src="<?php echo $figures;?>/news/wengen_andre.jpg" alt="Andre" style="width: 150px; height: auto; object-fit: cover;">
 						<img src="<?php echo $figures;?>/news/wengen_heiko.jpg" alt="Heiko" style="width: 150px; height: auto; object-fit: cover;">
 						<img src="<?php echo $figures;?>/news/wengen_joey.jpg" alt="Joey" style="width: 150px; height: auto; object-fit: cover;">

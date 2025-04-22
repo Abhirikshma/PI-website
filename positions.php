@@ -89,7 +89,7 @@ if ($content !== false) {
 ?>
 
 
-<h3 class="western">Past Theses</h2>   
+<h2 class="western">Past Theses</h2>   
 
 <?php
   physi_publications("gruppe='ATLAS' OR gruppe = 'mu3e' OR titel='Characterization of a Monolithic Pixel Sensor Prototype in HV-CMOS Technology for the High-Luminosity LHC' OR autor='Arthur E. Bolz' OR autor='Sebastian Dittmeier'
