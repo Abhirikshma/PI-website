@@ -32,13 +32,13 @@ include($headerInc);
         <h1 class="western">Mu3e @ HD-PI</h1> 
 
         <h2 class="western">The Mu3e Experiment</h2> 
-        <ul style="text-align: justify;"> 
+        <ul> 
             The Mu3e Experiment aims to search for the decay of an anti-muon into an electron and a pair of positrons, \(\small{\mu^+~\rightarrow~e^+ e^- e^+}\),
             which is only foreseen in the Standard Model at a very low branching ratio \(\small{(\sim 10^{-54})}\).
             Any observations in this decay channel above the branching ratio will be a clear indicator of the violation of charged lepton flavour conservation. 
             The experiment is actively undergoing commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
         </ul>
-        <ul style="text-indent:30px;text-align: justify;"> 
+        <ul style="text-indent:30px;> 
             While the current experimental limit for the branching ratio of \(\small\mu^+~\rightarrow~e^+ e^- e^+\) is around \(\small 10^{-12}\), the Mu3e Experiment aims to further exclude, or observe,
             it down to a sensitivity level of \(\small 10^{-16}\).
             To accomplish this goal, new solutions must be developed, which implement the latest technologies available in the field of High Energy Physics. 
@@ -46,20 +46,20 @@ include($headerInc);
             The Heidelberg PI group plays a leading role in the development of the experimental concept, the technical solutions and the detector design. 
             The group is responsible for the vertex detector, the innermost component of the experiment, and for many of the external services necessary for the operation of the whole system.
         </ul>
-        <ul style="text-indent:30px;text-align: justify;"> 
+        <ul style="text-indent:30px;"> 
             At the moment, the Phase 1 of the experiment is under construction. 
             After the construction and commissioning, physics data will be taken for two years. 
             Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
             This will require a general upgrade of the Mu3e experiment, the Phase 2.
         </ul>
-        <ul style="text-align: justify;"> 
+        <ul> 
             Mu3e PSI Website: <a href="https://www.psi.ch/en/mu3e">Link</a>
         </ul>
         <h2 class="western">Group Activites</h2> 
         <ul> 
             <h3 class="western">MuPix Design & Testing</h3>
             <div class="sub-block-content">
-            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
+            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
                 The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
                 This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
                 The MuPix, in particular, implements a minimal number of connections for powering and readout, a strategy that requires novel design features for the communication with the chip itself.
@@ -75,7 +75,7 @@ include($headerInc);
 
             <h3 class="western">Vertex Detector Development</h3>
             <div class="sub-block-content">
-            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
+            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
                 The HD-PI Mu3e group is responsible for the <b>construction and commissioning of the vertex detector</b>. 
                 In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
                 A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
@@ -85,7 +85,7 @@ include($headerInc);
 
             <h3 class="western">Simulation Studies & Data Analysis</h3>
             <div class="sub-block-content">
-            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">                       
+            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">                       
                 Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
                 The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
             </p>
@@ -94,7 +94,7 @@ include($headerInc);
 
             <h3 class="western">Future-Related Research Activites</h3>
             <div class="sub-block-content">
-            <p style="text-align: justify; width: 55%;object-fit: caution;  flex-grow: 1;">
+            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
                 While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode, the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed. Multiple projects related to simulation studies, MuPix development and Vertex detector design are available for participation.
                 </br>
                 </br>
