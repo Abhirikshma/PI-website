@@ -89,7 +89,7 @@
 
 
 /* Mobile dropdown adjustments */
-@media (max-width: 968px) {
+@media (max-width: 1000px) {
     .menu {
         display: none;
         flex-direction: column;
@@ -147,7 +147,7 @@
 }
 
 /* Desktop dropdown styling (opens on hover) */
-@media (min-width: 969px) {
+@media (min-width: 1001px) {
     .dropdown-menu {
         display: none;
         position: absolute;
