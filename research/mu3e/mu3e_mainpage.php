@@ -38,7 +38,7 @@ include($headerInc);
             Any observations in this decay channel above the branching ratio will be a clear indicator of the violation of charged lepton flavour conservation. 
             The experiment is actively undergoing commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
         </ul>
-        <ul style="text-indent:30px;> 
+        <ul style="text-indent:30px;"> 
             While the current experimental limit for the branching ratio of \(\small\mu^+~\rightarrow~e^+ e^- e^+\) is around \(\small 10^{-12}\), the Mu3e Experiment aims to further exclude, or observe,
             it down to a sensitivity level of \(\small 10^{-16}\).
             To accomplish this goal, new solutions must be developed, which implement the latest technologies available in the field of High Energy Physics. 
@@ -87,7 +87,7 @@ include($headerInc);
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">                       
                 Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
-                The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
+                The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering and hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks">
             </div>
@@ -95,7 +95,9 @@ include($headerInc);
             <h3 class="western">Future-Related Research Activites</h3>
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
-                While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode, the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed. Multiple projects related to simulation studies, MuPix development and Vertex detector design are available for participation.
+                While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode,
+                the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed.
+                Multiple projects related to design and simulation studies, MuPix development and Vertex detector design are available for participation.
                 </br>
                 </br>
                 <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
