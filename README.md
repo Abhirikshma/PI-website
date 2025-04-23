@@ -22,6 +22,7 @@ You can fork this repository and create a pull request for your changes.
 │   └── mu3e
 ├── <b><i>main_page.php</i></b>
 ├── people.php
+├── positions.php
 └── teaching.php
 </code>
 </pre>

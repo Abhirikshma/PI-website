@@ -24,167 +24,90 @@ include($headerInc);
 
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
+        
+        <div style="text-align: center;">
+            <img src='<?php echo $figures;?>/atlas.png' width='60%' alt='atlas_header' />
+        </div>
 
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-  font-family: Open Sans;
-}
+        <h1 class="western">ATLAS @ HD-PI</h1> 
 
-/* Create two equal columns that floats next to each other */
-.columnL {
-  float: left;
-  width: 65%;
-  padding: 10px;
-}
-.columnR {
-  float: left;
-  width: 35%;
-  padding: 10px;
-}
+        <h2 class="western">The ATLAS Experiment</h2> 
+        <ul> 
+                The ATLAS experiment is one of the four large experiments currently conducted at the Large Hadron Collider (LHC) at CERN.
+								It is a general-purpose detector, aiming to provide precise measurements of the Standard Model's parameters and to investigate
+								BSM physics at the high energy scales reached by the LHC. 
+        </ul>
+        <ul style="text-indent:30px;"> 
+          After reaching its targeted energy of 13.6 TeV, the next major development for the LHC is going to increase its luminosity.
+          In this High Luminosity (HL) LHC there will be about five times the number of simultaneous particle collisions than now, thus the experiments have to be upgraded to cope with that.
+        </ul>
+        <div style="text-align: center;">
+            <img src='<?php echo $figures;?>/ATLAS/BigData.png' width='60%'>
+        </div>
+        <ul style="text-indent:30px;"> 
+            At the moment, the Phase 1 of the experiment is under construction. 
+            After the construction and commissioning, physics data will be taken for 2 years. 
+            Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
+            This will require a general upgrade of the Mu3e experiment, the Phase 2.
+        </ul>
+        <h2 class="western">Group Activites</h2> 
+        <ul> 
+            <h3 class="western">MuPix Design & Testing</h3>
+            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
+                The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
+                This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
+                The MuPix, in particular, implements a minimal number of connections for powering and readout, a strategy that requires novel design features for the communication with the chip itself.
+                The Heidelberg group contributed significantly to the design of the chip and to the characterization of the several prototypes produced in the years. 
+                <br>
+                </br>
+                <button onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';"  style="background-color:var(--PI-darkred);border:0;color:var(--PI-sand);padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
+                    To HV-MAPS Group >>
+                </button>
+                <br>
+                </br>
+                <div style="text-align: center;">
+                    <img src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix" style="width:30%;min-width:200px;height:auto;">
+                </div>
+            </ul>
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-</head>
-<body>
+            <h3 class="western">Vertex Detector</h3>
+            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">
+                The HD-PI Mu3e group is responsible for the <b> construction and commissioning of the vertex detector </b>. 
+                In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
+                A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
+                <br>
+                </br>
+                <div style="text-align: center;">
+                    <img src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex" style="width:30%;min-width:200px;height:auto;">
+                </div>
+            </ul>
 
+            <h3 class="western">Simulation Studies</h3>
+            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+                Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping understanding the effects of the detector's configuration on signal sensitivity.
+                The group is also actively participating in improving track reconstruction under the <b> General Triplet Track Fit framework </b>.
+                <br>
+                </br>
+                <div style="text-align: center;">
+                    <img src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks" style="width:30%;min-width:200px;height:auto;">
+                </div>
+            </ul>
 
-<div class="row">
-  <div class="columnL" style="background-color:white;">
-    <p>
-    <h1 class="western"> ATLAS Group at Physikalisches Institut </h1>
-    <h2 class="western"> ATLAS Experiment </h2>
-    <br>
-    <br>
-    The <a href="https://atlas.cern/" target="_blank" rel="noopener noreferrer"> ATLAS</a> experiment is one of four large experiments 
-    currently being conducted at the <a href="https://home.cern/science/accelerators/large-hadron-collider" target="_blank" rel="noopener noreferrer"> Large Hadron Collider (LHC)</a> 
-    at <a href="https://home.cern/" target="_blank" rel="noopener noreferrer"> CERN</a>.
-    After reaching its targeted energy of 13.6 TeV, the next major development is going to increase the luminosity of the LHC.
-    In this <a href="https://home.cern/science/accelerators/high-luminosity-lhc" target="_blank" rel="noopener noreferrer"> High Luminosity (HL) LHC</a> will be about five times the number of simultaneous particle collisions than now and the experiments have to be upgraded to cope with that.
-    ATLAS is a general purpose detector that can observe both, proton-proton and heavy ion collisions.
-    It is build like an onion, different detector types are arranged hermetically in shells around the interaction region.    
-    </br>
-    <img src="<?php echo $figures;?>/ATLAS/HL-LHC_Schedule.png" width="100%" alt="Atlas">
-    </br>
-    <p>
-      Development of the LHC over time.</br>
-      <a href="https://hilumilhc.web.cern.ch/sites/default/files/HL-LHC_Janvier2022.pdf" target="_blank" rel="noopener noreferrer"> Source</a>
-    </p>
-    <br>
-    <br>
-    <h2 class="western"> Track Reconstruction </h2>
-    <br>
-    <br>
-    Whenever a particle traverses through matter, it loses some of its energy, which can be measured.
-    Highly energetic particles traverse many detector layers before they either decay, get absorbed, or leave the detector.
-    This string of signals, aligned like pearls on a chain, along the particle trajectory is called a track and it can be used to deduce the momentum, charge, and point of origin of the particle.
-    Unfortunately, it is not a priori known, which hits belong together.
-    The problem of assigning hits to track candidates is called <strong>track finding</strong>.
-    <strong>Track fitting</strong> is the process of applying a model to the track candidates to verify them and to calculate the particle properties.
-    <br>
-    <br>
-    <br>
-    <h2 class="western"> Triggered Readout </h2>
-    <br>
-    <br>
-    After the high luminosity upgrades at the end of this decade, it is expected that there are about 200 proton-proton collisions every 25 ns.
-    </br>
-    <img src="<?php echo $figures;?>/ATLAS/BigData.png" width="100%" alt="Atlas">
-    </br>
-    <p>
-      Data produced by the LHC compared with major web services.</br>
-      <a href="https://towardsdatascience.com/how-big-are-big-data-in-2021-6dc09aff5ced" target="_blank" rel="noopener noreferrer"> Source</a>
-    </p>
-
-    <!-- The goal of the ATLAS experiment is to gain a better understanding of the basic building blocks of matter and their underlying interactions.
-    <br>
-    <br>
-    The particles and forces we know of today are very well described by the Standard Model.
-    However, there are quite a few open questions the Standard Model cannot yet answer, like: 
-    <ul>
-      <li> What is Dark Matter? 
-      <li> Why does our universe only comprise matter - what happened to antimatter? 
-      <li> How does gravity fit into the picture of fundamental interactions? 
-    </ul> -->
-    <br>
-    <br>
-    <h2 class="western"> Current Activities </h2>
-    <br>
-    <br>
-    Our ATLAS group is working on the implementation of novel track fitting algorithms and modern track finding methods 
-    with hardware accelerators (GPUs, FPGAs) for the <a href="projects/EF"> Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system
-    of the ATLAS experiment at the <a href="https://home.cern/science/accelerators/high-luminosity-lhc" target="_blank" rel="noopener noreferrer"> High-Luminosity Large Hadron Collider (HL-LHC)</a>.
-    We are working on 
-    <ul>
-      <li> <a href="projects/GNN"> Track finding</a> with Graph Neural Networks on FPGAs 
-      <li> <a href="projects/TrackFits"> Novel track fitting algorithms</a> and their acceleration on GPUs (and FPGAs) 
-    </ul>
-    </br>
-    You are interested in joining our group to work on one of the largest particle physics experiments that has ever been conducted? Then get in touch! 
-    </br>
-    <br>
-    <h2 class="western"> Past Projects </h2>
-    <br>
-    <ul>
-      <li> <a href="projects/DiHiggs"> Background estimation</a> for searches for the decay Di-Higgs to 4b using Neural Networks
-      <li> Measurement of the inclusive triple-differential dijet cross section to disentangle quarks and gluons at the LHC
-      <li> Development of a new track trigger concept using three pixel detector layers, 
-      aka the <a href="projects/TTT">Triplet Track Trigger</a>.
-      <li> the <a href="prev_projects/HTT"> Hardware Tracking for the Trigger (HTT)</a> project for the ATLAS experiment at the 
-      High Luminosity Large Hadron Collider
-      <li> the <a href="prev_projects/FTK"> Fast TracKer (FTK)</a> upgrade of the ATLAS detector
-      <li> <a href="prev_projects/BoostedTop"> Boosted top quark reconstruction</a>
-      <li> <a href="prev_projects/Searches"> Searches for new Physics and Standard Model measurements involving top quarks</a>
-    </ul>
-    </p>
-  </div>
-  <div class="columnR" style="background-color:white;">
-    <!-- <img src="pics-new/lhc_overview.png" width="300" alt="Atlas">
-    </br>
-    <p>
-      The particle accelerator complex at CERN.
-    </p>
-    </br> -->
-    <!-- <img src="pics-new/HL-LHC_Schedule.png" width="500" alt="Atlas">
-    </br>
-    <p>
-      Development of the LHC over time.</br>
-      <a href="https://hilumilhc.web.cern.ch/sites/default/files/HL-LHC_Janvier2022.pdf" target="_blank" rel="noopener noreferrer"> Source</a>
-    </p> -->
-    </br>
-    <!-- <img src="pics-new/atlas_experiment.jpg" width="500" alt="Atlas"> -->
-    <img src="<?php echo $figures;?>/ATLAS/ITk.png" width="100%" alt="Atlas-ITk">
-    </br>
-    <p>
-      The new Inner Tracking Detector (ITk) of ATLAS for HL-LHC.</br>
-      <a href="https://cds.cern.ch/record/2285585?ln=en" target="_blank" rel="noopener noreferrer"> Source</a>
-    </p>
-    </br>
-    <img src="<?php echo $figures;?>/ATLAS/Event.png" width="100%" alt="Event">
-    </br>
-    <p>
-      Transversal projection of particle hits and tracks</br>
-      in the current inner detector.
-    </p>
-  </div>
-</div>
-
-</body>
+            <h3 class="western">Future-Related Research Activites</h3>
+            <ul style="background-color:var(--PI-sand);border-block:3px solid var(--PI-darkred);padding-top:30px;padding-bottom:30px;padding-left:20px;padding-right:20px;">            
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget tristique neque. Aliquam erat volutpat. Aenean laoreet neque in efficitur ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eleifend dui diam, vel eleifend tortor accumsan in. Donec sed lorem purus. Cras malesuada magna at nisl ultrices viverra. Morbi orci justo, tincidunt ac condimentum ac, pellentesque et libero. Aliquam rutrum rutrum mauris a cursus. Nam facilisis orci lectus. Curabitur id enim eu elit tempor porttitor. Nulla facilisi. Nulla facilisi. Maecenas finibus iaculis mi, ut tempor sapien efficitur vestibulum.
+                <br></br>
+                <button onclick="location.href='./mu3e_phase2.php';"  style="background-color:var(--PI-darkred);border:0;color:var(--PI-sand);padding-top:5px;padding-bottom:5px;padding-left:20px;padding-right:20px;">
+                    More Details >>
+                </button>
+            </ul>
+        </ul>
+<!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
 
 
     </div>
 </body>
 </html>
-
-
-<!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
 
 <?php
 include($footerInc); 

@@ -91,12 +91,23 @@ include($headerInc);
     
 		<div class="content"> <!-- Put in a new div to ensure this is pushed down when the buttons are opened -->
 			<h2 style="text-align: center;"> News</h2>
-			<ul> 
-				<li> Our group members had two hackaton days to create this new website!</li>
-					<video width="300" height=auto controls autoplay muted loop>
-						<source src="<?php echo $figures;?>/hackaton.MOV">
-						Your browser does not support the video tag.<!-- Error message if video isn't supported -->
-					</video>
+			<ul style="list-style-type: none; "> 
+				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 31 - Apr 4, 2025</b> Abhi, David F. and Giulia present their work at the <a href = "https://goettingen25.dpg-tagungen.de">DPG Spring Meeting</a></li>
+				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 17 - 20, 2025</b> The mu3e group has its annual retreat in Wengen, Switzerland </li>
+					<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px;">
+						<img src="<?php echo $figures;?>/news/wengen_andre.jpg" alt="Andre" style="width: 150px; height: auto; object-fit: cover;">
+						<img src="<?php echo $figures;?>/news/wengen_heiko.jpg" alt="Heiko" style="width: 150px; height: auto; object-fit: cover;">
+						<img src="<?php echo $figures;?>/news/wengen_joey.jpg" alt="Joey" style="width: 150px; height: auto; object-fit: cover;">
+						<img src="<?php echo $figures;?>/news/wengen_thomi.jpg" alt="Thomi" style="width: 150px; height: auto; object-fit: cover;">
+					</div>
+				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 15, 2025</b> Prof. Schöning publishes <a href="https://doi.org/10.1016/j.nima.2025.170391">"A general track fit based on triplets"</a></li>
+				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Feb 11, 2025</b> Our group members have two hackathon days to create this new website!</li>
+					<div style="text-align: center;">
+						<video width="300" height="auto" controls autoplay muted loop>
+							<source src="<?php echo $figures;?>/news/hackaton.MOV">
+							Your browser does not support the video tag.<!-- Error message if video isn't supported -->
+						</video>
+					</div>
 			</ul>
 		</div>
 		<br>

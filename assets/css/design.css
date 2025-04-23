@@ -13,6 +13,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+table {
+    border-collapse: collapse;
+    border-color: white !important;
+    width: auto !important;
+}
+td {
+    width: auto !important;
+}
+
 h1 {
     text-align: left;
 }
@@ -27,6 +36,7 @@ h2 {
     padding-left: 5px;
     padding-right: 5px;
     margin: 10px 0;
+    text-align: justify;
 }
 
 /* Target li elements only within the sub-body */
@@ -86,7 +96,26 @@ a:hover {
     font-size: 0.9em;
     color: gray;
 }
-
+/* Blocks in sub-pages */
+.sub-block-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--PI-sand);
+    padding-top: var(--pad-top)!important;
+    padding-bottom: var(--pad-bottom);
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
+    border-block: var(--border-width) solid var(--PI-darkred);
+    text-align: justify;
+    flex-wrap: wrap;
+}
+.sub-block-image{
+    margin: auto;
+    width: 40%;
+    min-width: calc(0.2*var(--page-width));
+    padding-left: var(--pad-left)!important;
+    flex-grow: 1;
+}
 /* Dropdown button */
 .dropdown-btn {
     height: var(--dropdown-button-height);
@@ -190,7 +219,7 @@ a:hover {
         /* The following two lines keep the content centered  in mobile view*/
         left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
         transform: translateX(-50%); /* Shift box back by half its width to center */
-        height: calc(0.4*var(--page-width)); /* here page width is low, so increase multiplication factor */
+        height: calc(1.1*var(--page-width)); /* here page width is low, so increase multiplication factor */
         width: 90vw; /* Keeps empty space on the left and right */
         z-index: 1;
         border: var(--border-width) solid var(--PI-darkred);

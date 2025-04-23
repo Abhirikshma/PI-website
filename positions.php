@@ -3,6 +3,7 @@ $subpath = $_SERVER['REQUEST_URI'];
 $incpath = "assets/inc";
 include($incpath . "/config.php");
 include($headerInc);
+include("header_common_he.php.inc")
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -13,16 +14,6 @@ include($headerInc);
     <title>PI Main webpage</title>
     <!-- Include style file -->
     <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
-    <style>
-    table {
-        border-collapse: collapse;
-        border-color: white !important;
-        width: auto !important;
-    }
-    td {
-        width: auto !important;
-    }
-    </style>
 </head>
 
 <body>
@@ -85,6 +76,17 @@ if ($content !== false) {
 } else {
     echo "<p>Error fetching content.</p>";
 }
+?>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 class="western">Past Theses</h2>   
+
+<?php
+  physi_publications("gruppe='ATLAS' OR gruppe = 'mu3e' OR titel='Characterization of a Monolithic Pixel Sensor Prototype in HV-CMOS Technology for the High-Luminosity LHC' OR autor='Arthur E. Bolz' OR autor='Sebastian Dittmeier'
+  OR autor='Aleem Ahmad Tariq Sheikh'");
 ?>
 
 
