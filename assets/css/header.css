@@ -136,7 +136,7 @@ header.navbar-scrolled .navbar-toggler-icon {
 }
 
 /* --- Desktop View Styling (>= 992px) --- */
-@media (min-width: 992px) { /* Changed from 1050px */
+@media (min-width: 992px) { /* Reverted from 1440px */
     /* Align nav items vertically */
     .navbar-nav {
         display: flex;
@@ -224,8 +224,16 @@ header.navbar-scrolled .navbar-toggler-icon {
     }
 }
 
+/* --- Intermediate View Styling (992px to 1439.98px) --- */
+/* Hide title specifically in this range when scrolled */
+@media (min-width: 992px) and (max-width: 1400px) {
+    header.navbar-scrolled #navbar-page-title {
+        display: none !important; /* Hide title in this specific range when scrolled */
+    }
+}
+
 /* --- Mobile View Styling (< 992px) --- */
-@media (max-width: 991.98px) {
+@media (max-width: 991.98px) { /* Reverted from 1439.98px */
     /* Ensure container-fluid manages flex items correctly */
     .navbar > .container-fluid {
         display: flex;
