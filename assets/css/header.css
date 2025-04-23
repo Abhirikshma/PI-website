@@ -5,7 +5,6 @@ header {
     position: sticky; /* Make header sticky */
     top: 0; /* Stick to the top */
     z-index: 1030; /* Ensure it's above most content */
-    background-color: var(--PI-red); /* Ensure header background matches navbar */
 }
 
 /* --- Bootstrap Navbar Customization --- */
@@ -16,6 +15,7 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Apply shadow here */
 }
 
 /* Navbar Brand (Logo) */
@@ -198,6 +198,7 @@ header.navbar-scrolled .navbar-toggler-icon {
         left: 0; /* Align with the left edge of the parent */
         min-width: 100%; /* Ensure dropdown is at least as wide as the parent */
         z-index: 1000; /* Ensure dropdown appears above other content */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Add shadow to desktop dropdown */
     }
 
     /* Show dropdown on hover */
@@ -389,6 +390,7 @@ header.navbar-scrolled .navbar-toggler-icon {
         border-radius: 3px; /* Optional: slightly rounded corners */
         text-align: left; /* Explicitly align left */
         text-decoration: none !important; /* Ensure no underline */
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add shadow to mobile dropdown items */
     }
 
     /* Add separator after each dropdown item except the last - Corrected selector */

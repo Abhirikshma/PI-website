@@ -1,0 +1,44 @@
+/* --- Image Collage Greyscale --- */
+.greyscale-image {
+    filter: saturate(80%); /* Use saturate for slight desaturation */
+    transition: filter 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.greyscale-image:hover {
+    filter: saturate(100%); /* Restore full saturation on hover */
+}
+
+/* Style the image container as a grid */
+#image-container {
+    display: grid; /* Use Grid */
+    /* grid-template-columns will be set by JS */
+    gap: 5px; /* Fixed spacing between items - Ensure this matches JS gapWidth */
+    justify-items: center; /* Center items within their grid cell */
+    /* Keep auto margins for centering the container itself */
+    margin-left: auto;
+    margin-right: auto;
+    /* width will be set by JS */
+}
+
+/* Adjust image item styles */
+.image-collage-item {
+    display: block;
+    padding: 0;
+    line-height: 0; /* Prevent extra space below image if link is block */
+}
+
+#image-container img {
+    display: block; /* Ensure image is block level */
+    /* width and height are set inline */
+}
+
+#image-container {
+    padding-top: 20px; /* Optional: space above the image */
+    padding-bottom: 20px; /* Optional: space below the image */
+}
+
+/* Style for empty cells to maintain grid structure */
+.empty-grid-cell {
+    /* width and min-height will be set inline by JS */
+    /* background-color: rgba(0,0,0,0.05); */
+}

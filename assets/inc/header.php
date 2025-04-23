@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Header</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $headerCss;?>">    
+    <!-- Add the missing CSS links -->
+    <link rel="stylesheet" href="<?php echo $headerCss;?>"> 
+    <link rel="stylesheet" href="<?php echo dirname($headerCss);?>/image_grid.css"> 
 </head>
 
 <body>
@@ -83,50 +85,73 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Shrink header on scroll
-    const stickyElement = document.querySelector('header'); 
-    const scrollThreshold = 30; // Pixels to scroll before shrinking navbar
-    const pageTitleElement = document.getElementById('navbar-page-title');
-    let h1Elements = []; // Initialize array to hold H1 elements
-    let currentH1Element = null; // Store the actual H1 element reference
-    let lastScrollY = window.scrollY; // Track last scroll position
-    const mobileCollapseScrollThreshold = 50; // Pixels to scroll (up or down) before collapsing mobile menu
-    let scrollStartY = 0; // Track scroll position when mobile menu opens
-    
-    // --- Navbar Collapse Elements ---
-    const navbarCollapse = document.getElementById('navbarNavDropdown');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    // -----------------------------
-
-    function handleScroll() {
-        const currentScrollY = window.scrollY;
-
-        let currentH1Text = ''; 
-        let foundH1 = null; // Temporarily store the found H1 element
-        const navbarBottomOffset = stickyElement.getBoundingClientRect().bottom; // Use bottom edge of header
-
-        // Find the last H1 whose bottom edge is above the bottom of the sticky header
-        for (let i = h1Elements.length - 1; i >= 0; i--) {
-            const h1 = h1Elements[i];
-            const rect = h1.getBoundingClientRect();
-            
-            // Check if the bottom of the H1 is above the navbar's bottom edge
-            if (rect.bottom < navbarBottomOffset) { 
-                currentH1Text = h1.textContent.trim();
-                foundH1 = h1; // Store the element reference
-                break; // Found the last one scrolled out
+    // --- Throttle Function ---
+    function throttle(func, limit) {
+        let inThrottle;
+        return function(...args) {
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
             }
         }
-        
-        // Update the global reference
-        currentH1Element = foundH1; 
+    }
 
-        // Handle navbar shrink/expand and title display
-        if (currentScrollY > scrollThreshold) {
+    // --- Configuration ---
+    const SCROLL_THRESHOLD = 30; // Pixels to scroll before shrinking navbar
+    const MOBILE_MENU_SCROLL_CLOSE_THRESHOLD = 50; // Pixels to scroll before closing mobile menu
+    const THROTTLE_LIMIT = 100; // Milliseconds to throttle scroll events
+
+    // --- DOM Elements (initialized in DOMContentLoaded) ---
+    let stickyElement = null;
+    let pageTitleElement = null;
+    let navbarCollapse = null;
+    let navbarToggler = null;
+    let h1Elements = [];
+
+    // --- State Variables ---
+    let currentH1Element = null;
+    let isMobileMenuFullyOpen = false; // Track if mobile menu is open AND animation finished
+    let menuOpenScrollStartY = null; // Track scroll position when menu fully opened
+
+    // --- Instant Header Shrink Logic ---
+    function updateHeaderShrinkState() {
+        if (!stickyElement) return; // Guard against element not being ready
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > SCROLL_THRESHOLD) {
             stickyElement.classList.add('navbar-scrolled');
+        } else {
+            stickyElement.classList.remove('navbar-scrolled');
+        }
+    }
+
+    // --- Throttled Scroll Logic (Title Update & Mobile Menu Close) ---
+    function handleScrollActions() {
+        const currentScrollY = window.scrollY;
+        const isScrolled = currentScrollY > SCROLL_THRESHOLD; // Still need this check for title logic
+
+        // 1. Handle Title Display (only when scrolled)
+        if (isScrolled) {
+            let currentH1Text = '';
+            let foundH1 = null;
+            // Ensure stickyElement is available before getting bounding rect
+            if (stickyElement) {
+                const navbarBottomOffset = stickyElement.getBoundingClientRect().bottom;
+                for (let i = h1Elements.length - 1; i >= 0; i--) {
+                    const h1 = h1Elements[i];
+                    const rect = h1.getBoundingClientRect();
+                    if (rect.bottom < navbarBottomOffset) {
+                        currentH1Text = h1.textContent.trim();
+                        foundH1 = h1;
+                        break;
+                    }
+                }
+            }
+            currentH1Element = foundH1; // Update global reference
+
             if (pageTitleElement) {
-                pageTitleElement.textContent = currentH1Text; // Set the found H1 text, or empty string
-                // Add/remove class to indicate clickability
+                pageTitleElement.textContent = currentH1Text;
                 if (currentH1Element) {
                     pageTitleElement.classList.add('clickable-title');
                 } else {
@@ -134,52 +159,57 @@
                 }
             }
         } else {
-            stickyElement.classList.remove('navbar-scrolled');
+            // Clear title and reset H1 element if not scrolled past threshold
             if (pageTitleElement) {
-                pageTitleElement.textContent = ''; // Clear title text when not scrolled
-                pageTitleElement.classList.remove('clickable-title'); // Remove clickable class
+                pageTitleElement.textContent = '';
+                pageTitleElement.classList.remove('clickable-title');
             }
-            currentH1Element = null; // Reset when scrolled to top
+            currentH1Element = null;
         }
 
-        // --- Collapse mobile navbar on significant scroll since opening ---
-        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            // Check if toggler is visible (i.e., we are in mobile view)
-            if (navbarToggler && getComputedStyle(navbarToggler).display !== 'none') {
-                // Check if scrolled more than the threshold (up or down) since opening
-                if (Math.abs(currentScrollY - scrollStartY) > mobileCollapseScrollThreshold) { 
-                    var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        // 2. Handle Mobile Menu Close on Scroll
+        if (isMobileMenuFullyOpen && menuOpenScrollStartY !== null && navbarCollapse && navbarToggler) {
+             // Check if the toggler is visible (i.e., we are in mobile view)
+            const isTogglerVisible = getComputedStyle(navbarToggler).display !== 'none';
+            if (isTogglerVisible) {
+                const scrollDelta = Math.abs(currentScrollY - menuOpenScrollStartY);
+                if (scrollDelta > MOBILE_MENU_SCROLL_CLOSE_THRESHOLD) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                     if (bsCollapse) {
                         bsCollapse.hide();
+                        // Reset state immediately, hide.bs.collapse listener will also do this
+                        isMobileMenuFullyOpen = false;
+                        menuOpenScrollStartY = null;
                     }
                 }
+            } else {
+                 // If toggler is not visible (desktop view), ensure state is reset
+                 isMobileMenuFullyOpen = false;
+                 menuOpenScrollStartY = null;
             }
         }
-        // -------------------------------------------------------
-
-        // Update last scroll position (can still be useful)
-        lastScrollY = currentScrollY;
     }
 
-    // Wait for the DOM to be fully loaded before trying to find H1 elements
+    // --- Throttled Scroll Handler ---
+    const throttledScrollHandler = throttle(handleScrollActions, THROTTLE_LIMIT);
+
+    // --- Initialization and Event Listeners ---
     document.addEventListener('DOMContentLoaded', () => {
-        // Find all H1 elements on the page *after* DOM is ready
-        h1Elements = document.querySelectorAll('h1'); 
-        console.log("DOMContentLoaded - h1Elements found:", h1Elements.length); // Debug log
-        
-        // Initialize lastScrollY after DOM is ready
-        lastScrollY = window.scrollY; 
+        // Assign DOM Elements
+        stickyElement = document.querySelector('header');
+        pageTitleElement = document.getElementById('navbar-page-title');
+        navbarCollapse = document.getElementById('navbarNavDropdown');
+        navbarToggler = document.querySelector('.navbar-toggler');
+        h1Elements = document.querySelectorAll('h1');
 
         // Add click listener to the title placeholder
         if (pageTitleElement) {
             pageTitleElement.addEventListener('click', () => {
-                if (currentH1Element) {
-                    // Calculate the position to scroll to
+                if (currentH1Element && stickyElement) { // Check stickyElement exists
                     const headerHeight = stickyElement.offsetHeight;
                     const elementPosition = currentH1Element.getBoundingClientRect().top + window.scrollY;
-                    const offsetPosition = elementPosition - headerHeight - 10; // Subtract header height and a small margin (10px)
+                    const offsetPosition = elementPosition - headerHeight - 10;
 
-                    // Scroll smoothly to the calculated position
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
@@ -188,40 +218,57 @@
             });
         }
 
-        // --- Record scroll position when navbar is shown ---
-        if (navbarCollapse) {
-            navbarCollapse.addEventListener('show.bs.collapse', function () {
-                scrollStartY = window.scrollY; // Record scroll position when opening starts
+        // Listener to remove focus from toggler when menu hides & reset state
+        if (navbarCollapse && navbarToggler) {
+            navbarCollapse.addEventListener('hide.bs.collapse', () => {
+                navbarToggler.blur(); // Remove focus from the toggler
+                isMobileMenuFullyOpen = false; // Reset state when hiding starts/finishes
+                menuOpenScrollStartY = null;
+            });
+
+            // Listener to set state when menu is fully shown
+            navbarCollapse.addEventListener('shown.bs.collapse', () => {
+                 // Check if the toggler is visible when the menu is shown
+                const isTogglerVisible = getComputedStyle(navbarToggler).display !== 'none';
+                if (isTogglerVisible) {
+                    isMobileMenuFullyOpen = true; // Set state only when fully expanded
+                    menuOpenScrollStartY = window.scrollY; // Record scroll position
+                } else {
+                    // If toggler became hidden during animation (e.g., resize), reset state
+                    isMobileMenuFullyOpen = false;
+                    menuOpenScrollStartY = null;
+                }
             });
         }
-        // -------------------------------------------------
 
-        // --- Close navbar on outside click ---
-        document.addEventListener('click', function (event) {
+        // Click Outside Listener for Mobile Menu (Simplified)
+        document.addEventListener('click', (event) => {
+            if (!stickyElement || !navbarCollapse || !navbarToggler) return;
+
             const isClickInsideNavbar = stickyElement.contains(event.target);
-            
-            if (navbarCollapse && navbarCollapse.classList.contains('show') && !isClickInsideNavbar) {
-                 // Check if toggler is visible (i.e., we are in mobile view)
-                 if (navbarToggler && getComputedStyle(navbarToggler).display !== 'none') {
-                    // Use Bootstrap's Collapse instance to hide it properly
-                    var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                    if (bsCollapse) {
-                        bsCollapse.hide();
-                    } else {
-                         // Fallback if instance not found (less ideal)
-                        navbarToggler.click(); 
-                    }
-                 }
+            const isTogglerVisible = getComputedStyle(navbarToggler).display !== 'none';
+            const isNavbarShown = navbarCollapse.classList.contains('show'); // Check if menu is currently open
+
+            // Close if toggler is visible, menu is shown, and click is outside
+            if (isTogglerVisible && isNavbarShown && !isClickInsideNavbar) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
             }
         });
-        // -----------------------------------
 
-        // Run handleScroll once on load *after* finding H1s and setting up click listener
-        handleScroll(); 
-    }); 
+        // Attach the INSTANT scroll listener for shrinking
+        window.addEventListener('scroll', updateHeaderShrinkState);
 
-    // Add scroll listener separately
-    window.addEventListener('scroll', handleScroll);
+        // Attach the THROTTLED scroll listener for title/menu actions
+        window.addEventListener('scroll', throttledScrollHandler);
+
+        // Initial calls to set state correctly on load
+        updateHeaderShrinkState(); // Set initial shrink state immediately
+        setTimeout(handleScrollActions, 50); // Set initial title/menu state after short delay
+
+    });
 
 </script>
 

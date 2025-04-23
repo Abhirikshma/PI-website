@@ -23,38 +23,10 @@ include($headerInc);
 		<br/>
 		<h1 class="western" style="text-align: center;">Welcome to Prof. Schöning's High Energy  Group</h1> 
 		
-		<!-- Collage of our pictures -->
-		<div class="row" style="text-align: center;" id="image-container">
-			<script>
-			// Fetch the list of images from the PHP script and loop over them to show collage
-				fetch("<?php echo dirname($subpath);?>/assets/inc/read_images.php")	
-				.then(response => response.json())
-				.then(images => {
-					const container = document.getElementById('image-container');
-					// Empty space on the sides of the collage
-					container.style.marginLeft = '20%';
-					container.style.marginRight = '20%';
-
-					images.forEach(image => {
-						const imageElement = document.createElement('a');
-						imageElement.href = "<?php echo dirname($subpath);?>/people.php";
-						imageElement.style.marginLeft = '2px'; // Add space on the left of each image
-						imageElement.style.marginRight = '2px'; // Add space on the right of each image
-
-		const img = document.createElement('img');
-		img.src = `<?php echo $figures;?>/group_members/${image}`;
-		img.alt = image;
-		img.style.width = '120px';  // Set the desired width for the image
-      	img.style.height = '160px'; // If you want to set the height too
-     	img.style.objectFit = 'cover';  // Ensure the image maintains aspect ratio
-
-						imageElement.appendChild(img);
-						container.appendChild(imageElement);
-					});
-				})
-				.catch(err => console.error('Error loading images:', err));
-			</script>
-		</div>
+		<?php
+            // Include the image grid component
+            include("image_grid.php"); 
+        ?>
 
 		<p style="margin-bottom: 0cm; text-align:center;">
 			Our group is involved in several research projects in the field of experimental particle physics,
