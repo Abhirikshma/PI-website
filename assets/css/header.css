@@ -192,10 +192,6 @@ header.navbar-scrolled .navbar-toggler-icon {
     /* Dropdown Menu Styling (Desktop) */
     .navbar .dropdown-menu {
         background-color: var(--PI-darkred) !important;
-        border: 2px solid white !important;
-        border-radius: 0;
-        padding-top: 0;
-        padding-bottom: 0;
         display: none; /* Hide by default */
         position: absolute; /* Ensure proper positioning */
         top: 100%; /* Position below the parent item */
@@ -214,13 +210,17 @@ header.navbar-scrolled .navbar-toggler-icon {
         font-family: Arial, Helvetica, sans-serif;
         font-weight: lighter;
         font-size: 18px;
-        padding: 10px 15px;
-        border-bottom: 1px solid var(--PI-lightred); /* Separator inside dropdown */
         white-space: nowrap; /* Prevent wrapping */
+        transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     }
-     .navbar .dropdown-menu .dropdown-item:last-child {
-         border-bottom: none;
-     }
+
+    /* Adjust Desktop dropdown item hover/focus */
+    .navbar .dropdown-menu .dropdown-item:hover,
+    .navbar .dropdown-menu .dropdown-item:focus {
+        color: var(--PI-lightred) !important;
+        background-color: rgba(255, 255, 255, 0.1) !important; /* Subtle background change */
+        text-decoration: none !important;
+    }
 }
 
 /* --- Mobile View Styling (< 992px) --- */
@@ -311,7 +311,7 @@ header.navbar-scrolled .navbar-toggler-icon {
         padding: 0; /* Remove extra padding, handled by nav-item flex */
         display: block;
         text-align: left; /* Explicitly align left */
-        width: 100%; /* Take full width within the flex container */
+        width: auto; /* Adjust width for inline layout */
         text-decoration: none !important; /* Ensure no underline */
     }
 
@@ -345,7 +345,7 @@ header.navbar-scrolled .navbar-toggler-icon {
         text-align: left; /* Explicitly align left */
     }
 
-     /* Separator AFTER the dropdown toggle link */
+    /* Separator AFTER the dropdown toggle link */
     .navbar-collapse .dropdown > .nav-link::after {
         content: "";
         position: absolute;
