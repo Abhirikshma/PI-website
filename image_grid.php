@@ -142,8 +142,12 @@
                 const totalImages = imageList.length;
                 if (cols <= 0) return;
 
-                const totalRows = Math.ceil(totalImages / cols);
-                const totalCells = totalRows * cols;
+                let totalRows = Math.ceil(totalImages / cols);
+                // Ensure totalRows is odd
+                if (totalRows % 2 === 0) {
+                    totalRows++;
+                }
+                const totalCells = totalRows * cols; // Recalculate totalCells with potentially adjusted rows
                 const centerIndex = Math.floor(totalCells / 2);
 
                 let gridItems = new Array(totalCells).fill(null);
