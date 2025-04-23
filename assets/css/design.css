@@ -22,14 +22,15 @@ h2 {
     margin-left: 0px; /* Ensures no unintended margin */
 }
 
-ul {
+.body ul {
     list-style-type: square;
-    padding-left: 5 px;
-    padding-right: 5 px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin: 10px 0;
 }
 
-li {
+/* Target li elements only within the sub-body */
+.body li {
     margin-bottom: 5px;
 }
 

@@ -1,15 +1,20 @@
 @import "common_vars.css";
 
+/* --- Header Sticky --- */
+header {
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1030; /* Ensure it's above most content */
+    background-color: var(--PI-red); /* Ensure header background matches navbar */
+}
+
 /* --- Bootstrap Navbar Customization --- */
 
 /* Navbar background and base padding */
 .navbar {
     background-color: var(--PI-red) !important;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    position: sticky; /* Make navbar sticky */
-    top: 0; /* Stick to the top */
-    z-index: 1030; /* Ensure it's above most content (Bootstrap default for navbars) */
+    padding-top: 5px;
+    padding-bottom: 5px;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out; /* Smooth transition */
 }
 
@@ -17,16 +22,52 @@
 .navbar-brand img {
     height: 60px; /* Match original logo height */
     transition: height 0.3s ease-in-out; /* Smooth transition for logo */
+    vertical-align: middle; /* Align logo vertically */
+}
+
+/* Style the logo group container */
+.logo-group {
+    display: flex; /* Default display for desktop (can be overridden in mobile) */
+    align-items: center;
+}
+
+/* Adjust spacing between logos if needed */
+.logo-group .navbar-brand:not(:last-child) {
+    margin-right: 10px; /* Add space between logos */
+}
+
+/* Page Title Placeholder */
+#navbar-page-title {
+    color: white;
+    font-size: 1.1em; /* Adjust size as needed */
+    font-weight: normal;
+    display: none; /* Hidden by default */
+    vertical-align: middle; /* Align with logo */
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in */
+    cursor: default; /* Default cursor */
+    line-height: 1.0;
+}
+
+/* Add pointer cursor when the title is clickable */
+#navbar-page-title.clickable-title {
+    cursor: pointer;
 }
 
 /* --- Scrolled State --- */
-.navbar-scrolled {
-    padding-top: 5px !important; /* Reduced padding when scrolled */
-    padding-bottom: 5px !important; /* Reduced padding when scrolled */
+header.navbar-scrolled .navbar {
+    padding-top: 0px !important; /* Reduced padding when scrolled */
+    padding-bottom: 0px !important; /* Reduced padding when scrolled */
 }
 
-.navbar-scrolled .navbar-brand img {
+header.navbar-scrolled .navbar .navbar-brand img {
     height: 40px !important; /* Reduced logo height when scrolled */
+}
+
+/* Show page title when scrolled */
+header.navbar-scrolled #navbar-page-title {
+    display: inline-block; /* Show the title */
+    opacity: 1; /* Fade in */
 }
 
 /* Navbar Link base styles (Desktop and Mobile) */
@@ -35,11 +76,11 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 20px;  /* Padding-left adjusted per view */
     padding-right: 20px; /* Padding-right adjusted per view */
-    /* Padding-left/right adjusted per view */
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Add transitions */
 }
 
 /* Navbar Link hover/focus color - remove underline and exclude dropdown-toggle */
@@ -70,10 +111,24 @@
 /* Hamburger Button Color (Mobile view) */
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5) !important;
+    padding: 0.25rem 0.5rem; /* Default padding */
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.6em; /* Default icon size */
+    height: 1.6em; /* Default icon size */
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition for icon size */
 }
+
+/* --- Scrolled State specific styles for Toggler --- */
+header.navbar-scrolled .navbar-toggler {
+    /* Remove padding change - keep it same as default */
+}
+header.navbar-scrolled .navbar-toggler-icon {
+    width: 1em; /* Reduced icon size */
+    height: 1em; /* Reduced icon size */
+}
+/* --- End Scrolled State specific styles --- */
 
 /* Remove dropdown arrow globally */
 .dropdown-toggle::after {
@@ -81,19 +136,38 @@
 }
 
 /* --- Desktop View Styling (>= 992px) --- */
-@media (min-width: 992px) {
+@media (min-width: 992px) { /* Changed from 1050px */
+    /* Align nav items vertically */
+    .navbar-nav {
+        display: flex;
+        align-items: center; /* Vertically center items in the flex container */
+    }
+
     /* Standard padding for links */
     .navbar .navbar-nav .nav-link {
         padding-left: 20px;  /* Reset to original padding */
         padding-right: 20px; /* Reset to original padding */
         text-align: center;
+        display: flex; /* Use flex for centering text within link if needed */
+        align-items: center; /* Center text vertically within link */
+        justify-content: center; /* Center text horizontally within link */
+        height: 100%; /* Ensure link takes full height of nav-item */
     }
+
+    /* --- Scrolled State specific styles for Desktop Nav Links --- */
+    header.navbar-scrolled .navbar .navbar-nav .nav-link {
+        padding-top: 0px; /* Reduce top padding */
+        padding-bottom: 0px; /* Reduce bottom padding */
+    }
+    /* --- End Scrolled State specific styles --- */
 
     /* Add margin to nav-items for increased spacing */
     .navbar-nav .nav-item {
         position: relative; /* Needed for ::after positioning */
         margin-left: 15px; /* Add space between items */
         margin-right: 15px; /* Add space between items */
+        display: flex; /* Ensure nav-item itself is a flex container */
+        align-items: center; /* Center its content (the nav-link) */
     }
 
     /* Make dropdown toggle clickable again only for desktop hover */
@@ -151,9 +225,68 @@
 
 /* --- Mobile View Styling (< 992px) --- */
 @media (max-width: 991.98px) {
+    /* Ensure container-fluid manages flex items correctly */
+    .navbar > .container-fluid {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping so collapse goes below */
+        align-items: center; /* Keep items vertically aligned */
+    }
+
+    /* Style the logo group for mobile */
+    .logo-group {
+        display: flex; /* Ensure flex display */
+        align-items: center; /* Vertically align logos */
+        margin-right: 0; 
+        flex-shrink: 0; /* Prevent logo group from shrinking */
+        /* Ensure it stays on the first line */
+        flex-basis: auto; 
+    }
+
+    /* Ensure logos don't have extra margins pushing things */
+    .logo-group .navbar-brand {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-right: 5px; /* Adjust spacing between logos for mobile */
+    }
+    .logo-group .navbar-brand:last-child {
+        margin-right: 0; /* No margin on the last logo */
+    }
+
+    /* Adjust logo image height specifically for mobile if needed */
+    .logo-group .navbar-brand img {
+         height: 50px; /* Slightly smaller initial height for mobile */
+    }
+
+    /* Adjust title margin and flex properties */
+     #navbar-page-title {
+        margin-left: 15px; /* Add some space between logo group and title */
+        margin-right: 10px; /* Add some space before the toggler */
+        /* Base styles - hidden by default, alignment set globally */
+        flex-grow: 1; /* Allow title to take available space */
+        flex-shrink: 1; /* Allow title to shrink */
+        min-width: 0; /* IMPORTANT: Allows shrinking below content size for wrapping */
+        text-align: left; /* Align wrapped text to the left */
+        /* Ensure it stays on the first line */
+        flex-basis: 0; 
+    }
+
+    /* Adjust toggler flex property */
+    .navbar-toggler {
+        flex-shrink: 0; /* Prevent toggler from shrinking */
+        margin-left: auto; /* Push toggler to the far right */
+         /* Ensure it stays on the first line */
+        flex-basis: auto;
+    }
+
     /* Ensure left alignment in collapsed state */
     .navbar-collapse .navbar-nav {
         align-items: flex-start; /* Align items to the start (left) */
+    }
+
+    /* Ensure the collapse container takes full width and wraps below */
+    .navbar-collapse {
+        width: 100%;
+        flex-basis: 100%; /* Force onto next line */
     }
 
     /* Reset padding/borders for nav items in the collapse menu */
@@ -162,7 +295,6 @@
         border-top: 1px solid rgba(255, 255, 255, 0.2); /* Separator line */
         width: 100%; /* Ensure items take full width initially */
         text-align: left; /* Ensure text within items is left-aligned */
-        /* Ensure consistent vertical alignment for non-flex items */
         display: flex; /* Use flex for all items for consistency */
         align-items: center; /* Vertically center content */
         flex-wrap: wrap; /* Allow wrapping */
@@ -175,25 +307,30 @@
     .navbar-collapse .navbar-nav > .nav-item:not(.dropdown) > .nav-link {
         color: white !important;
         font-size: 18px;
-        font-weight: lighter;
+        font-weight: normal; /* Changed from lighter */
         padding: 0; /* Remove extra padding, handled by nav-item flex */
         display: block;
         text-align: left; /* Explicitly align left */
         width: 100%; /* Take full width within the flex container */
+        text-decoration: none !important; /* Ensure no underline */
+    }
+
+    /* Add hover/focus for non-dropdown links */
+    .navbar-collapse .navbar-nav > .nav-item:not(.dropdown) > .nav-link:hover,
+    .navbar-collapse .navbar-nav > .nav-item:not(.dropdown) > .nav-link:focus {
+        color: var(--PI-lightred) !important;
+        background-color: transparent !important;
     }
 
     /* Style the dropdown container (.nav-item) using Flexbox */
     .navbar-collapse .nav-item.dropdown {
-        /* display: flex; */ /* Already set on all .nav-item */
-        /* flex-wrap: wrap; */ /* Already set on all .nav-item */
         align-items: center; /* Vertically center items */
-        /* padding: 10px 20px; */ /* Already set on all .nav-item */
         justify-content: flex-start; /* Align content to the left */
     }
 
     /* Style the dropdown toggle link within the flex container */
     .navbar-collapse .dropdown > .nav-link {
-        display: inline-block;
+        display: inline;
         width: auto;
         border-top: none;
         padding: 0; /* Remove padding */
@@ -202,7 +339,7 @@
         padding-right: 12px; /* Space for separator */
         color: white !important;
         font-size: 18px;
-        font-weight: lighter;
+        font-weight: normal; /* Changed from lighter */
         pointer-events: none; /* Ensure disabled in mobile */
         cursor: default; /* Ensure default cursor in mobile */
         text-align: left; /* Explicitly align left */
@@ -220,14 +357,24 @@
         background-color: rgba(255, 255, 255, 0.5);
     }
 
-    /* Style the dropdown menu container (inline within flex) */
+    /* Style the dropdown menu container - Use inline-flex */
     .navbar-collapse .dropdown-menu {
-        display: contents; /* Treat children as direct flex items of .nav-item.dropdown */
+        display: inline-flex !important; /* Use inline-flex for horizontal items */
+        flex-wrap: wrap; /* Allow wrapping */
+        align-items: center; /* Align items vertically */
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important; /* Reset margin */
+        margin-top: 5px; /* Add a small gap below the toggle link */
+        width: auto !important;
+        box-shadow: none !important;
+        position: static !important; /* Keep in flow */
     }
 
     /* Style individual dropdown items for horizontal layout */
     .navbar-collapse .navbar-nav .dropdown-item {
-        display: inline-block; /* Keep inline-block for spacing/separator */
+        display: inline; /* Keep inline-block for spacing/separator */
         padding: 3px 8px; /* Adjust padding for height */
         margin-right: 5px; /* Reduced space between items */
         margin-bottom: 5px; /* Space if wrapping */
@@ -235,7 +382,7 @@
         border: none;
         color: white !important;
         font-size: 16px; /* Slightly smaller for horizontal fit */
-        font-weight: lighter;
+        font-weight: normal; /* Changed from lighter */
         position: relative;
         padding-right: 10px; /* Space for separator */
         background-color: var(--PI-darkred); /* Darker background */
@@ -256,11 +403,25 @@
         background-color: rgba(255, 255, 255, 0.4); /* Slightly lighter separator */
     }
 
-    /* Adjust hover/focus for dropdown items */
+    /* Adjust hover/focus for dropdown items - Match non-dropdown links */
     .navbar-collapse .navbar-nav .dropdown-item:hover,
     .navbar-collapse .navbar-nav .dropdown-item:focus {
-        background-color: var(--PI-red) !important; /* Use main red for hover */
-        color: white !important;
+        background-color: transparent !important; /* Keep background transparent */
+        color: var(--PI-lightred) !important; /* Use light red for text hover */
         text-decoration: none !important; /* Ensure no underline */
     }
+
+    /* --- Scrolled State specific styles for Mobile --- */
+    header.navbar-scrolled .logo-group .navbar-brand img {
+        height: 35px !important; /* Reduced logo height when scrolled in mobile */
+    }
+
+    /* Allow title to wrap when shown in scrolled mobile view */
+    header.navbar-scrolled #navbar-page-title {
+         white-space: normal; /* Allow wrapping */
+         vertical-align: middle; /* Align vertically */
+         display: inline-block; /* Keep display as inline-block or block */
+         /* Optional: Add a max-width if needed, e.g., max-width: 60%; */ /* Removed max-width constraint */
+    }
+    /* --- End Scrolled State specific styles --- */
 }

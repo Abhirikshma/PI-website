@@ -2,6 +2,8 @@
 $subpath = dirname($_SERVER['REQUEST_URI']);
 $incpath = "../assets/inc";
 include($incpath . "/config.php");
+$subPageLogo = $figures . "/ATLAS/ATLAS_logo_white.svg"; 
+$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
 include($headerInc);
 ?>
 

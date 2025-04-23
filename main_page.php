@@ -12,7 +12,6 @@ include($headerInc);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PI Main webpage</title>
 	<!-- Include style file -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
 	<script type="text/javascript" async
 	  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
@@ -134,8 +133,6 @@ include($headerInc);
 	<!-- Load Javascript to toggle buttons visibility -->
 	<script type="text/javascript" src="<?php echo $buttonsJs;?>"></script>
 	</div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

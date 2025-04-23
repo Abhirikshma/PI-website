@@ -2,6 +2,9 @@
 $subpath = dirname(dirname($_SERVER['REQUEST_URI']));
 $incpath = "../../assets/inc";
 include($incpath . "/config.php");
+// Define the subpage logo path and link before including the header
+$subPageLogo = $figures . "/mu3e/mu3e_logo_white.svg"; 
+$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
 include($headerInc);
 ?>
 
