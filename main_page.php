@@ -8,6 +8,7 @@ include($headerInc);
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
+	<title>HE Group</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PI Main webpage</title>
@@ -34,6 +35,7 @@ include($headerInc);
             This includes the participation in the ATLAS experiment at the Large Hadron Collider (LHC) at CERN,
             the Mu3e experiment at PSI and the development of new high resolution Silicon detector technologies.
 		</p>
+		<br/>
 	
 		<h2 style="text-align: center;">Our Research Subgroups</h2>
 		<!-- Dropdown menu with 3 buttons for the research subgroups -->	
@@ -88,7 +90,7 @@ include($headerInc);
     			</div>
 			</div>
 		</div>
-    
+		<br/>
 		<div class="content"> <!-- Put in a new div to ensure this is pushed down when the buttons are opened -->
 			<h2 style="text-align: center;"> News</h2>
 			<ul style="list-style-type: none; "> 
