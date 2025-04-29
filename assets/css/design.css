@@ -96,26 +96,7 @@ a:hover {
     font-size: 0.9em;
     color: gray;
 }
-/* Blocks in sub-pages */
-.sub-block-content {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--PI-sand);
-    padding-top: var(--pad-top)!important;
-    padding-bottom: var(--pad-bottom);
-    padding-left: var(--pad-left);
-    padding-right: var(--pad-right);
-    border-block: var(--border-width) solid var(--PI-darkred);
-    text-align: justify;
-    flex-wrap: wrap;
-}
-.sub-block-image{
-    margin: auto;
-    width: 40%;
-    min-width: calc(0.2*var(--page-width));
-    padding-left: var(--pad-left)!important;
-    flex-grow: 1;
-}
+
 /* Dropdown button */
 .dropdown-btn {
     height: var(--dropdown-button-height);
@@ -173,7 +154,7 @@ a:hover {
 }
 
 /* subbody width is locked to 70% on Desktop */
-@media (min-width: 969px) {
+@media (min-width: 1131px) {
     .sub-body {
         width: var(--page-width); /* Adjust width as needed */
         max-width: 1500px; /* Prevents it from getting too wide */
@@ -183,10 +164,30 @@ a:hover {
         box-shadow: 0px 0px 10px var(--shadow-color); /* Optional: Adds a shadow */
         text-align: left; /* Keeps text left-aligned */
     }
+    /* Blocks in sub-pages */
+    .sub-block-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--PI-sand);
+        padding-top: var(--pad-top)!important;
+        padding-bottom: var(--pad-bottom);
+        padding-left: var(--pad-left);
+        padding-right: var(--pad-right);
+        border-block: var(--border-width) solid var(--PI-darkred);
+        text-align: justify;
+        flex-wrap: wrap;
+    }
+    .sub-block-image{
+        margin: auto;
+        width: 40%;
+        min-width: calc(0.2*var(--page-width));
+        padding-left: var(--pad-left)!important;
+        flex-grow: 1;
+    }
 }
 
 /* Changes for Mobile */
-@media (max-width: 968px) {
+@media (max-width: 1130px) {
     .sub-body {
         width: auto; /* Adjust width as needed */
         max-width: 1500px; /* Prevents it from getting too wide */
@@ -220,12 +221,32 @@ a:hover {
         left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
         transform: translateX(-50%); /* Shift box back by half its width to center */
         height: calc(1.1*var(--page-width)); /* here page width is low, so increase multiplication factor */
-        width: 90vw; /* Keeps empty space on the left and right */
+        width: 302%; /* Keeps empty space on the left and right */
         z-index: 1;
         border: var(--border-width) solid var(--PI-darkred);
         border-radius: var(--border-radius);
         box-sizing: border-box;
         overflow-y: auto; /* Make the dropdown content scrollable if it exceeds the height */
+    }
+    /* Blocks in sub-pages */
+    .sub-block-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--PI-sand);
+        padding-top: var(--pad-top)!important;
+        padding-bottom: var(--pad-bottom);
+        padding-left: var(--pad-left);
+        padding-right: var(--pad-right);
+        border-block: var(--border-width) solid var(--PI-darkred);
+        text-align: justify;
+        flex-wrap: wrap;
+    }
+    .sub-block-image{
+        margin: auto;
+        width: 60%;
+        max-width: 550px;
+        padding-left: var(--pad-left)!important;
+        flex-grow: 1;
     }
 }
 /* edge case */
@@ -244,5 +265,25 @@ a:hover {
         border-radius: 5px;
         box-sizing: border-box;
         overflow-y: auto; /* Make the dropdown content scrollable if it exceeds the height */
+    }
+    /* Blocks in sub-pages */
+    .sub-block-content {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--PI-sand);
+        padding-top: var(--pad-top)!important;
+        padding-bottom: var(--pad-bottom);
+        padding-left: var(--pad-left);
+        padding-right: var(--pad-right);
+        border-block: var(--border-width) solid var(--PI-darkred);
+        text-align: justify;
+        flex-wrap: wrap;
+    }
+    .sub-block-image{
+        margin: auto;
+        width: 40%;
+        min-width: calc(0.2*var(--page-width));
+        padding-left: var(--pad-left)!important;
+        flex-grow: 1;
     }
 }

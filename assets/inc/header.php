@@ -74,7 +74,7 @@
                         <a class="nav-link" href="<?php echo dirname($subpath);?>/people.php">People</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo dirname($subpath);?>/positions.php">Theses Opportunities</a>
+                        <a class="nav-link" href="<?php echo dirname($subpath);?>/positions.php">Theses&nbsp;Opportunities</a>
                     </li>
                 </ul>
             </div>
