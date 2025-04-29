@@ -107,6 +107,7 @@ include($headerInc);
                 onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_phase2.php';">More Details >>
                 </button>
             </p>
+            </div>
         </ul>
 <!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
 
