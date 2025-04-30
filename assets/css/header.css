@@ -20,7 +20,7 @@ header {
 
 /* Navbar Brand (Logo) */
 .navbar-brand img {
-    height: 60px; /* Match original logo height */
+    height: 50px; /* Set base initial height */
     transition: height 0.3s ease-in-out; /* Smooth transition for logo */
     vertical-align: middle; /* Align logo vertically */
 }
@@ -61,7 +61,7 @@ header.navbar-scrolled .navbar {
 }
 
 header.navbar-scrolled .navbar .navbar-brand img {
-    height: 40px !important; /* Reduced logo height when scrolled */
+    height: 35px !important; /* Reduced logo height when scrolled */
 }
 
 /* Show page title when scrolled */
@@ -112,6 +112,7 @@ header.navbar-scrolled #navbar-page-title {
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5) !important;
     padding: 0.25rem 0.5rem; /* Default padding */
+    display: block; /* Ensure it's visible by default (mobile-first) */
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
@@ -135,12 +136,27 @@ header.navbar-scrolled .navbar-toggler-icon {
     display: none !important;
 }
 
-/* --- Desktop View Styling (>= 992px) --- */
+/* --- Desktop View Styling (>= 1131px) --- */
 @media (min-width: 1131px) { /* Reverted from 1440px */
+    /* Hide the toggler button */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Force the collapsible content to be visible and flex */
+    .navbar-collapse {
+        display: flex !important; /* Override Bootstrap's default */
+        flex-basis: auto; /* Allow it to take natural width */
+        width: auto; /* Override potential 100% width from mobile */
+    }
+
     /* Align nav items vertically */
     .navbar-nav {
         display: flex;
+        flex-direction: row; /* Ensure horizontal layout */
         align-items: center; /* Vertically center items in the flex container */
+        margin-left: auto !important; /* Replicate ms-auto effect */
+        margin-bottom: 0 !important; /* Remove bottom margin */
     }
 
     /* Standard padding for links */
@@ -192,18 +208,27 @@ header.navbar-scrolled .navbar-toggler-icon {
     /* Dropdown Menu Styling (Desktop) */
     .navbar .dropdown-menu {
         background-color: var(--PI-darkred) !important;
-        display: none; /* Hide by default */
+        display: block; /* Keep it in the layout */
+        visibility: hidden; /* Hide visually and from interactions */
+        opacity: 0; /* Start fully transparent */
         position: absolute; /* Ensure proper positioning */
         top: 100%; /* Position below the parent item */
         left: 0; /* Align with the left edge of the parent */
         min-width: 100%; /* Ensure dropdown is at least as wide as the parent */
         z-index: 1000; /* Ensure dropdown appears above other content */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Add shadow to desktop dropdown */
+        transform: translateY(10px); /* Start slightly lower */
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0s linear 0.2s; /* Add transitions, delay visibility change */
+        pointer-events: none; /* Prevent interaction when hidden */
     }
 
     /* Show dropdown on hover */
     .navbar .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
+        visibility: visible; /* Make visible */
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to final position */
+        transition-delay: 0s; /* Apply visibility change immediately on hover */
+        pointer-events: auto; /* Allow interaction when visible */
     }
 
     .navbar .dropdown-menu .dropdown-item {
@@ -224,7 +249,7 @@ header.navbar-scrolled .navbar-toggler-icon {
     }
 }
 
-/* --- Intermediate View Styling (992px to 1439.98px) --- */
+/* --- Intermediate View Styling (1131px to 1400px) --- */
 /* Hide title specifically in this range when scrolled */
 @media (min-width: 1131px) and (max-width: 1400px) {
     header.navbar-scrolled #navbar-page-title {
@@ -232,8 +257,14 @@ header.navbar-scrolled .navbar-toggler-icon {
     }
 }
 
-/* --- Mobile View Styling (< 992px) --- */
+/* --- Mobile View Styling (< 1131px) --- */
 @media (max-width: 1130.98px) { /* Reverted from 1439.98px */
+    /* Ensure toggler is visible */
+    .navbar-toggler {
+        display: block; /* Or inline-block if needed */
+    }
+
+    /* Ensure collapse behavior works */
     /* Ensure container-fluid manages flex items correctly */
     .navbar > .container-fluid {
         display: flex;
@@ -261,14 +292,9 @@ header.navbar-scrolled .navbar-toggler-icon {
         margin-right: 0; /* No margin on the last logo */
     }
 
-    /* Adjust logo image height specifically for mobile if needed */
-    .logo-group .navbar-brand img {
-         height: 50px; /* Slightly smaller initial height for mobile */
-    }
-
     /* Adjust title margin and flex properties */
      #navbar-page-title {
-        margin-left: 15px; /* Add some space between logo group and title */
+        margin-left: 25px; /* Further increased space between logo group and title */
         margin-right: 10px; /* Add some space before the toggler */
         /* Base styles - hidden by default, alignment set globally */
         flex-grow: 1; /* Allow title to take available space */
@@ -290,12 +316,15 @@ header.navbar-scrolled .navbar-toggler-icon {
     /* Ensure left alignment in collapsed state */
     .navbar-collapse .navbar-nav {
         align-items: flex-start; /* Align items to the start (left) */
+        /* margin-left: 0 !important; Override potential ms-auto from desktop */
     }
 
     /* Ensure the collapse container takes full width and wraps below */
     .navbar-collapse {
         width: 100%;
         flex-basis: 100%; /* Force onto next line */
+        /* Bootstrap's .collapse class will handle display: none initially */
+        /* Bootstrap's JS will handle display during/after animation */
     }
 
     /* Reset padding/borders for nav items in the collapse menu */

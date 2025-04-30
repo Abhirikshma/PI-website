@@ -15,7 +15,7 @@
 
 <header>
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light"> <!-- Adjust classes (e.g., navbar-dark bg-dark) as needed -->
+    <nav class="navbar navbar-light"> <!-- Removed navbar-expand-lg -->
         <div class="container-fluid"> <!-- Use container-fluid for full width -->
             <!-- Group logos together -->
             <div class="logo-group"> 
@@ -43,7 +43,7 @@
 
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Added ms-auto back -->
+                <ul class="navbar-nav ms-auto mb-2"> <!-- Keep ms-auto and mb-2 for now -->
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo dirname($subpath);?>/main_page.php">Home</a>
                     </li>
