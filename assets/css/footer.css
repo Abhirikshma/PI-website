@@ -1,19 +1,50 @@
 @import "common_vars.css";
 
+/* Contact section styling for the footer - more compact */
+.contact-role {
+    min-width: 100px; /* Reduced from 110px */
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px; /* Reduced size */
+}
+
+.contact-email {
+    text-decoration: none;
+    font-size: 14px; /* Reduced size */
+    white-space: nowrap; /* Prevent breaking between text and icon */
+    display: inline-flex; /* Use inline-flex to keep items aligned */
+    align-items: center; /* Vertically align text and icon */
+}
+
+.contact-email:hover {
+    color: var(--PI-darkred);
+}
+
+.contact-email-icon {
+    color: var(--PI-darkred);
+    font-size: 0.80em;
+    margin-left: 5px;
+    margin-bottom: -0.2em;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
 .tab-bar-footer {
     clear: both;
     background-color: var(--PI-sand); 
     padding: 0px 0;
-    overflow: hidden;/*ensure that the container will wrap around the floated elements inside it*/
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align children to bottom */
 }
 
 .tab-bar-footer-left {
-    float: left; /* Light red */
     padding: 0px 0;
     margin: 2%;
     text-align: left;
     color: black;
-    font-size: 16px;
+    flex: 1; /* Take up available space but allow logo to have needed space */
+    max-width: 60%; /* Limit width to leave more space for logo */
 }
 
 .tab-bar-footer-left a {
@@ -21,10 +52,48 @@
 }
 
 .tab-bar-footer-right {
-    float: right; /* Light red */
     padding: 0px 0;
     margin: 2%;
-    text-align: right; 
+    text-align: right;
+    align-self: flex-end; /* Align to bottom of flex container */
+    display: flex;
+    align-items: flex-end; /* Align content to bottom */
+}
+
+/* Remove table styling that might be interfering with alignment */
+.tab-bar-footer-right table,
+.tab-bar-footer-right tr,
+.tab-bar-footer-right td {
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+/* Responsive scaling for university logo */
+.tab-bar-footer-right img {
+    max-width: 35vw; /* Increased to use more available space */
+    min-width: 120px; /* Ensure logo has a minimum size */
+    max-height: 110px; /* Set maximum height to 110px */
+    height: auto;
+    display: block;
+    margin-bottom: 0px; /* Ensure no margin at bottom */
+}
+
+/* For very small screens, further reduce font sizes */
+@media (max-width: 480px) {
+    .contact-role {
+        min-width: 90px;
+        font-size: 13px;
+    }
+    
+    .contact-email {
+        font-size: 13px;
+    }
+    
+    .contact-email-icon {
+        margin-left: 5px;
+    }
 }
 
 
