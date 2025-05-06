@@ -3,8 +3,8 @@ $subpath = dirname(dirname($_SERVER['REQUEST_URI']));
 $incpath = "../../assets/inc";
 include($incpath . "/config.php");
 // Define the subpage logo path and link before including the header
-$subPageLogo = $figures . "/mu3e/mu3e_logo_white.svg"; 
-$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
+$subPageLogo = $mu3eLogo; // Use centralized mu3e logo
+$subPageLink = $mu3eMainpageURL; // Link to the current page since this is the mainpage
 include($headerInc);
 ?>
 
@@ -110,7 +110,7 @@ include($headerInc);
                 </br>
                 </br>
                 <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_phase2.php';">More Details >>
+                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_subpage/mu3e_phase2.php';">More Details >>
                 </button>
             </p>
             </div>

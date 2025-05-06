@@ -3,8 +3,8 @@ $subpath = dirname(dirname($_SERVER['REQUEST_URI']));
 $incpath = "../../assets/inc";
 include($incpath . "/config.php");
 // Define the subpage logo path and link before including the header
-$subPageLogo = $figures . "/HV-Maps/hv_maps_logo_v4.svg"; 
-$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
+$subPageLogo = $HVMapsLogo; // Use centralized HV-Maps logo
+$subPageLink = $HVMapsMainpageURL; // Link to the current page since this is the mainpage
 include($headerInc);
 ?>
 

@@ -2,8 +2,8 @@
 $subpath = dirname($_SERVER['REQUEST_URI']);
 $incpath = "../assets/inc";
 include($incpath . "/config.php");
-$subPageLogo = $figures . "/mu3e/mu3e_logo_white.svg"; 
-$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
+$subPageLogo = $mu3eLogo; // Use centralized mu3e logo
+$subPageLink = $mu3eMainpageURL; // Link to mu3e mainpage
 include($headerInc);
 ?>
 

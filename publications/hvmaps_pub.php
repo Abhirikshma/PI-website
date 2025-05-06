@@ -2,6 +2,8 @@
 $subpath = dirname($_SERVER['REQUEST_URI']);
 $incpath = "../assets/inc";
 include($incpath . "/config.php");
+$subPageLogo = $HVMapsLogo; // Use centralized HV-Maps logo
+$subPageLink = $HVMapsMainpageURL; // Link to HV-Maps mainpage
 include($headerInc);
 ?>
 

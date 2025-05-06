@@ -3,11 +3,10 @@ $subpath = dirname(dirname(dirname($_SERVER['REQUEST_URI'])));
 $incpath = "../../../assets/inc";
 include($incpath . "/config.php");
 // Define the subpage logo path and link before including the header
-$subPageLogo = $figures . "/ATLAS/ATLAS_logo_white.svg"; 
-$subPageLink = $_SERVER['REQUEST_URI']; // Link to the current page
+$subPageLogo = $ATLASLogo; // Use centralized ATLAS logo
+$subPageLink = $ATLASMainpageURL; // Use centralized ATLAS mainpage URL
 include($headerInc);
 ?>
-
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
