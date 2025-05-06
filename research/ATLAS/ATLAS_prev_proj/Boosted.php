@@ -33,7 +33,7 @@ include($headerInc);
         <h1 class="western">Boosted Top Quarks</h1> 
         </br>
         
-        <p style="width: 100%;object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
         The top quark is the heaviest known particle (m<sub>top</sub> &approx; 173 GeV). It is even heavier than the newly discovered Higgs boson (m<sub>Higgs</sub> &approx; 125 GeV). 
         Because of its high mass, the top quark plays an important role in both the Standard Model (in electroweak symmetry breaking, due to its large coupling to the Higgs boson) 
         and in Physics beyond the Standard Model scenarios. At the LHC, due to the large center-of-mass energy of the proton-proton collisions, top quark pairs (<span>\(t\bar{t}\)</span>) 
@@ -42,41 +42,41 @@ include($headerInc);
         </br>
         <h2 class="western">Reconstruction with the HEPTopTagger</h2> 
 
-        <p style="width: 100%;object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
         We use the <a href="./HTT.php" target="_blank" rel="noopener noreferrer">HEPTopTagger (HTT)</a> to reconstruct such boosted top quarks (\(P_T>200\) GeV) in the fully hadronic final state. 
         </p>
         </br>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10%;">
-            <img src='<?php echo $figures;?>/ATLAS/hadtopdecaygraph.png' width='33%'>
-            <img src='<?php echo $figures;?>/ATLAS/boosted.png' width='35%'>
+        <div class="image-pair">
+            <img src='<?php echo $figures;?>/ATLAS/hadtopdecaygraph.png' alt="Top quark decay">
+            <img src='<?php echo $figures;?>/ATLAS/boosted.png' alt="Boosted top quark">
         </div>
         </br>
-        <p style="object-fit: caution;  flex-grow: 1; text-align: center;">
+        <p class="caption-text">
         Top quark decaying to hadrons. \(t\rightarrow b + W(\rightarrow q\bar{q}') = b+q+\bar{q}'\), with \(q/q'=u,c,d,s,b\) (left). Sketch of a top quark decaying to hadrons, with the top quark at rest or boosted.
         </p>
         </br>
-        <p style="width: 100%;object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
         The HTT uses large jets as inputs, assuming they contain all decay products of the top quark. The substructure of the large jets is then tested for compatibility with a hadronic top decay. 
         We have tested the performance of the HTT with ATLAS data in the lepton+jets final state. Assuming one top quarks decays via \(t\rightarrow b + W (\rightarrow \mu\nu)\) we reconstruct 
         events with a muon \(\mu\), missing transverse energy (to account for the neutrino) and apply the HTT to the hadronically decaying top quark. 
         </p>
         </br>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10%;">
-            <img src='<?php echo $figures;?>/ATLAS/fig_10d.png' width='48%'>
-            <img src='<?php echo $figures;?>/ATLAS/mass_mu.png' width='35%'>
+        <div class="image-pair">
+            <img src='<?php echo $figures;?>/ATLAS/fig_10d.png' alt="Top quark candidate mass">
+            <img src='<?php echo $figures;?>/ATLAS/mass_mu.png' alt="HTT vs interactions">
         </div>
         </br>
-        <p style="object-fit: caution;  flex-grow: 1; text-align: center;">
+        <p class="caption-text">
         Top quark candidate mass, reconstructed with the HTT in lepton+jets events [<a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2015-04/">JHEP 06 (2016) 093</a>] (left). HTT 
         top quark candidate mass versus average number of interactions \(<\mu>\) for events reconstructed with the HTT in the lepton+jets final state [<a href=https://cds.cern.ch/record/1571040>ATLAS-CONF-2013-084</a>] (right).
         </p>
         </br>
-        <p style="width: 100%;object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
         The reconstructed top mass (fully hadronic!) and various control distributions are well behaved and agree with the Monte Carlo simulation within uncertainties. 
         Additionally the stability of the HTT with respect to additional proton-proton interactions, referred to as pile-up, has been tested and found to be excellent, by looking at the stability of the 
         reconstructed mass versus the average number of interactions \(<\mu>\). 
         </p>
-        <p style="width: 100%;object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
         The PI ATLAS group has been leading in using the HTT in ATLAS, e.g. by<br>
         <ul>
         <li>establishing the HTT algorithm in the ATLAS Collaboration, by showing its usability in ATLAS data and simulation,</li>

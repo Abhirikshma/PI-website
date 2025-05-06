@@ -87,7 +87,46 @@ The rest of the variables are then correctly taken care in config.php.
 
 href="<?php echo $designCss;?>
 ```
-### Icluding Latex code in php using MathJax
+
+### Common CSS Classes for Content Formatting
+
+For consistent formatting across the website, use these standard CSS classes:
+
+- **Text Content:**
+  - `.block-text`: For standard text blocks outside of flex layouts
+  - `.sub-block-text`: For text content within sub-block containers
+  - `.caption-text`: For image captions and centered explanatory text below figures
+
+- **Image Content:**
+  - `.sub-block-image`: For standard images displayed alongside text
+  - `.image-pair`: Container for displaying multiple images side-by-side that automatically wrap on small screens
+
+- **Layout Containers:**
+  - `.sub-block-content`: Flex container for displaying image+text combinations 
+
+Example usage:
+```php
+<!-- Image with text in a flex container -->
+<div class="sub-block-content">
+    <p class="sub-block-text">
+        Your paragraph content here.
+    </p>
+    <img class="sub-block-image" src="<?php echo $figures;?>/image.jpg" alt="Description">
+</div>
+
+<!-- Multiple images side by side -->
+<div class="image-pair">
+    <img src="<?php echo $figures;?>/image1.jpg" alt="Description 1">
+    <img src="<?php echo $figures;?>/image2.jpg" alt="Description 2">
+</div>
+
+<!-- Caption text for images -->
+<p class="caption-text">
+    This is a caption for the images above.
+</p>
+```
+
+### Including Latex code in php using MathJax
 LaTex code can be included by including the MathJax library in the header of the page.
 ```
 	<script type="text/javascript" async

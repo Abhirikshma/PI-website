@@ -82,6 +82,7 @@ include($headerInc);
                 The Heidelberg group is performing characterisation studies in the lab and test beam campaigns at various centers (CERN, DESY, MAMI, Paul Scherrer Institut) to evaluate the performance of the developed sensors. 
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/HV-Maps/Telescope.png" alt="telescope">
+            <!-- TODO: replace this by something one can actually read -->
         </div>
     
         </br>

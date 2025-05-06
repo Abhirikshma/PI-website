@@ -63,57 +63,58 @@ include($headerInc);
             Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
             This will require a general upgrade of the Mu3e experiment, the so-called Phase 2.
         </p>
+        
         <h2 class="western">Group Activites</h2> 
 
             <h3 class="western">MuPix Design & Testing</h3>
             <div class="sub-block-content">
-            <p class="sub-block-text" style="width: 55%;">
-                The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
-                This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
-                The MuPix, in particular, implements a minimal number of connections for powering and readout, a strategy that requires novel design features for the communication with the chip itself.
-                The Heidelberg group contributed significantly to the design of the chip and to the characterization of the several prototypes produced in the years. 
-                </br>
-                </br>
-                <button class="btn btn-danger" 
-                onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">
-                    To HV-MAPS Group <i class="fas fa-arrow-right"></i>
-                </button>
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
+                <p class="sub-block-text">
+                    The MuPix is the silicon pixel sensor developed specifically for Mu3e, based on the <b> High Voltage Monolithic Active Pixel Sensors (HV-MAPS) </b> technology. 
+                    This is one of the most promising technologies for High Energy Physics experiments as it combines high performance with low cost and high flexibility. 
+                    The MuPix, in particular, implements a minimal number of connections for powering and readout, a strategy that requires novel design features for the communication with the chip itself.
+                    The Heidelberg group contributed significantly to the design of the chip and to the characterization of the several prototypes produced in the years. 
+                    </br>
+                    </br>
+                    <button class="btn btn-danger" 
+                    onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">
+                        To HV-MAPS Group <i class="fas fa-arrow-right"></i>
+                    </button>
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
             </div>
             </br>
             <h3 class="western">Vertex Detector Development</h3>
             <div class="sub-block-content">
-            <p class="sub-block-text" style="width: 55%;">
-                The HD-PI Mu3e group is responsible for the <b>construction and commissioning of the vertex detector</b>. 
-                In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
-                A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex">
+                <p class="sub-block-text">
+                    The HD-PI Mu3e group is responsible for the <b>construction and commissioning of the vertex detector</b>. 
+                    In close cooperation with the workshop, various engineering solutions are explored for the assembly of detector components, the installation, and the connection to cooling and powering systems. 
+                    A mockup of the experiment is also available nearby the workshop, where solutions can be physically verified.
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex">
             </div>
             </br>
             <h3 class="western">Simulation Studies & Data Analysis</h3>
             <div class="sub-block-content">
-            <p class="sub-block-text" style="width: 55%;">                       
-                Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
-                The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering and hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks">
+                <p class="sub-block-text">                       
+                    Alongside intensive hardware development, comprehensive simulation studies also complement the groups activies by helping to understand any systematic effects from detector misalignment and efficiency.
+                    The group is also actively participating in improving track reconstruction by accounting for both the Multiple-Scattering and hit uncertainties aka the <b>General Triplet Track Fit</b>, while preparing the groundwork for the upcoming analysis of first data.
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks">
             </div>
             </br>
             <h3 class="western">Future-Related Research Activites</h3>
             <div class="sub-block-content">
-            <p class="sub-block-text" style="width: 55%;">
-                While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode,
-                the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed.
-                Multiple projects related to design and simulation studies, MuPix development and Vertex detector design are available for participation.
-                </br>
-                </br>
-                <button class="btn btn-danger" 
-                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_subpage/mu3e_phase2.php';">
-                    More Details <i class="fas fa-arrow-right"></i>
-                </button>
-            </p>
+                <p class="sub-block-text">
+                    While the commissioning for Phase-1 ramps up and the experiment approaches data-taking mode,
+                    the R&D for the planned Phase-2 future upgrade of the Mu3e detector is also picking up speed.
+                    Multiple projects related to design and simulation studies, MuPix development and Vertex detector design are available for participation.
+                    </br>
+                    </br>
+                    <button class="btn btn-danger" 
+                    onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_subpage/mu3e_phase2.php';">
+                        More Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </p>
             </div>
 </br>
             

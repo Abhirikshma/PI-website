@@ -38,7 +38,7 @@ include($headerInc);
 
         <h1 class="western">Mu3e Experiment Phase-II R&D</h1> 
         <h2 class="western">Phase-II Motivations</h2> 
-        <p style="object-fit: caution;  flex-grow: 1;">
+        <p class="block-text">
             To reach the ultimate sensitivity of \(\small \mathbf{B(\mu^+~\rightarrow~e^+ e^- e^+) \sim 10^{-16}}\), very high muon stopping rates of \(\small \sim 2 \cdot 10^9 /\text{s}\) are required.
             This will be achieved by the High Intensity Muon Beamline (HIMB) at PSI, which will deliver muon rates up to 10 GHz.
             To achieve this goal, the Mu3e experiment will undergo a major upgrade, the Phase-II and several R&D activities are underway.
@@ -74,10 +74,10 @@ include($headerInc);
             </br>
             <h3 class="western">Phase-II Vertex Detector & DAQ</h3>
             <div class="sub-block-content">
-            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
-                A longer Vertex detector, with at least 10 chips instead of the current six, is envisioned to be deployed for Mu3e Phase-2. Carbon fibre reinforcing structures are an ideal candidate to support the detector, while detector services will likely need a revamp & R&D in order to simplify it for future commissioning. 
-                Other possible avenues for improvement include a redesign of the High-Density Interconnects (HDIs), endpiece flexible printable circuit boards (flex PCBs) and an earlier switch to optical cables for detector communication.
-            </p>
+                <p class="sub-block-text">
+                    A longer Vertex detector, with at least 10 chips instead of the current six, is envisioned to be deployed for Mu3e Phase-2. Carbon fibre reinforcing structures are an ideal candidate to support the detector, while detector services will likely need a revamp & R&D in order to simplify it for future commissioning. 
+                    Other possible avenues for improvement include a redesign of the High-Density Interconnects (HDIs), endpiece flexible printable circuit boards (flex PCBs) and an earlier switch to optical cables for detector communication.
+                </p>
             </div>
 
 <!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
