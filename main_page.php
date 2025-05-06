@@ -28,7 +28,7 @@ include($headerInc);
             // Include the image grid component
             include("image_grid.php"); 
         ?>
-
+		<br/>
 		<p style="margin-bottom: 0cm; text-align:center;">
 			Our group is involved in several research projects in the field of experimental particle physics,
             with a focus on the study of fundamental particles and their interactions.
@@ -39,6 +39,7 @@ include($headerInc);
 	
 		<h2 style="text-align: center;">Our Research Subgroups</h2>
 		<!-- Dropdown menu with 3 buttons for the research subgroups -->	
+		<br/>
 		<div class ="dropdown-container", style="text-align: center; width: 100%;" >
 			<div class="dropdown", style="width:  33%;" >
 				<button class="dropdown-btn">Mu3e</button>
@@ -61,7 +62,7 @@ include($headerInc);
 			  <div class="dropdown", style="width: 33%;" >
     			<button class="dropdown-btn">ATLAS</button>
     			<div class="dropdown-content">
-				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php">
+				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_old.php">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
 							<img src="<?php echo $figures;?>/atlas.png" alt="atlas-exp" style="width:40%">
 							<p style="text-align: right; width: 55%;">

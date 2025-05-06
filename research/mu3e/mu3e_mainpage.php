@@ -27,39 +27,45 @@ include($headerInc);
 
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
-        
+        <p style="text-align: right; object-fit: caution;  flex-grow: 1;">
+        <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-lightred); color: var(--PI-darkred); border: none"
+                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages  >>
+            </button>
+        </p>    
+
+
         <div style="text-align: center;">
             <img src='<?php echo $figures;?>/mu3e/vertex-cad.png' width='60%' alt='mu3e_header' />
         </div>
+        </br>
 
         <h1 class="western">Mu3e @ HD-PI</h1> 
 
         <h2 class="western">The Mu3e Experiment</h2> 
-        <ul> 
-            The Mu3e Experiment aims to search for the decay of an anti-muon into an electron and a pair of positrons, \(\small{\mu^+~\rightarrow~e^+ e^- e^+}\),
+        <p style="object-fit: caution;  flex-grow: 1;">
+            The <b>Mu3e Experiment</b> aims to search for the decay of an anti-muon into an electron and a pair of positrons, \(\small{\mu^+~\rightarrow~e^+ e^- e^+}\),
             which is only foreseen in the Standard Model at a very low branching ratio \(\small{(\sim 10^{-54})}\).
             Any observations in this decay channel above the branching ratio will be a clear indicator of the violation of charged lepton flavour conservation. 
-            The experiment is actively undergoing commissioning at the Paul Scherrer Institute (PSI), in Villigen, Switzerland. 
-        </ul>
-        <ul style="text-indent:30px;"> 
+            The experiment is actively undergoing commissioning at the Paul Scherrer Institute (<a href="https://www.psi.ch/en/mu3e">PSI</a>), in Villigen, Switzerland. 
+        </p>    
+
+         <p style="object-fit: caution;  flex-grow: 1;">
             While the current experimental limit for the branching ratio of \(\small\mu^+~\rightarrow~e^+ e^- e^+\) is around \(\small 10^{-12}\), the Mu3e Experiment aims to further exclude, or observe,
             it down to a sensitivity level of \(\small 10^{-16}\).
             To accomplish this goal, new solutions must be developed, which implement the latest technologies available in the field of High Energy Physics. 
             In particular, the tracking system is made of ultra-thin pixel silicon sensors, which can reconstruct the tracks of the decayed electrons and positrons with minimal interference. 
             The Heidelberg PI group plays a leading role in the development of the experimental concept, the technical solutions and the detector design. 
             The group is responsible for the vertex detector, the innermost component of the experiment, and for many of the external services necessary for the operation of the whole system.
-        </ul>
-        <ul style="text-indent:30px;"> 
+        </p> 
+
+         <p style="object-fit: caution;  flex-grow: 1;">
             At the moment, the Phase 1 of the experiment is under construction. 
             After the construction and commissioning, physics data will be taken for two years. 
             Afterwards, the beamline will be upgraded to the High Intensity Muon Beamilne (HIMB), which will deliver muon rates up to 10 GHz. 
-            This will require a general upgrade of the Mu3e experiment, the Phase 2.
-        </ul>
-        <ul> 
-            Mu3e PSI Website: <a href="https://www.psi.ch/en/mu3e">Link</a>
-        </ul>
+            This will require a general upgrade of the Mu3e experiment, the so-called Phase 2.
+        </p>
         <h2 class="western">Group Activites</h2> 
-        <ul> 
+
             <h3 class="western">MuPix Design & Testing</h3>
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
@@ -75,7 +81,7 @@ include($headerInc);
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
             </div>
-
+            </br>
             <h3 class="western">Vertex Detector Development</h3>
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
@@ -85,7 +91,7 @@ include($headerInc);
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-vertex">
             </div>
-
+            </br>
             <h3 class="western">Simulation Studies & Data Analysis</h3>
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">                       
@@ -94,7 +100,7 @@ include($headerInc);
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/tracks.png" alt="mu3e-tracks">
             </div>
-
+            </br>
             <h3 class="western">Future-Related Research Activites</h3>
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
@@ -108,7 +114,11 @@ include($headerInc);
                 </button>
             </p>
             </div>
-        </ul>
+</br>
+            
+
+            
+
 <!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->
 
 
