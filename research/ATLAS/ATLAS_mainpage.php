@@ -101,7 +101,7 @@ include($headerInc);
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
             Our ATLAS group is working on the implementation of modern track finding methods using Graph Neural Networks (GNNs) on hardware accelerators (GPUs, FPGAs) 
-            for the Event Filter, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC).
+            for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC).
                 </br>
                 </br>
                 <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
@@ -115,7 +115,7 @@ include($headerInc);
             <div class="sub-block-content">
             <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
             Novel track fitting algorithms, like the General Triplet Track Fit, are implemented on hardware accelerators (GPUs, FPGAs) 
-            for the Event Filter, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC). 
+            for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC). 
                 </br>
                 </br>
                 <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"

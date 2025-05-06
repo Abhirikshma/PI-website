@@ -7,6 +7,8 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     --page-width: 70vw; /* Width of the page, set in units of vw so it can be used in subclasses with smaller dimension than the window */
     --dropdown-button-height: 75px;
+    --dropdown-content-height: 500px;
+    --dropdown-content-width: 303%;
     --border-width: 2px;
     --border-radius: 5px; /* Determines how round the corners are */
     --vertical-offset: 10px; /* Use this variable when the position of something below something else should be set as bottom (something else) +  offset*/

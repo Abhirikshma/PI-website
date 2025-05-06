@@ -26,11 +26,11 @@ include($headerInc);
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
 <p style="text-align: right; object-fit: caution;  flex-grow: 1;">
         <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-lightred); color: var(--PI-darkred); border: none"
-                onclick="location.href='https://www.physi.uni-heidelberg.de/Forschung/he/HVMAPS/atlas_wiki/index.php';">Internal Pages  >>
+                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages  >>
             </button>
         </p>    
 <div style="text-align: center;">
-            <img src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" width='60%' alt='mu3e_header' />
+            <img src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" width='60%' alt='HV_Maps_header' />
         </div>
         </br>
         <h1 class="western">HV-MAPS @ HD-PI</h1> 

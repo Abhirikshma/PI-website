@@ -62,10 +62,10 @@ include($headerInc);
 			  <div class="dropdown", style="width: 33%;" >
     			<button class="dropdown-btn">ATLAS</button>
     			<div class="dropdown-content">
-				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_old.php">
+				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
 							<img src="<?php echo $figures;?>/atlas.png" alt="atlas-exp" style="width:40%">
-							<p style="text-align: right; width: 55%;">
+							<p style="text-align: justify; width: 55%;">
 								The ATLAS experiment is one of the four large experiments currently conducted at the Large Hadron Collider (LHC) at CERN.
 								It is a general-purpose detector, aiming to provide precise measurements of the Standard Model's parameters and to investigate
 								BSM physics at the high energy scales reached by the LHC.
@@ -79,12 +79,12 @@ include($headerInc);
     			<div class="dropdown-content">
 				<a href="<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php">
 						<div style="display: flex; align-items: center; justify-content: space-between;">
-							<img src="<?php echo $figures;?>/mu3e.jpg" alt="hvmaps-exp" style="width:40%">
-							<p style="text-align: right; width: 55%;">
-								Mu3e is an experiment under construction at the Paul Scherrer Institute (PSI), in Villigen, Switzerland.
-								The goal is to search for the anti-muon decay into two positrons and one electron. 
-									This decay channel would violate the conservation of the Charge Lepton Flavour, which is foreseen in the Standard Model only
-							at very low branching ratios. While the current limit for the branching ratio is about, Mu3e aims to exclude it, or observe it, at a sensitivity of.
+							<img src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" alt="hvmaps-exp" style="width:40%">
+							<p style="text-align: justify; width: 55%;">
+							The High Energy of the Physics Institute is developing High Voltage – Monolithic Active Pixel Sensors (HV-MAPS) for future particle 
+							physics experiments. Pixel sensors provide spatial information at micrometer precision for particles in the momentum range from a few MeV
+							 to hundreds of GeV/c. HV-MAPS allow for particle tracking at highest rates and are easy to produce compared to standard hybrid pixel detectors. 
+							 Monolithic sensors have the additional advantage that very thin tracking modules can be built, with a radiation length of only 0.11% in case of the Mu3e experiment. 
 							</p>
 						</div>
 					</a>
