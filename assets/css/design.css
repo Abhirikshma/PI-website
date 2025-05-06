@@ -160,6 +160,37 @@ a:hover {
     margin-top: calc(var(--dropdown-bot) + var(--vertical-offset));
 }
 
+/* Bootstrap button customization */
+.btn-danger {
+    background-color: var(--PI-darkred);
+    border-color: var(--PI-darkred);
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+    background-color: #6b0000; /* Slightly darker on hover */
+    border-color: #6b0000;
+}
+
+.btn-outline-danger {
+    color: var(--PI-darkred);
+    border-color: var(--PI-darkred);
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-outline-danger:hover, .btn-outline-danger:focus {
+    background-color: var(--PI-darkred);
+    color: white;
+    border-color: var(--PI-darkred);
+}
+
+/* Add a small margin to the icons inside buttons */
+.btn i {
+    margin-left: 5px;
+}
+
 /* subbody width is locked to 70% on Desktop */
 @media (min-width: 1131px) {
     .sub-body {

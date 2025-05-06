@@ -19,7 +19,7 @@ $ATLASMainpageURL = $siteRoot . $ATLASMainpagePath;
 $mu3eMainpageURL = $siteRoot . $mu3eMainpagePath;
 $HVMapsMainpageURL = $siteRoot . $HVMapsMainpagePath;
 $ATLASLogo = $figures . "/ATLAS/ATLAS_logo_white.svg";
-$mu3eLogo = $figures . "/mu3e/mu3e-logo.png";
+$mu3eLogo = $figures . "/mu3e/mu3e_logo_white.svg";
 $HVMapsLogo = $figures . "/HV-Maps/hv_maps_logo_v4.svg";
 
 // echo $figures;

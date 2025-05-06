@@ -101,8 +101,9 @@ include($headerInc);
             Also other algorithms are being studied, e.g. Hough Transforms, or cluster triplet finding, ... 
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">Learn More >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">
+                    Learn More <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GNN.png" alt="mu3e-mupix">
@@ -118,8 +119,9 @@ include($headerInc);
             and the <a href="https://www.sciencedirect.com/science/article/pii/S016890021631138X?via%3Dihub" target="_blank" rel="noopener noreferrer">Triplet Fit</a>. 
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">Learn More >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">
+                    Learn More <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GTTF.png" alt="mu3e-mupix">

@@ -26,8 +26,8 @@ include($headerInc);
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
 
 <p style="text-align: right; object-fit: caution;  flex-grow: 1;">
-        <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-lightred); color: var(--PI-darkred); border: none"
-                onclick="location.href='https://www.physi.uni-heidelberg.de/Forschung/he/ATLAS/atlas_wiki/index.php?title=Main_Page';">Internal Pages  >>
+        <button class="btn btn-outline-danger" 
+                onclick="location.href='https://www.physi.uni-heidelberg.de/Forschung/he/ATLAS/atlas_wiki/index.php?title=Main_Page';">Internal Pages <i class="fas fa-external-link-alt"></i>
             </button>
         </p>    
         <div style="text-align: center;">
@@ -104,8 +104,9 @@ include($headerInc);
             for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC).
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">Learn More >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">
+                    Learn More <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GNN.png" alt="mu3e-mupix">
@@ -118,8 +119,9 @@ include($headerInc);
             for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC). 
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">Learn More >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">
+                    Learn More <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GTTF.png" alt="mu3e-mupix">

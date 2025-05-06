@@ -25,8 +25,8 @@ include($headerInc);
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
 <p style="text-align: right; object-fit: caution;  flex-grow: 1;">
-        <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-lightred); color: var(--PI-darkred); border: none"
-                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages  >>
+        <button class="btn btn-outline-danger" 
+                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages <i class="fas fa-external-link-alt"></i>
             </button>
         </p>    
 <div style="text-align: center;">
@@ -66,8 +66,9 @@ include($headerInc);
             The largest sensor produced so far is MuPix10 which will be used by the Mu3e experiment for constructing a large pixel tracking detector with an instrumented area of more than 1 square meter. 
             </br>
             </br>
-            <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-            onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php';">To Mu3e Group >>
+            <button class="btn btn-danger" 
+            onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php';">
+                To Mu3e Group <i class="fas fa-arrow-right"></i>
             </button>
         </p>
         <img class="sub-block-image" src="<?php echo $figures;?>/HV-Maps/Mupix10_pictures.png" alt="mupix+vertex">

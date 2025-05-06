@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Add the missing CSS links -->
     <link rel="stylesheet" href="<?php echo $headerCss;?>"> 
     <link rel="stylesheet" href="<?php echo dirname($headerCss);?>/image_grid.css"> 
@@ -27,6 +29,9 @@
                         // Determine the correct link target
                         $isCurrentPage = isset($subPageLink) && !empty($subPageLink) && ($subPageLink == $_SERVER['REQUEST_URI']);
                         $linkTarget = $isCurrentPage ? '#' : (isset($subPageLink) && !empty($subPageLink) ? $subPageLink : '#'); 
+                        
+                        // Debug the logo path (uncomment if needed)
+                        // echo "<!-- Logo path: " . $subPageLogo . " -->";
                     ?>
                     <a class="navbar-brand subpage-logo" href="<?php echo $linkTarget; ?>"> 
                         <img src="<?php echo $subPageLogo; ?>" alt="Subpage Logo" height="30"> 

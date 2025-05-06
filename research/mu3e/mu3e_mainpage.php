@@ -28,8 +28,8 @@ include($headerInc);
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
         <p style="text-align: right; object-fit: caution;  flex-grow: 1;">
-        <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-lightred); color: var(--PI-darkred); border: none"
-                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages  >>
+        <button class="btn btn-outline-danger"
+                onclick="location.href='https://physi.uni-heidelberg.de/Forschung/he/mu3e/wiki/index.php/Main_Page';">Internal Pages <i class="fas fa-external-link-alt"></i>
             </button>
         </p>    
 
@@ -75,8 +75,9 @@ include($headerInc);
                 The Heidelberg group contributed significantly to the design of the chip and to the characterization of the several prototypes produced in the years. 
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">To HV-MAPS Group >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">
+                    To HV-MAPS Group <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="mu3e-mupix">
@@ -109,8 +110,9 @@ include($headerInc);
                 Multiple projects related to design and simulation studies, MuPix development and Vertex detector design are available for participation.
                 </br>
                 </br>
-                <button class="dropdown-btn" style="height: var(--dropdown-button-height)-30px; background-color:var(--PI-darkred); color: white;"
-                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_subpage/mu3e_phase2.php';">More Details >>
+                <button class="btn btn-danger" 
+                onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_subpage/mu3e_phase2.php';">
+                    More Details <i class="fas fa-arrow-right"></i>
                 </button>
             </p>
             </div>
