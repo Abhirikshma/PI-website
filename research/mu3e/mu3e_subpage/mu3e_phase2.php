@@ -1,6 +1,6 @@
 <?php
-$subpath = dirname(dirname($_SERVER['REQUEST_URI']));
-$incpath = "../../assets/inc";
+$subpath = dirname(dirname(dirname($_SERVER['REQUEST_URI'])));
+$incpath = "../../../assets/inc";
 include($incpath . "/config.php");
 // Define the subpage logo path and link before including the header
 $subPageLogo = $mu3eLogo; // Use centralized mu3e logo
