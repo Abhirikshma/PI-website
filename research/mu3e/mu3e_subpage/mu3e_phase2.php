@@ -51,25 +51,25 @@ include($headerInc);
              https://indico.psi.ch/event/16889/contributions/56050/attachments/30033/58620/Mu3e_Phase2_intro.pdf 
              https://indico.psi.ch/event/16889/contributions/56052/attachments/30038/58628/Wengen2025.pdf -->
             <div class="sub-block-content">
-            <p style="width: 30%;object-fit: caution;  flex-grow: 1;">
-                The high muon beam rates from the HIMB will lead to an increase in the rate of accidental background events, which will be a challenge for the Mu3e Phase-II experiment.
-                To cope with the higher accidental backgrounds and to achieve about an order of magnitude higher muon stopping rates,
-                design and simulations studies for an optimal muon stopping target are required.
-                Furthermore, a detector with excellent momentum and timing resolution are needed to reduce the accidental background.
-                One possible design for such a detector is shown in the figure.
-            </p>
-            <img class="sub-block-image" src='<?php echo $figures;?>/mu3e/mu3e_phase2.png' alt='mu3e_phase2_header'/>
+                <p class="sub-block-text">
+                    The high muon beam rates from the HIMB will lead to an increase in the rate of accidental background events, which will be a challenge for the Mu3e Phase-II experiment.
+                    To cope with the higher accidental backgrounds and to achieve about an order of magnitude higher muon stopping rates,
+                    design and simulations studies for an optimal muon stopping target are required.
+                    Furthermore, a detector with excellent momentum and timing resolution are needed to reduce the accidental background.
+                    One possible design for such a detector is shown in the figure.
+                </p>
+                <img class="sub-block-image" src='<?php echo $figures;?>/mu3e/mu3e_phase2.png' alt='mu3e_phase2_header'/>
             </div>
             </br>
             <h3 class="western">MuPix 2.0</h3>
             <div class="sub-block-content">
-            <p style="width: 30%;object-fit: caution;  flex-grow: 1;">
-                In order to withstand the higher rate of the upcoming HIMB beamline, more robust silicon sensors need to be developed in order to exploit the full potential for physics discovery.
-                Three types of sensors, generally with lower power consumption and serial powering but with different requirements need to be produced: 
-                more granular pixel sensors with multiple 10 Gbps links for the Vertex layers, ultra fast timing sensors with at least 100 ps timing resolution
-                for the timing layer replacing the scintillating fibres, and improved time resolution down to 1 ns for the Outer Pixel layers.
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/phase2-sensors.png" alt="mu3e-p2-sensors">
+                <p class="sub-block-text">
+                    In order to withstand the higher rate of the upcoming HIMB beamline, more robust silicon sensors need to be developed in order to exploit the full potential for physics discovery.
+                    Three types of sensors, generally with lower power consumption and serial powering but with different requirements need to be produced: 
+                    more granular pixel sensors with multiple 10 Gbps links for the Vertex layers, ultra fast timing sensors with at least 100 ps timing resolution
+                    for the timing layer replacing the scintillating fibres, and improved time resolution down to 1 ns for the Outer Pixel layers.
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/mu3e/phase2-sensors.png" alt="mu3e-p2-sensors">
             </div>
             </br>
             <h3 class="western">Phase-II Vertex Detector & DAQ</h3>

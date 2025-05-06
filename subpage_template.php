@@ -42,7 +42,7 @@ include($headerInc);
         <ul> 
             <h3 class="western">Sub Sub Heading</h3>
             <div class="sub-block-content">
-                <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
+                <p class="sub-block-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio.
                     Vitae scelerisque enim ligula venenatis dolor.

@@ -25,7 +25,7 @@ include($headerInc);
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
 
-<p style="text-align: right; object-fit: caution;  flex-grow: 1;">
+<p style="text-align: right;">
         <button class="btn btn-outline-danger" 
                 onclick="location.href='https://www.physi.uni-heidelberg.de/Forschung/he/ATLAS/atlas_wiki/index.php?title=Main_Page';">Internal Pages <i class="fas fa-external-link-alt"></i>
             </button>
@@ -99,32 +99,32 @@ include($headerInc);
         <h2 class="western">Group Activites</h2> 
         <h3 class="western">Track Finding</h3>
             <div class="sub-block-content">
-            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
-            Our ATLAS group is working on the implementation of modern track finding methods using Graph Neural Networks (GNNs) on hardware accelerators (GPUs, FPGAs) 
-            for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC).
-                </br>
-                </br>
-                <button class="btn btn-danger" 
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">
-                    Learn More <i class="fas fa-arrow-right"></i>
-                </button>
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GNN.png" alt="mu3e-mupix">
+                <p class="sub-block-text">
+                    Our ATLAS group is working on the implementation of modern track finding methods using Graph Neural Networks (GNNs) on hardware accelerators (GPUs, FPGAs) 
+                    for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC).
+                    </br>
+                    </br>
+                    <button class="btn btn-danger" 
+                    onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GNN_Finding.php';">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GNN.png" alt="mu3e-mupix">
             </div>
             </br>
             <h3 class="western">Track Fitting</h3>
             <div class="sub-block-content">
-            <p style="width: 55%;object-fit: caution;  flex-grow: 1;">
-            Novel track fitting algorithms, like the General Triplet Track Fit, are implemented on hardware accelerators (GPUs, FPGAs) 
-            for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC). 
-                </br>
-                </br>
-                <button class="btn btn-danger" 
-                onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">
-                    Learn More <i class="fas fa-arrow-right"></i>
-                </button>
-            </p>
-            <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GTTF.png" alt="mu3e-mupix">
+                <p class="sub-block-text">
+                    Novel track fitting algorithms, like the General Triplet Track Fit, are implemented on hardware accelerators (GPUs, FPGAs) 
+                    for the <a href="ATLAS_subpage/Event_Filter.php">Event Filter</a>, part of the Trigger and Data Acquisition (TDAQ) system of the ATLAS experiment at the High-Luminosity Large Hadron Collider (HL-LHC). 
+                    </br>
+                    </br>
+                    <button class="btn btn-danger" 
+                    onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_subpage/GTTF.php';">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </button>
+                </p>
+                <img class="sub-block-image" src="<?php echo $figures;?>/ATLAS/GTTF.png" alt="mu3e-mupix">
             </div>
             </br>
             

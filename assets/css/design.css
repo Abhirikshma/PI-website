@@ -191,6 +191,60 @@ a:hover {
     margin-left: 5px;
 }
 
+/* Add a new CSS class to handle special cases where we want images side-by-side */
+.image-pair {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.image-pair img {
+    flex: 1 1 280px; /* Allow growing but set minimum width */
+    min-width: 280px;
+    object-fit: contain;
+    max-width: 350px; /* Prevent images from getting too large */
+}
+
+.block-text {
+    object-fit: caution;
+    flex-grow: 1;
+}
+
+/* Make sub-block-content styling consistent across all screen sizes */
+.sub-block-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--PI-sand);
+    padding-top: var(--pad-top)!important;
+    padding-bottom: var(--pad-bottom);
+    padding-left: var(--pad-left);
+    padding-right: var(--pad-right);
+    border-block: var(--border-width) solid var(--PI-darkred);
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap for better spacing when wrapping */
+}
+
+/* New class for content paragraphs in sub-blocks */
+.sub-block-text {
+    min-width: 280px; /* Minimum width before wrapping */
+    flex: 1 1 280px; /* Grow, shrink, and basis */
+    object-fit: contain;
+    text-align: justify;
+}
+
+.sub-block-image {
+    margin: auto;
+    min-width: 280px; /* Consistent min-width with text */
+    max-width: 550px;
+    padding-left: var(--pad-left)!important;
+    flex-grow: 1;
+    flex-basis: 280px; /* Consistent flex-basis */
+    object-fit: contain;
+}
+
 /* subbody width is locked to 70% on Desktop */
 @media (min-width: 1131px) {
     .sub-body {
@@ -214,13 +268,23 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
+        gap: 20px; /* Add gap for better spacing when wrapping */
     }
-    .sub-block-image{
+    .sub-block-image {
         margin: auto;
         width: 40%;
         min-width: calc(0.2*var(--page-width));
         padding-left: var(--pad-left)!important;
         flex-grow: 1;
+    }
+    .sub-block-text {
+        width: 55%; /* Standard width for desktop */
+    }
+    /* For very small screens, stack images completely */
+    @media (max-width: 600px) {
+        .image-pair img {
+            width: 100%;
+        }
     }
 }
 
@@ -278,13 +342,20 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
+        gap: 15px; /* Slightly smaller gap on mobile */
     }
-    .sub-block-image{
+    .sub-block-image {
         margin: auto;
         width: 60%;
         max-width: 550px;
         padding-left: var(--pad-left)!important;
         flex-grow: 1;
+        width: 100%; /* Full width on mobile */
+        order: -1; /* Images appear above text on mobile */
+    }
+    .sub-block-text {
+        width: 100%; /* Take full width on mobile */
+        min-width: 100%; /* Force full width */
     }
 }
 /* edge case */
@@ -318,12 +389,20 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
+        gap: 25px; /* Slightly larger gap for larger screens */
     }
-    .sub-block-image{
+    .sub-block-image {
         margin: auto;
         width: 40%;
         min-width: calc(0.2*var(--page-width));
         padding-left: var(--pad-left)!important;
         flex-grow: 1;
+        min-width: 350px;
+        flex-basis: 350px;
+    }
+    .sub-block-text {
+        min-width: 350px; /* Larger min-width on large screens */
+        flex: 1 1 350px; /* Grow, shrink, and basis */
+        width: 55%; /* Standard width for large screens */
     }
 }
