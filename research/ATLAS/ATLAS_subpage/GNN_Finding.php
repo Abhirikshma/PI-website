@@ -13,7 +13,7 @@ include($headerInc);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PI Main webpage</title>
+    <title>ATLAS</title>
 	<!-- Include style file -->
     <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
     <!-- to enable mathjax (LaTeX code rendering) -->

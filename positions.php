@@ -11,7 +11,7 @@ include("header_common_he.php.inc")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PI Main webpage</title>
+    <title>Thesis Opportunities</title>
     <!-- Include style file -->
     <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
 </head>
