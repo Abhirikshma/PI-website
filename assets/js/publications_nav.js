@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Process each section and create navigation links
     sections.forEach((section, index) => {
         const id = section.getAttribute('id');
-        const title = section.querySelector('h1').textContent;
+        const title = section.querySelector('h2').textContent; // Changed from h1 to h2
         
         // Create link
         const link = document.createElement('a');

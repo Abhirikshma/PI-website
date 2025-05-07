@@ -23,20 +23,23 @@ include($headerInc);
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body lang="en-US" dir="ltr" style="text-align:left;">
-    <div class="sub-body">
+    <div class="sub-body">        
         <!-- Simple Publication Navigation -->
         <div id="pub-nav-container" class="pub-nav-container">
             <!-- Navigation will be auto-populated here -->
         </div>
 
         <div class="publications-container">
+            <!-- Main Page Heading -->
+            <h1 class="page-title">ATLAS Publications</h1>
+
             <!-- JOURNAL PUBLICATIONS -->
             <div id="journal-publications" class="publication-section">
-                <h1>Journal Publications</h1>
-                <h3>(with significant contributions from members of our group)</h3>
+                <h2>Journals</h2>
+                <p class="subtitle">(with significant contributions from members of our group)</p>
             
                 <div class="publication-year">
-                    <h2>2024</h2>
+                    <h3>2024</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -50,7 +53,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2023</h2>
+                    <h3>2023</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -64,7 +67,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2022</h2>
+                    <h3>2022</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -78,7 +81,7 @@ include($headerInc);
                 </ul>
                 
                 <div class="publication-year">
-                    <h2>2021</h2>
+                    <h3>2021</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -101,7 +104,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2018</h2>
+                    <h3>2018</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -124,7 +127,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2017</h2>
+                    <h3>2017</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -140,7 +143,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2016</h2>
+                    <h3>2016</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -224,7 +227,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2015</h2>
+                    <h3>2015</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -274,7 +277,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2014</h2>
+                    <h3>2014</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -297,7 +300,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2013</h2>
+                    <h3>2013</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -320,7 +323,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2012</h2>
+                    <h3>2012</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -353,7 +356,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>All ATLAS Papers</h2>
+                    <h3>All ATLAS Papers</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -366,10 +369,10 @@ include($headerInc);
                 
             <!-- PRE-PRINTS SECTION -->
             <div id="preprints-proceedings-pubnotes" class="publication-section">
-                <h1>Pre-prints, Proceedings, Conference and Pub Notes</h1>
+                <h2>Pre-prints, Proceedings, Conference and Pub Notes</h2>
                 
                 <div class="publication-year">
-                    <h2>2023</h2>
+                    <h3>2023</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -392,7 +395,7 @@ include($headerInc);
                 </ul>
                 
                 <div class="publication-year">
-                    <h2>2022</h2>
+                    <h3>2022</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -429,7 +432,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2021</h2>
+                    <h3>2021</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -442,7 +445,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2019</h2>
+                    <h3>2019</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -464,7 +467,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2017</h2>
+                    <h3>2017</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -501,7 +504,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2016</h2>
+                    <h3>2016</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -547,7 +550,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2015</h2>
+                    <h3>2015</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -625,7 +628,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2014</h2>
+                    <h3>2014</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -654,7 +657,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2013</h2>
+                    <h3>2013</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -676,7 +679,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2012</h2>
+                    <h3>2012</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -710,10 +713,10 @@ include($headerInc);
                 
             <!-- CONFERENCE TALKS SECTION -->
             <div id="conference-invited-talks" class="publication-section">
-                <h1>Conference and Invited Talks</h1>
+                <h2>Conference and Invited Talks</h2>
                 
                 <div class="publication-year">
-                    <h2>2024</h2>
+                    <h3>2024</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -751,7 +754,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2023</h2>
+                    <h3>2023</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -774,7 +777,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2022</h2>
+                    <h3>2022</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -788,7 +791,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2019</h2>
+                    <h3>2019</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -802,7 +805,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2017</h2>
+                    <h3>2017</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -859,7 +862,7 @@ include($headerInc);
 
                 <!-- Continue with other years for conference talks... -->
                 <div class="publication-year">
-                    <h2>2016</h2>
+                    <h3>2016</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -948,7 +951,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2015</h2>
+                    <h3>2015</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -959,7 +962,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2014</h2>
+                    <h3>2014</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -982,7 +985,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2013</h2>
+                    <h3>2013</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -1004,7 +1007,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2012</h2>
+                    <h3>2012</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -1053,7 +1056,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2010</h2>
+                    <h3>2010</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -1073,10 +1076,10 @@ include($headerInc);
 
         <div class="publications-container">
             <div id="poster-publications" class="publication-section">
-                <h1>Posters</h1>
+                <h2>Posters</h2>
             
-                <div class="publication-year">
-                    <h2>2024</h2>
+                <div class="publication-year"></div>
+                    <h3>2024</h3>
                 </div>
 
                 <ul class="publications">
@@ -1091,7 +1094,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2022</h2>
+                    <h3>2022</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -1106,7 +1109,7 @@ include($headerInc);
                 </ul>
 
                 <div class="publication-year">
-                    <h2>2019</h2>
+                    <h3>2019</h3>
                 </div>
                 <ul class="publications">
                     <li>
@@ -1129,7 +1132,7 @@ include($headerInc);
                 </ul>
                 
                 <div class="publication-year">
-                    <h2>2016 and Earlier</h2>
+                    <h3>2016 and Earlier</h3>
                 </div>
                 <ul class="publications">
                     <li>

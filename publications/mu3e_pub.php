@@ -30,13 +30,16 @@ include($headerInc);
             </div>
 
             <div class="publications-container">
+                <!-- Main Page Heading -->
+                <h1 class="page-title">Mu3e Publications</h1>
+
                 <!-- JOURNAL PUBLICATIONS -->
                 <div id="journal-publications" class="publication-section">
-                    <h1>Journal Publications</h1>
-                    <h3>(with significant contributions from members of our group)</h3>
+                    <h2>Journals</h2>
+                    <p class="subtitle">(with significant contributions from members of our group)</p>
                 
                     <div class="publication-year">
-                        <h2>2021</h2>
+                        <h3>2021</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -58,7 +61,7 @@ include($headerInc);
                     </ul>
                 
                     <div class="publication-year">
-                        <h2>2020</h2>
+                        <h3>2020</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -71,7 +74,7 @@ include($headerInc);
                     </ul>
                     
                     <div class="publication-year">
-                        <h2>2019</h2>
+                        <h3>2019</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -92,7 +95,7 @@ include($headerInc);
                     </ul>
                     
                     <div class="publication-year">
-                        <h2>2018</h2>
+                        <h3>2018</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -113,7 +116,7 @@ include($headerInc);
                     </ul>
                     
                     <div class="publication-year">
-                        <h2>2017</h2>
+                        <h3>2017</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -134,7 +137,7 @@ include($headerInc);
                     </ul>
                     
                     <div class="publication-year">
-                        <h2>2016</h2>
+                        <h3>2016</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -149,10 +152,10 @@ include($headerInc);
                 
                 <!-- PREPRINTS, PROCEEDINGS, PUB NOTES -->
                 <div id="preprints-proceedings-pubnotes" class="publication-section">
-                    <h1>Pre-prints, Proceedings and Pub Notes</h1>
+                    <h2>Pre-prints, Proceedings and Pub Notes</h2>
                 
                     <div class="publication-year">
-                        <h2>2020</h2>
+                        <h3>2020</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -168,10 +171,10 @@ include($headerInc);
                 
                 <!-- CONFERENCE AND INVITED TALKS -->
                 <div id="conference-invited-talks" class="publication-section">
-                    <h1>Conference and Invited Talks</h1>
+                    <h2>Conference and Invited Talks</h2>
                 
                     <div class="publication-year">
-                        <h2>2024</h2>
+                        <h3>2024</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -187,10 +190,10 @@ include($headerInc);
                 
                 <!-- POSTERS -->
                 <div id="posters" class="publication-section">
-                    <h1>Posters</h1>
+                    <h2>Posters</h2>
                 
                     <div class="publication-year">
-                        <h2>2024</h2>
+                        <h3>2024</h3>
                     </div>
                     <ul class="publications">
                         <li>

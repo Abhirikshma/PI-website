@@ -30,13 +30,16 @@ include($headerInc);
             </div>
 
             <div class="publications-container">
+                <!-- Main Page Heading -->
+                <h1 class="page-title">HV-MAPS Publications</h1>
+
                 <!-- JOURNAL PUBLICATIONS -->
                 <div id="journal-publications" class="publication-section">
-                    <h1>Journal Publications</h1>
-                    <h3>(with significant contributions from members of our group)</h3>
+                    <h2>Journals</h2>
+                    <p class="subtitle">(with significant contributions from members of our group)</p>
                 
                     <div class="publication-year">
-                        <h2>2024</h2>
+                        <h3>2024</h3>
                     </div>
                     <ul class="publications">
 
@@ -45,10 +48,10 @@ include($headerInc);
                 
                 <!-- PREPRINTS, PROCEEDINGS, PUB NOTES -->
                 <div id="preprints-proceedings-pubnotes" class="publication-section">
-                    <h1>Pre-prints, Proceedings and Pub Notes</h1>
+                    <h2>Pre-prints, Proceedings and Pub Notes</h2>
                 
                     <div class="publication-year">
-                        <h2>2023</h2>
+                        <h3>2023</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -64,10 +67,10 @@ include($headerInc);
                 
                 <!-- CONFERENCE AND INVITED TALKS -->
                 <div id="conference-invited-talks" class="publication-section">
-                    <h1>Conference and Invited Talks</h1>
+                    <h2>Conference and Invited Talks</h2>
                 
                     <div class="publication-year">
-                        <h2>2024</h2>
+                        <h3>2024</h3>
                     </div>
                     <ul class="publications">
                         <li>
@@ -83,10 +86,10 @@ include($headerInc);
                 
                 <!-- POSTERS -->
                 <div id="posters" class="publication-section">
-                    <h1>Posters</h1>
+                    <h2>Posters</h2>
                 
                     <div class="publication-year">
-                        <h2>2024</h2>
+                        <h3>2024</h3>
                     </div>
                     <ul class="publications">
                         <li>
