@@ -150,6 +150,11 @@ a:hover {
     margin-top: calc(var(--dropdown-bot) + var(--vertical-offset));
 }
 
+.content ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .research-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--PI-darkred);

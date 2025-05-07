@@ -20,6 +20,13 @@
     /* width will be set by JS */
 }
 
+/* Ensure proper centering on all screen sizes */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* Adjust image item styles */
 .image-collage-item {
     display: block;
@@ -28,6 +35,7 @@
 }
 
 #image-container img {
+    margin: 0 auto !important;
     display: block; /* Ensure image is block level */
     /* width and height are set inline */
 }
