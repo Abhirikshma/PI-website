@@ -114,10 +114,10 @@
     let pageTitleElement = null;
     let navbarCollapse = null;
     let navbarToggler = null;
-    let h1Elements = [];
+    let targetH2Elements = []; // Changed from h1Elements
 
     // --- State Variables ---
-    let currentH1Element = null;
+    let currentVisibleH2Element = null; // Changed from currentH1Element
     let isMobileMenuFullyOpen = false; // Track if mobile menu is open AND animation finished
     let menuOpenScrollStartY = null; // Track scroll position when menu fully opened
 
@@ -139,38 +139,38 @@
 
         // 1. Handle Title Display (only when scrolled)
         if (isScrolled) {
-            let currentH1Text = '';
-            let foundH1 = null;
+            let currentHeadingText = ''; // Renamed from currentH1Text
+            let foundHeading = null;     // Renamed from foundH1
             // Ensure stickyElement is available before getting bounding rect
             if (stickyElement) {
                 const navbarBottomOffset = stickyElement.getBoundingClientRect().bottom;
-                for (let i = h1Elements.length - 1; i >= 0; i--) {
-                    const h1 = h1Elements[i];
-                    const rect = h1.getBoundingClientRect();
+                for (let i = targetH2Elements.length - 1; i >= 0; i--) { // Changed from h1Elements
+                    const h2 = targetH2Elements[i]; // Changed from h1 / h1Elements[i]
+                    const rect = h2.getBoundingClientRect();
                     if (rect.bottom < navbarBottomOffset) {
-                        currentH1Text = h1.textContent.trim();
-                        foundH1 = h1;
+                        currentHeadingText = h2.textContent.trim(); // Changed from h1
+                        foundHeading = h2; // Changed from h1
                         break;
                     }
                 }
             }
-            currentH1Element = foundH1; // Update global reference
+            currentVisibleH2Element = foundHeading; // Renamed from currentH1Element
 
             if (pageTitleElement) {
-                pageTitleElement.textContent = currentH1Text;
-                if (currentH1Element) {
+                pageTitleElement.textContent = currentHeadingText; // Use new text variable
+                if (currentVisibleH2Element) { // Use new element variable
                     pageTitleElement.classList.add('clickable-title');
                 } else {
                     pageTitleElement.classList.remove('clickable-title');
                 }
             }
         } else {
-            // Clear title and reset H1 element if not scrolled past threshold
+            // Clear title and reset H2 element if not scrolled past threshold
             if (pageTitleElement) {
                 pageTitleElement.textContent = '';
                 pageTitleElement.classList.remove('clickable-title');
             }
-            currentH1Element = null;
+            currentVisibleH2Element = null; // Renamed from currentH1Element
         }
 
         // 2. Handle Mobile Menu Close on Scroll
@@ -206,14 +206,14 @@
         pageTitleElement = document.getElementById('navbar-page-title');
         navbarCollapse = document.getElementById('navbarNavDropdown');
         navbarToggler = document.querySelector('.navbar-toggler');
-        h1Elements = document.querySelectorAll('h1');
+        targetH2Elements = document.querySelectorAll('h2'); // Changed from h1Elements and querySelectorAll('h1')
 
         // Add click listener to the title placeholder
         if (pageTitleElement) {
             pageTitleElement.addEventListener('click', () => {
-                if (currentH1Element && stickyElement) { // Check stickyElement exists
+                if (currentVisibleH2Element && stickyElement) { // Changed from currentH1Element
                     const headerHeight = stickyElement.offsetHeight;
-                    const elementPosition = currentH1Element.getBoundingClientRect().top + window.scrollY;
+                    const elementPosition = currentVisibleH2Element.getBoundingClientRect().top + window.scrollY; // Changed from currentH1Element
                     const offsetPosition = elementPosition - headerHeight - 10;
 
                     window.scrollTo({

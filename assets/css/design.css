@@ -22,6 +22,10 @@ td {
     width: auto !important;
 }
 
+h1:first-of-type {
+    margin-top: 0rem; /* Adjust this value as needed */
+}
+
 h1 {
     text-align: left;
     margin-top: 2.5rem;
