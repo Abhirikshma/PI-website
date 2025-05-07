@@ -8,104 +8,151 @@
     margin: 0 auto;
 }
 
-/* Publication Navigation - New Design */
+/* Simple Publication Navigation */
 .pub-nav-container {
-    margin-bottom: 2rem;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    position: relative; /* For absolute positioning of toggle button */
 }
 
-.pub-nav {
-    background-color: var(--PI-sand);
-    border-radius: 4px;
-    border-left: 4px solid var(--PI-darkred);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
-
-.pub-nav-header {
+.pub-nav-wrapper {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    background-color: var(--PI-darkred);
-    color: white;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.pub-nav-toggle {
-    display: none;
-    background: none;
-    border: 1px solid rgba(255,255,255,0.5);
-    color: white;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.pub-nav-toggle:hover {
-    background-color: rgba(255,255,255,0.1);
+    justify-content: center;
 }
 
 .pub-nav-links {
     display: flex;
-    padding: 10px 15px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 0.25rem 0;
+    align-items: center;
 }
 
 .pub-nav-links a {
     color: var(--PI-darkred);
     text-decoration: none;
-    padding: 8px 15px;
-    margin-right: 15px;
-    margin-bottom: 5px;
+    padding: 0.5rem 0.75rem;
     font-weight: 500;
-    transition: all 0.2s;
-    border-radius: 3px;
-    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Separator between links - as separate element */
+.pub-nav-separator {
+    color: #aaa;
+    padding: 0 0.25rem;
 }
 
 .pub-nav-links a:hover {
-    background-color: rgba(0,0,0,0.05);
     color: var(--PI-red);
 }
 
-.pub-nav-links a.active {
-    background-color: var(--PI-red);
-    color: white;
+.pub-nav-links a:active {
+    font-weight: 700;
+    color: var(--PI-red);
+}
+
+/* Toggle button styles */
+.pub-nav-toggle {
+    display: none;
+    background: transparent;
+    color: #777;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.4rem 0.6rem;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.2s ease, box-shadow 0.2s ease;
+    z-index: 20;
+}
+
+.pub-nav-toggle:hover {
+    color: var(--PI-darkred);
+    border-color: var(--PI-darkred);
+}
+
+/* Add shadow when dropdown is open */
+.pub-nav-toggle[aria-expanded="true"] {
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    border-color: var(--PI-darkred);
+    color: var(--PI-darkred);
 }
 
 /* Mobile navigation */
-@media (max-width: 767px) {
+@media (max-width: 860px) {
+    /* Container styling for mobile */
+    .pub-nav-container {
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Hide the wrapper completely */
+    .pub-nav-wrapper {
+        display: none;
+    }
+    
+    /* Show toggle button */
     .pub-nav-toggle {
         display: block;
     }
     
+    /* Dropdown menu positioning and styling */
     .pub-nav-links {
         display: none;
+        position: absolute;
+        right: 0;
+        top: 50px; /* Position below the button */
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 10;
+        padding: 0.5rem;
+        min-width: 200px;
         flex-direction: column;
-        padding: 0;
+        align-items: flex-start;
+        
+        /* Animation properties */
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+        pointer-events: none;
     }
     
-    .pub-nav-links.show {
+    /* Show dropdown with animation */
+    .pub-nav-links.mobile-expanded {
         display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
     
     .pub-nav-links a {
-        padding: 10px 15px;
-        margin: 0;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding: 0.5rem;
+        width: 100%;
+        text-align: left;
+        border-radius: 3px;
     }
     
-    .pub-nav-links a:last-child {
-        border-bottom: none;
+    .pub-nav-links a:hover {
+        background-color: #f5f5f5;
+    }
+    
+    /* Hide separators in mobile view */
+    .pub-nav-separator {
+        display: none;
     }
 }
 
 /* Publication section header */
 .publication-section {
-    /* margin-top: 2.5rem; */
     padding-bottom: 0.5rem;
     scroll-margin-top: 100px; /* Add space for scrolling to section */
 }
