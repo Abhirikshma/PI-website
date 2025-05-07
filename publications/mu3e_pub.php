@@ -16,6 +16,7 @@ include($headerInc);
         <!-- Include style file -->
         <link rel="stylesheet" type="text/css" href="<?php echo $designCss;?>">
         <link rel="stylesheet" type="text/css" href="<?php echo $publicationCss;?>">
+        <!-- Bootstrap CSS is already included in header.php -->
         <!-- to enable mathjax (LaTeX code rendering) -->
         <script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
@@ -24,6 +25,24 @@ include($headerInc);
     </head>
     <body lang="en-US" dir="ltr" style="text-align:left;">
         <div class="sub-body">
+            <!-- Publication Navigation Menu - Separated from header -->
+            <div class="pub-nav-container">
+                <div class="pub-nav">
+                    <div class="pub-nav-header">
+                        <span>Publication Sections</span>
+                        <button class="pub-nav-toggle" type="button" aria-expanded="false">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="pub-nav-links">
+                        <a href="#journal-publications">Journal Publications</a>
+                        <a href="#preprints-proceedings-pubnotes">Pre-prints & Proceedings</a>
+                        <a href="#conference-invited-talks">Conference Talks</a>
+                        <a href="#posters">Posters</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="publications-container">
                 <!-- JOURNAL PUBLICATIONS -->
                 <div id="journal-publications" class="publication-section">
@@ -200,6 +219,76 @@ include($headerInc);
                 </div>
             </div>
         </div>
+        
+        <!-- Simple toggle script for publication navigation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Toggle for publication navigation
+                const pubNavToggle = document.querySelector('.pub-nav-toggle');
+                const pubNavLinks = document.querySelector('.pub-nav-links');
+                
+                if (pubNavToggle && pubNavLinks) {
+                    pubNavToggle.addEventListener('click', function() {
+                        pubNavLinks.classList.toggle('show');
+                        this.setAttribute('aria-expanded', 
+                            this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+                    });
+                }
+                
+                // Smooth scrolling for all links
+                document.querySelectorAll('.pub-nav-links a').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            // Calculate offset from top of window
+                            const offset = 100; // Adjust based on your needs
+                            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Update URL hash
+                            history.pushState(null, null, this.getAttribute('href'));
+                            
+                            // Close mobile menu if open
+                            if (window.innerWidth < 768 && pubNavLinks.classList.contains('show')) {
+                                pubNavLinks.classList.remove('show');
+                                pubNavToggle.setAttribute('aria-expanded', 'false');
+                            }
+                        }
+                    });
+                });
+                
+                // Handle active state based on scroll position
+                const sections = document.querySelectorAll('.publication-section');
+                const navLinks = document.querySelectorAll('.pub-nav-links a');
+                
+                function setActiveLink() {
+                    const offset = 150; // Adjust based on your needs
+                    
+                    sections.forEach(section => {
+                        const sectionTop = section.getBoundingClientRect().top;
+                        const sectionId = section.getAttribute('id');
+                        
+                        if (sectionTop <= offset) {
+                            navLinks.forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === '#' + sectionId) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    });
+                }
+                
+                window.addEventListener('scroll', setActiveLink);
+                setActiveLink(); // Set initial state
+            });
+        </script>
     </body>
 </html>
 
