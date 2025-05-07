@@ -9,6 +9,7 @@ $headerCss = $assets . "/css/header.css";
 $footerCss = $assets . "/css/footer.css";
 $buttonsJs = $assets . "/js/buttons.js";
 $menu_mobile_toggleJs = $assets . "/js/menu_mobile_toggle.js";
+$pub_navJs = $assets . "/js/publications_nav.js";
 
 $ATLASMainpagePath = "/research/ATLAS/ATLAS_mainpage.php";
 $mu3eMainpagePath = "/research/mu3e/mu3e_mainpage.php";

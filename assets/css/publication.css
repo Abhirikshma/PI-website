@@ -62,7 +62,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 0.4rem 0.6rem;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     cursor: pointer;
     font-size: 0.9rem;
     position: absolute;
@@ -85,7 +85,7 @@
 }
 
 /* Mobile navigation */
-@media (max-width: 860px) {
+@media (max-width: 870.98px) {
     /* Container styling for mobile */
     .pub-nav-container {
         border-bottom: none;
@@ -148,6 +148,25 @@
     /* Hide separators in mobile view */
     .pub-nav-separator {
         display: none;
+    }
+}
+
+/* Ensure nav is always visible in desktop view */
+@media (min-width: 871px) {
+    .pub-nav-wrapper {
+        display: flex !important; /* Force display in desktop mode */
+    }
+    
+    .pub-nav-links {
+        display: flex !important;
+        opacity: 1 !important;
+        position: static !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+    
+    .pub-nav-toggle {
+        display: none !important; /* Always hide toggle in desktop */
     }
 }
 

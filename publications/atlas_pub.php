@@ -24,6 +24,11 @@ include($headerInc);
 </head>
 <body lang="en-US" dir="ltr" style="text-align:left;">
     <div class="sub-body">
+        <!-- Simple Publication Navigation -->
+        <div id="pub-nav-container" class="pub-nav-container">
+            <!-- Navigation will be auto-populated here -->
+        </div>
+
         <div class="publications-container">
             <!-- JOURNAL PUBLICATIONS -->
             <div id="journal-publications" class="publication-section">
@@ -1149,6 +1154,7 @@ include($headerInc);
         </div>
         </div>
     </div>
+    <script type="text/javascript" src="<?php echo $pub_navJs;?>"></script>
 </body>
 </html>
 
