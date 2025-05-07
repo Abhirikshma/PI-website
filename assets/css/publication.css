@@ -1,88 +1,132 @@
 @import "common_vars.css";
 
-/* menu-pub */
-.menu-pub {
-    list-style: none;
+/* Publication page common styling */
+
+/* Publication container */
+.publications-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Publication section header */
+.publication-section {
+    /* margin-top: 2.5rem; */
+    padding-bottom: 0.5rem;
+}
+
+.publication-section h1 {
+    color: var(--PI-darkred);
+    font-size: 2.2rem;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+}
+
+.publication-section h3 {
+    font-style: italic;
+    font-weight: normal;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Year dividers */
+.publication-year {
+    margin: 1.3rem 0 1rem 0;
+    background-color: var(--PI-sand);
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.publication-year h2 {
     margin: 0;
+    font-size: 1.6rem;
+    color: var(--PI-darkred);
+}
+
+/* Publication list */
+ul.publications {
+    list-style-type: none;
     padding: 0;
+    margin: 0 10px;
+}
+
+ul.publications li {
+    margin-bottom: 1rem;
+    padding: 5px 15px;
+    background-color: #fff;
+    border-left: 4px solid var(--PI-red);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+ul.publications li:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-left-color: var(--PI-darkred);
+}
+
+/* Publication title */
+p.title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--PI-darkred);
+}
+
+/* Authors and links */
+ul.publications li a {
+    display: inline-block;
+    margin-top: 5px;
+    color: var(--PI-red);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+/* Publication link styling for inline display */
+.publication-links {
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 0.5em 2em; /* row-gap column-gap */
+    margin-top: 5px;
 }
 
-/* menu-pub items */
-.menu-pub li {
+.publication-links a {
     position: relative;
-    padding: 0px 0px;
-    align-items: center;
-    white-space: nowrap;
+    margin-top: 0 !important; /* Override existing margin */
 }
 
-/* Vertical separators */
-.menu-pub li:not(:last-child)::after {
-    content: "";
+/* Add separator between links, but not after the last one */
+.publication-links a:not(:last-child)::after {
+    content: "|";
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 50%;
-    width: 2px;
-    background-color: var(--PI-lightred);
+    right: -1.2em;
+    color: #999;
 }
 
-/* 🟢 RESPONSIVE DESIGN: Hides menu-pub & shows hamburger */
-.hamburger-pub {
-    display: none;
-    font-size: 35px;
-    background: none;
-    border: none;
+ul.publications li a:hover {
     color: var(--PI-darkred);
-    cursor: pointer;
+    text-decoration: underline;
 }
 
-/* Mobile dropdown adjustments */
-@media (max-width: 1268px) {
-    .menu-pub {
-        position: absolute;
-        top: 150px; /* Position the menu directly below the hamburger icon */
-        left: calc(-1 * var(--dropdown-left) + 10vw); /* Set the horizontal offset to be -dropdown-left */
-        width: 70%; /* TODO: get this from design.css sub-body class */
-        display: none; /* Initially hide the menu */
-        flex-direction: column;
-        background-color: white; /* Background color for the menu */
-        box-shadow: 0 8px 16px var(--shadow-color); /* Optional: Add some shadow for better visibility */
-        z-index: 1000; /* Ensure the menu is above other elements */
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    ul.publications {
+        margin: 0 0px;
     }
-
-    .hamburger-pub {
-        display: block;
+    ul.publications li {
+        padding: 5px 10px;
+        font-size: 0.9rem;
     }
-
-    .hamburger-pub:hover + .menu-pub,
-    .menu-pub:hover {
-        display: flex;
+    
+    p.title {
+        font-size: 1.00rem;
     }
-
-    .menu-pub li {
-        text-align: left;
-        width: 100%;
-        border-bottom: 2px solid var(--PI-red);
+    
+    .publication-section h1 {
+        font-size: 1.6rem;
     }
-}
-
-/* Style the links inside the menu-pub */
-.menu-pub li a {
-    text-decoration: none; /* Removes underline */
-    color: black; /* White text */
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-}
-
-/* Change color on hover */
-.menu-pub li a:hover {
-    color: var(--PI-darkred);
-    /* Light red hover effect */
+    
+    .publication-year h2 {
+        font-size: 1.4rem;
+    }
 }
