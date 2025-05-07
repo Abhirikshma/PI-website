@@ -88,18 +88,34 @@ ul.publications li a {
     flex-wrap: wrap;
     gap: 0.5em 2em; /* row-gap column-gap */
     margin-top: 5px;
-}
-
-.publication-links a {
     position: relative;
-    margin-top: 0 !important; /* Override existing margin */
+    align-items: flex-end; /* Align items to bottom */
 }
 
-/* Add separator between links, but not after the last one */
-.publication-links a:not(:last-child)::after {
+/* New approach: Make each direct child of publication-links a relative container */
+.publication-links > * {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end; /* Align contents to bottom */
+}
+
+/* Make the link-wrapper italic by default */
+.publication-links .link-wrapper {
+    font-style: italic;
+}
+
+/* But keep the links themselves in normal style */
+.publication-links .link-wrapper a {
+    margin-right: 1em;
+    font-style: normal;
+}
+
+/* Add separator after each direct child except the last one */
+.publication-links > *:not(:last-child)::after {
     content: "|";
     position: absolute;
-    right: -1.2em;
+    right: -1.1em; /* Position more centrally between items */
+    bottom: 0; /* Align to bottom */
     color: #999;
 }
 

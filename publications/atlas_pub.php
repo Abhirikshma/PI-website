@@ -126,7 +126,9 @@ include($headerInc);
                         <p class="title">Determination of the strong coupling constant \(\alpha_{s}(M_Z)\) in next-to-next-to-leading order QCD using H1 jet cross section measurements</p>
                         H1 Collaboration<br/>
                         <div class="publication-links">
-                            <a href="https://arxiv.org/abs/1709.07251">arXiv:1709.07251 [hep-ex]</a> accepted by EPJC
+                            <div class="link-wrapper">
+                                <a href="https://arxiv.org/abs/1709.07251">arXiv:1709.07251 [hep-ex]</a> accepted by EPJC
+                            </div>
                             <a href="https://www-h1.desy.de/h1/www/publications/htmlsplit/DESY-17-137.long.poster.html">H1 Link</a>
                         </div>
                     </li>
@@ -140,7 +142,9 @@ include($headerInc);
                         <p class="title">Precision measurement and interpretation of inclusive \(W^+\), \(W^-\) and \(Z/\gamma^*\) production cross sections with the ATLAS detector</p>
                         The ATLAS Collaboration<br/>
                         <div class="publication-links">
-                            <a href="http://arxiv.org/abs/1612.03016">arXiv:1612.03016 [hep-ex]</a> subm. to EPJC
+                            <div class="link-wrapper">
+                                <a href="http://arxiv.org/abs/1612.03016">arXiv:1612.03016 [hep-ex]</a> subm. to EPJC
+                            </div>
                             <a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2012-20/">ATLAS Link</a>
                         </div>
                     </li>
