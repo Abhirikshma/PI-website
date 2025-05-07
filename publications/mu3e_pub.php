@@ -208,197 +208,162 @@ include($headerInc);
         
         <!-- Minimal publication navigation script -->
         <script>
+            // Prevent automatic scrolling when page loads with a hash
+            if (window.location.hash) {
+                // Force scroll to top
+                window.scrollTo(0, 0);
+                
+                // Optional: Remove the hash without causing a jump
+                history.replaceState({}, document.title, window.location.pathname);
+            }
+            
             document.addEventListener('DOMContentLoaded', function() {
-                // Get all h1 elements within publication sections
+                // Get all publication sections and container
                 const sections = document.querySelectorAll('.publication-section');
                 const navContainer = document.getElementById('pub-nav-container');
                 
-                if (navContainer && sections.length > 0) {
-                    // Create wrapper for desktop navigation
-                    const navWrapper = document.createElement('div');
-                    navWrapper.className = 'pub-nav-wrapper';
-                    
-                    // Create navigation container
-                    const navLinks = document.createElement('div');
-                    navLinks.className = 'pub-nav-links';
-                    
-                    // Add links for each section
-                    sections.forEach((section, index) => {
-                        const id = section.getAttribute('id');
-                        const title = section.querySelector('h1').textContent;
-                        
-                        // Create link
-                        const link = document.createElement('a');
-                        link.href = '#' + id;
-                        link.textContent = title;
-                        
-                        // Add to container
-                        navLinks.appendChild(link);
-                        
-                        // Add separator after all links except the last one
-                        if (index < sections.length - 1) {
-                            const separator = document.createElement('span');
-                            separator.className = 'pub-nav-separator';
-                            separator.innerHTML = '&bull;'; 
-                            navLinks.appendChild(separator);
-                        }
-                        
-                        // Add click handler for smooth scrolling
-                        link.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            const target = document.querySelector(this.getAttribute('href'));
-                            if (target) {
-                                // Calculate offset from top of window
-                                const offset = 100;
-                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                                
-                                window.scrollTo({
-                                    top: targetPosition,
-                                    behavior: 'smooth'
-                                });
-                                
-                                // Update URL without affecting scroll position
-                                history.pushState(null, null, this.getAttribute('href'));
-                                
-                                // Close mobile dropdown if open
-                                closeDropdown();
-                            }
-                        });
-                    });
-                    
-                    // Add mobile toggle button directly to the container
-                    const toggleButton = document.createElement('button');
-                    toggleButton.className = 'pub-nav-toggle';
-                    toggleButton.type = 'button';
+                if (!navContainer || !sections.length) return;
+                
+                // Create navigation elements
+                const navWrapper = document.createElement('div');
+                navWrapper.className = 'pub-nav-wrapper';
+                
+                const navLinks = document.createElement('div');
+                navLinks.className = 'pub-nav-links';
+                
+                // Create toggle button
+                const toggleButton = document.createElement('button');
+                toggleButton.className = 'pub-nav-toggle';
+                toggleButton.type = 'button';
+                toggleButton.setAttribute('aria-expanded', 'false');
+                toggleButton.innerHTML = '<i class="fas fa-list"></i>';
+                
+                // Function to close dropdown menu
+                function closeDropdown() {
+                    navLinks.classList.remove('mobile-expanded');
                     toggleButton.setAttribute('aria-expanded', 'false');
-                    toggleButton.innerHTML = '<i class="fas fa-list"></i>';
                     
-                    // Function to close the dropdown
-                    function closeDropdown() {
-                        if (navLinks.classList.contains('mobile-expanded')) {
-                            navLinks.classList.remove('mobile-expanded');
-                            toggleButton.setAttribute('aria-expanded', 'false');
+                    // Hide after animation completes
+                    setTimeout(() => {
+                        if (!navLinks.classList.contains('mobile-expanded')) {
+                            navLinks.style.display = 'none';
                         }
-                    }
-                    
-                    // Add click handler for toggle with animation
-                    toggleButton.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        
-                        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                        
-                        if (!isExpanded) {
-                            // Opening the dropdown
-                            navLinks.style.display = 'flex';
-                            setTimeout(() => {
-                                navLinks.classList.add('mobile-expanded');
-                            }, 10);
-                            this.setAttribute('aria-expanded', 'true');
-                        } else {
-                            // Closing the dropdown
-                            navLinks.classList.remove('mobile-expanded');
-                            
-                            // Allow animation to complete before hiding
-                            setTimeout(() => {
-                                if (!navLinks.classList.contains('mobile-expanded')) {
-                                    navLinks.style.display = 'none';
-                                }
-                            }, 250); 
-                            
-                            this.setAttribute('aria-expanded', 'false');
-                        }
-                    });
-                    
-                    // Close dropdown when clicking outside
-                    document.addEventListener('click', function(e) {
-                        if (!navLinks.contains(e.target) && e.target !== toggleButton) {
-                            if (navLinks.classList.contains('mobile-expanded')) {
-                                navLinks.classList.remove('mobile-expanded');
-                                
-                                setTimeout(() => {
-                                    if (!navLinks.classList.contains('mobile-expanded')) {
-                                        navLinks.style.display = 'none';
-                                    }
-                                }, 250);
-                                
-                                toggleButton.setAttribute('aria-expanded', 'false');
-                            }
-                        }
-                    });
-
-                    // Throttled scroll handler for closing dropdown
-                    function throttle(func, limit) {
-                        let inThrottle;
-                        return function(...args) {
-                            const context = this;
-                            if (!inThrottle) {
-                                func.apply(context, args);
-                                inThrottle = true;
-                                setTimeout(() => inThrottle = false, limit);
-                            }
-                        }
-                    }
-
-                    const handleScroll = throttle(function() {
-                        if (navLinks.classList.contains('mobile-expanded')) {
-                            navLinks.classList.remove('mobile-expanded');
-                            
-                            setTimeout(() => {
-                                if (!navLinks.classList.contains('mobile-expanded')) {
-                                    navLinks.style.display = 'none';
-                                }
-                            }, 250);
-                            
-                            toggleButton.setAttribute('aria-expanded', 'false');
-                        }
-                    }, 100);
-
-                    window.addEventListener('scroll', handleScroll);
-                    
-                    // Prevent initial auto-scrolling
-                    if (window.location.hash) {
-                        const hashTarget = document.querySelector(window.location.hash);
-                        if (hashTarget) {
-                            window.scrollTo(0, 0);
-                        }
-                    }
-                    
-                    // Append elements to appropriate containers
-                    navWrapper.appendChild(navLinks); // Always add links to wrapper initially
-                    navContainer.appendChild(navWrapper); // Add wrapper to container
-                    navContainer.appendChild(toggleButton); // Add button directly to container
-                    
-                    // For mobile view, move navLinks to container level
-                    function adjustForMobile() {
-                        const isMobileView = window.innerWidth <= 767;
-                        
-                        if (isMobileView) {
-                            // For mobile: Move links out of wrapper to container
-                            if (navWrapper.contains(navLinks)) {
-                                navWrapper.removeChild(navLinks);
-                                navContainer.appendChild(navLinks);
-                            }
-                            navWrapper.style.display = 'none'; // Hide wrapper
-                        } else {
-                            // For desktop: Move links back to wrapper and show wrapper
-                            if (navContainer.contains(navLinks) && !navWrapper.contains(navLinks)) {
-                                navContainer.removeChild(navLinks);
-                                navWrapper.appendChild(navLinks);
-                            }
-                            navWrapper.style.display = 'flex'; // Show wrapper again
-                            
-                            // Reset any mobile-specific styles when returning to desktop
-                            navLinks.style.display = 'flex';
-                            navLinks.classList.remove('mobile-expanded');
-                            navLinks.style.transform = 'none';
-                            navLinks.style.opacity = '1';
-                        }
-                    }
-                    
-                    // Initial adjustment and resize listener
-                    adjustForMobile();
-                    window.addEventListener('resize', adjustForMobile);
+                    }, 250);
                 }
+                
+                // Process each section and create navigation links
+                sections.forEach((section, index) => {
+                    const id = section.getAttribute('id');
+                    const title = section.querySelector('h1').textContent;
+                    
+                    // Create link
+                    const link = document.createElement('a');
+                    link.href = '#' + id;
+                    link.textContent = title;
+                    
+                    // Add smooth scrolling
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            const offset = 100;
+                            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            history.pushState(null, null, this.getAttribute('href'));
+                            closeDropdown();
+                        }
+                    });
+                    
+                    // Add to container
+                    navLinks.appendChild(link);
+                    
+                    // Add separator if not the last item
+                    if (index < sections.length - 1) {
+                        const separator = document.createElement('span');
+                        separator.className = 'pub-nav-separator';
+                        separator.innerHTML = '&bull;';
+                        navLinks.appendChild(separator);
+                    }
+                });
+                
+                // Toggle button click handler
+                toggleButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    if (isExpanded) {
+                        closeDropdown();
+                    } else {
+                        navLinks.style.display = 'flex';
+                        setTimeout(() => navLinks.classList.add('mobile-expanded'), 10);
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (navLinks.classList.contains('mobile-expanded') && 
+                        !navLinks.contains(e.target) && 
+                        e.target !== toggleButton) {
+                        closeDropdown();
+                    }
+                });
+                
+                // Close dropdown when scrolling
+                window.addEventListener('scroll', function() {
+                    if (navLinks.classList.contains('mobile-expanded')) {
+                        closeDropdown();
+                    }
+                });
+                
+                // Append all elements
+                navWrapper.appendChild(navLinks);
+                navContainer.appendChild(navWrapper);
+                navContainer.appendChild(toggleButton);
+                
+                // Handle responsive layout
+                function adjustLayout() {
+                    // Check container width instead of window
+                    const containerWidth = document.querySelector('.sub-body').offsetWidth;
+                    const isNarrow = containerWidth <= 850;
+                    
+                    // Always ensure dropdown is closed when layout changes
+                    navLinks.classList.remove('mobile-expanded');
+                    navLinks.style.display = isNarrow ? 'none' : 'flex';
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                    
+                    if (isNarrow) {
+                        // Narrow layout: Move links out of wrapper
+                        if (navWrapper.contains(navLinks)) {
+                            navWrapper.removeChild(navLinks);
+                            navContainer.appendChild(navLinks);
+                        }
+                        navWrapper.style.display = 'none';
+                    } else {
+                        // Wide layout: Move links back to wrapper
+                        if (navContainer.contains(navLinks) && !navWrapper.contains(navLinks)) {
+                            navContainer.removeChild(navLinks);
+                            navWrapper.appendChild(navLinks);
+                        }
+                        navWrapper.style.display = 'flex';
+                    }
+                }
+                
+                // Set initial layout
+                adjustLayout();
+                
+                // Handle resize
+                const resizeObserver = new ResizeObserver(adjustLayout);
+                resizeObserver.observe(document.querySelector('.sub-body'));
+                
+                // Fallback for browsers without ResizeObserver
+                window.addEventListener('resize', adjustLayout);
             });
         </script>
     </body>
