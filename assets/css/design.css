@@ -27,8 +27,8 @@ h1 {
 }
 
 h2 {
-    text-align: left; /* Aligns semester titles to the left */
-    margin-left: 0px; /* Ensures no unintended margin */
+    text-align: left;
+    margin-left: 0px;
 }
 
 .body ul {
@@ -39,7 +39,6 @@ h2 {
     text-align: justify;
 }
 
-/* Target li elements only within the sub-body */
 .body li {
     margin-bottom: 5px;
 }
@@ -48,31 +47,30 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
 
 .row a {
     margin: 10px;
 }
 
-/* Style for each member entry */
 .member {
     display: flex;
-    align-items: center; /* Align image and text */
+    align-items: center;
     margin-bottom: 20px;
     padding: 10px;
-    border-bottom: 1px solid #ddd; /* Separator line */
+    border-bottom: 1px solid #ddd;
 }
 
 .member img {
-    width: 80px; /* Adjust image size */
+    width: 80px;
     height: 80px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
     margin-right: 20px;
     object-fit: cover;
 }
 
 .member-info {
-    flex: 1; /* Allows text to take the remaining space */
+    flex: 1;
 }
 
 a {
@@ -84,10 +82,9 @@ p {
     text-align: justify;
 }
 
-
 a:hover {
-    color: var(--PI-darkred); /* Darker red when hovered */
-    text-decoration: underline; /* Optional: Add underline back on hover */
+    color: var(--PI-darkred);
+    text-decoration: underline;
 }
 
 .member-info h3 {
@@ -102,7 +99,6 @@ a:hover {
     color: gray;
 }
 
-/* Dropdown button */
 .dropdown-btn {
     height: var(--dropdown-button-height);
     font-size: 100%;
@@ -114,40 +110,35 @@ a:hover {
     color: var(--PI-darkred);
     border: var(--border-width) solid var(--PI-darkred);
     border-radius: var(--border-radius);
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    box-sizing: border-box;
 }
 
 .dropdown-container {
-    display: flex; /* Make sure that buttons in the same container are aligned horizontally */
+    display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Basic styling for the dropdown */
 .dropdown {
     position: relative;
     display: inline-flex;
 }
 
-/* Box for the dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--PI-sand);
-    top: calc(var(--dropdown-button-height) + var(--vertical-offset)); /* Position the dropdown below the button */
-    /* The following two lines keep the content centered  in mobile view*/
-    left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
-    transform: translateX(-50%); /* Shift box back by half its width to center */
-    /*height: var(--dropdown-content-height); /* here page width is low, so increase multiplication factor */
-    width: 303%; /* Keeps empty space on the left and right */
+    top: calc(var(--dropdown-button-height) + var(--vertical-offset));
+    left: calc(50vw + -1 * var(--dropdown-left));
+    transform: translateX(-50%);
+    width: 303%;
     z-index: 1;
     border: var(--border-width) solid var(--PI-darkred);
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    overflow-y: auto; /* Make the dropdown content scrollable if it exceeds the height */
+    overflow-y: auto;
 }
 
-/* Text in the dropdown */
 .dropdown-content a {
     color: black;
     padding: 10px 10px;
@@ -155,12 +146,107 @@ a:hover {
     display: flex;
 }
 
-/* Class for elements which go below the dropdown, it pushes them down when dropdown is opened */
 .content {
     margin-top: calc(var(--dropdown-bot) + var(--vertical-offset));
 }
 
-/* Bootstrap button customization */
+.research-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--PI-darkred);
+    cursor: pointer;
+}
+
+.research-card:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: auto;
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .col-md-4 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        max-width: 550px;
+    }
+    
+    .card-img-top {
+        max-height: 200px;
+        padding: 10px 15px;
+    }
+    
+    .research-card .card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    
+    .card-text {
+        margin-bottom: 10px;
+    }
+    
+    .mobile-learn-more {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .mobile-learn-more .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .row.justify-content-center {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-learn-more {
+        display: none;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.card-title {
+    color: var(--PI-darkred);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .btn-danger {
     background-color: var(--PI-darkred);
     border-color: var(--PI-darkred);
@@ -169,7 +255,7 @@ a:hover {
 }
 
 .btn-danger:hover, .btn-danger:focus {
-    background-color: #6b0000; /* Slightly darker on hover */
+    background-color: #6b0000;
     border-color: #6b0000;
 }
 
@@ -186,12 +272,10 @@ a:hover {
     border-color: var(--PI-darkred);
 }
 
-/* Add a small margin to the icons inside buttons */
 .btn i {
     margin-left: 5px;
 }
 
-/* Add a new CSS class to handle special cases where we want images side-by-side */
 .image-pair {
     display: flex;
     justify-content: center;
@@ -201,20 +285,18 @@ a:hover {
 }
 
 .image-pair img {
-    flex: 1 1 280px; /* Allow growing but set minimum width */
+    flex: 1 1 280px;
     min-width: 280px;
     object-fit: contain;
-    max-width: 350px; /* Prevent images from getting too large */
+    max-width: 350px;
 }
 
-/* Standard text block for non-flex layouts */
 .block-text {
     text-align: justify;
     object-fit: contain;
     flex-grow: 1;
 }
 
-/* Caption text for images and diagrams */
 .caption-text {
     text-align: center;
     font-size: 0.95em;
@@ -226,51 +308,90 @@ a:hover {
     color: #333;
 }
 
-/* Make sub-block-content styling consistent across all screen sizes */
 .sub-block-content {
     display: flex;
     justify-content: space-between;
     background-color: var(--PI-sand);
-    padding-top: var(--pad-top)!important;
+    padding-top: var(--pad-top) !important;
     padding-bottom: var(--pad-bottom);
     padding-left: var(--pad-left);
     padding-right: var(--pad-right);
     border-block: var(--border-width) solid var(--PI-darkred);
     text-align: justify;
     flex-wrap: wrap;
-    gap: 20px; /* Add gap for better spacing when wrapping */
+    gap: 20px;
 }
 
-/* New class for content paragraphs in sub-blocks */
 .sub-block-text {
-    min-width: 280px; /* Minimum width before wrapping */
-    flex: 1 1 280px; /* Grow, shrink, and basis */
+    min-width: 280px;
+    flex: 1 1 280px;
     object-fit: contain;
     text-align: justify;
 }
 
 .sub-block-image {
     margin: auto;
-    min-width: 280px; /* Consistent min-width with text */
+    min-width: 280px;
     max-width: 550px;
-    padding-left: var(--pad-left)!important;
+    padding-left: var(--pad-left) !important;
     flex-grow: 1;
-    flex-basis: 280px; /* Consistent flex-basis */
+    flex-basis: 280px;
     object-fit: contain;
 }
 
-/* subbody width is locked to 70% on Desktop */
+@media (max-width: 1130px) {
+    .sub-block-image {
+        width: 100%;
+        order: -1;
+    }
+    
+    .sub-block-text {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .sub-block-content {
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1131px) {
+    .sub-block-image {
+        width: 40%;
+        min-width: calc(0.2*var(--page-width));
+    }
+    
+    .sub-block-text {
+        width: 55%;
+    }
+}
+
+@media (min-width: 2139px) {
+    .sub-block-image {
+        min-width: 350px;
+        flex-basis: 350px;
+    }
+    
+    .sub-block-text {
+        min-width: 350px;
+        flex: 1 1 350px;
+    }
+    
+    .sub-block-content {
+        gap: 25px;
+    }
+}
+
 @media (min-width: 1131px) {
     .sub-body {
-        width: var(--page-width); /* Adjust width as needed */
-        max-width: 1500px; /* Prevents it from getting too wide */
-        background-color: white; /* Makes it stand out from body */
-        margin: auto; /* Centers it */
+        width: var(--page-width);
+        max-width: 1500px;
+        background-color: white;
+        margin: auto;
         padding: 20px;
-        box-shadow: 0px 0px 10px var(--shadow-color); /* Optional: Adds a shadow */
-        text-align: left; /* Keeps text left-aligned */
+        box-shadow: 0px 0px 10px var(--shadow-color);
+        text-align: left;
     }
-    /* Blocks in sub-pages */
     .sub-block-content {
         display: flex;
         justify-content: space-between;
@@ -282,7 +403,7 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
-        gap: 20px; /* Add gap for better spacing when wrapping */
+        gap: 20px;
     }
     .sub-block-image {
         margin: auto;
@@ -292,9 +413,8 @@ a:hover {
         flex-grow: 1;
     }
     .sub-block-text {
-        width: 55%; /* Standard width for desktop */
+        width: 55%;
     }
-    /* For very small screens, stack images completely */
     @media (max-width: 600px) {
         .image-pair img {
             width: 100%;
@@ -302,18 +422,16 @@ a:hover {
     }
 }
 
-/* Changes for Mobile */
 @media (max-width: 1130px) {
     .sub-body {
-        width: auto; /* Adjust width as needed */
-        max-width: 1500px; /* Prevents it from getting too wide */
-        background-color: white; /* Makes it stand out from body */
+        width: auto;
+        max-width: 1500px;
+        background-color: white;
         padding: 20px;
-        box-shadow: 0px 0px 10px var(--shadow-color); /* Optional: Adds a shadow */
-        text-align: left; /* Keeps text left-aligned */
+        box-shadow: 0px 0px 10px var(--shadow-color);
+        text-align: left;
     }
 
-    /* Dropdown button */
     .dropdown-btn {
         height: var(--dropdown-button-height);
         font-size: 100%;
@@ -332,19 +450,16 @@ a:hover {
         display: none;
         position: absolute;
         background-color: var(--PI-sand);
-        top: calc(var(--dropdown-button-height) + var(--vertical-offset)); /* Position the dropdown below the button */
-        /* The following two lines keep the content centered  in mobile view*/
-        left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
-        transform: translateX(-50%); /* Shift box back by half its width to center */
-        /*height: var(--dropdown-content-height); /* here page width is low, so increase multiplication factor */
-        width: 303%; /* Keeps empty space on the left and right */
+        top: calc(var(--dropdown-button-height) + var(--vertical-offset));
+        left: calc(50vw + -1 * var(--dropdown-left));
+        transform: translateX(-50%);
+        width: 303%;
         z-index: 1;
         border: var(--border-width) solid var(--PI-darkred);
         border-radius: var(--border-radius);
         box-sizing: border-box;
-        overflow-y: auto; /* Make the dropdown content scrollable if it exceeds the height */
+        overflow-y: auto;
     }
-    /* Blocks in sub-pages */
     .sub-block-content {
         display: flex;
         justify-content: space-between;
@@ -356,7 +471,7 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
-        gap: 15px; /* Slightly smaller gap on mobile */
+        gap: 15px;
     }
     .sub-block-image {
         margin: auto;
@@ -364,34 +479,30 @@ a:hover {
         max-width: 550px;
         padding-left: var(--pad-left)!important;
         flex-grow: 1;
-        width: 100%; /* Full width on mobile */
-        order: -1; /* Images appear above text on mobile */
+        width: 100%;
+        order: -1;
     }
     .sub-block-text {
-        width: 100%; /* Take full width on mobile */
-        min-width: 100%; /* Force full width */
+        width: 100%;
+        min-width: 100%;
     }
 }
-/* edge case */
+
 @media (min-width: 2139px) {
     .dropdown-content {
         display: none;
-        position: absolute; /* Position the dropdown relative to the page */
+        position: absolute;
         background-color: var(--PI-sand);
-        top: calc(var(--dropdown-button-height) + var(--vertical-offset)); /* Position the dropdown below the button */
-        /* The following two lines keep the content centered  in mobile view*/
-        left: calc(50vw + -1 * var(--dropdown-left)); /* Start positioning from the center */
-        transform: translateX(-50%); /* Shift box back by half its width to center */
-        /*height: var(--dropdown-content-height); /* here page width is low, so increase multiplication factor */
-        width: 303%; /* Keeps empty space on the left and right */
-        /*max-width: 1360px; /* Prevents it from getting too wide */
+        top: calc(var(--dropdown-button-height) + var(--vertical-offset));
+        left: calc(50vw + -1 * var(--dropdown-left));
+        transform: translateX(-50%);
+        width: 303%;
         z-index: 1;
         border: 2px solid var(--PI-darkred);
         border-radius: 5px;
         box-sizing: border-box;
-        overflow-y: auto; /* Make the dropdown content scrollable if it exceeds the height */
+        overflow-y: auto;
     }
-    /* Blocks in sub-pages */
     .sub-block-content {
         display: flex;
         justify-content: space-between;
@@ -403,7 +514,7 @@ a:hover {
         border-block: var(--border-width) solid var(--PI-darkred);
         text-align: justify;
         flex-wrap: wrap;
-        gap: 25px; /* Slightly larger gap for larger screens */
+        gap: 25px;
     }
     .sub-block-image {
         margin: auto;
@@ -415,8 +526,8 @@ a:hover {
         flex-basis: 350px;
     }
     .sub-block-text {
-        min-width: 350px; /* Larger min-width on large screens */
-        flex: 1 1 350px; /* Grow, shrink, and basis */
-        width: 55%; /* Standard width for large screens */
+        min-width: 350px;
+        flex: 1 1 350px;
+        width: 55%;
     }
 }

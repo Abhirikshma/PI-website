@@ -22,11 +22,11 @@ include($headerInc);
 <body lang="en-US" dir="ltr">
 	<div class = "sub-body">
 		<br/>
-		<h1 class="western" style="text-align: center;">Welcome to Prof. Schöning's High Energy  Group</h1> 
+		<h1 class="western" style="text-align: center;">Welcome to Prof. Schöning's High Energy Group</h1> 
 		
 		<?php
             // Include the image grid component
-            include("image_grid.php"); 
+            include("image_grid.php");
         ?>
 		<br/>
 		<p style="margin-bottom: 0cm; text-align:center;">
@@ -38,61 +38,82 @@ include($headerInc);
 		<br/>
 	
 		<h2 style="text-align: center;">Our Research Subgroups</h2>
-		<!-- Dropdown menu with 3 buttons for the research subgroups -->	
-		<br/>
-		<div class ="dropdown-container", style="text-align: center; width: 100%;" >
-			<div class="dropdown", style="width:  33%;" >
-				<button class="dropdown-btn">Mu3e</button>
-				<div class="dropdown-content">
-					<a href="<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php">
-							<div class="sub-block-content" style="border: none; background-color: transparent;">
-								<img class="sub-block-image" src="<?php echo $figures;?>/mu3e.jpg" alt="mu3e-exp" style="width: 40%;">
-								<p class="sub-block-text">
-									Mu3e is an experiment under construction at the Paul Scherrer Institute (PSI), in Villigen, Switzerland.
-									Its goal is to search for an anti-muon decaying into two positrons and one electron, \(\small \mu^+~\rightarrow~e^+ e^- e^+\). 
-									This decay channel would violate the conservation of the Charge Lepton Flavour, which is foreseen in the Standard Model only
-									at very low branching ratios \(\small\mathcal{O}(10^{-50})\).
-									While the current limit for the branching ratio is about \(\small 10^{-12}\), Mu3e aims to exclude it,
-									or observe it, at a sensitivity of \(\small 10^{-16}\).
-								</p>
+		<!-- Replace dropdown menu with Bootstrap cards -->
+		<div class="row justify-content-center">
+			<!-- Mu3e Card -->
+			<div class="col-md-4 mb-4">
+				<a href="<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php" class="card-link">
+					<div class="card h-100 research-card">
+						<img class="card-img-top" src="<?php echo $figures;?>/mu3e.jpg" alt="mu3e-exp">
+						<div class="card-body">
+							<h5 class="card-title">Mu3e</h5>
+							<p class="card-text">
+								Mu3e is an experiment under construction at the Paul Scherrer Institute (PSI), in Villigen, Switzerland.
+								Its goal is to search for an anti-muon decaying into two positrons and one electron, \(\small \mu^+~\rightarrow~e^+ e^- e^+\). 
+								This decay channel would violate the conservation of the Charge Lepton Flavour, which is foreseen in the Standard Model only
+								at very low branching ratios \(\small\mathcal{O}(10^{-50})\).
+							</p>
+							<div class="mobile-learn-more">
+								<button class="btn btn-danger" 
+								onclick="location.href='<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php';">
+									Learn More <i class="fas fa-arrow-right"></i>
+								</button>
 							</div>
-					</a>
-				</div>
-  			</div>
-			  <div class="dropdown", style="width: 33%;" >
-    			<button class="dropdown-btn">ATLAS</button>
-    			<div class="dropdown-content">
-					<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php">
-							<div class="sub-block-content" style="border: none; background-color: transparent;">
-								<img class="sub-block-image" src="<?php echo $figures;?>/atlas.png" alt="atlas-exp" style="width: 40%;">
-								<p class="sub-block-text">
-									The ATLAS experiment is one of the four large experiments currently conducted at the Large Hadron Collider (LHC) at CERN.
-									It is a general-purpose detector, aiming to provide precise measurements of the Standard Model's parameters and to investigate
-									BSM physics at the high energy scales reached by the LHC.
-								</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<!-- ATLAS Card -->
+			<div class="col-md-4 mb-4">
+				<a href="<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php" class="card-link">
+					<div class="card h-100 research-card">
+						<img class="card-img-top" src="<?php echo $figures;?>/atlas.png" alt="atlas-exp">
+						<div class="card-body">
+							<h5 class="card-title">ATLAS</h5>
+							<p class="card-text">
+								The ATLAS experiment is one of the four large experiments currently conducted at the Large Hadron Collider (LHC) at CERN.
+								It is a general-purpose detector, aiming to provide precise measurements of the Standard Model's parameters and to investigate
+								BSM physics at the high energy scales reached by the LHC.
+							</p>
+							<div class="mobile-learn-more">
+								<button class="btn btn-danger" 
+								onclick="location.href='<?php echo dirname($subpath);?>/research/ATLAS/ATLAS_mainpage.php';">
+									Learn More <i class="fas fa-arrow-right"></i>
+								</button>
 							</div>
-					</a>
-    			</div>
-  			</div>
-			<div class="dropdown", style="width:  33%;" >
-    			<button class="dropdown-btn">HV-MAPS</button>
-    			<div class="dropdown-content">
-					<a href="<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php">
-							<div class="sub-block-content" style="border: none; background-color: transparent;">
-								<img class="sub-block-image" src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" alt="hvmaps-exp" style="width: 40%;">
-								<p class="sub-block-text">
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<!-- HV-MAPS Card -->
+			<div class="col-md-4 mb-4">
+				<a href="<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php" class="card-link">
+					<div class="card h-100 research-card">
+						<img class="card-img-top" src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" alt="hvmaps-exp">
+						<div class="card-body">
+							<h5 class="card-title">HV-MAPS</h5>
+							<p class="card-text">
 								The High Energy of the Physics Institute is developing High Voltage – Monolithic Active Pixel Sensors (HV-MAPS) for future particle 
 								physics experiments. Pixel sensors provide spatial information at micrometer precision for particles in the momentum range from a few MeV
-								to hundreds of GeV/c. HV-MAPS allow for particle tracking at highest rates and are easy to produce compared to standard hybrid pixel detectors. 
-								Monolithic sensors have the additional advantage that very thin tracking modules can be built, with a radiation length of only 0.11% in case of the Mu3e experiment. 
-								</p>
+								to hundreds of GeV/c.
+							</p>
+							<div class="mobile-learn-more">
+								<button class="btn btn-danger" 
+								onclick="location.href='<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php';">
+									Learn More <i class="fas fa-arrow-right"></i>
+								</button>
 							</div>
-					</a>
-    			</div>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 		<br/>
-		<div class="content"> <!-- Put in a new div to ensure this is pushed down when the buttons are opened -->
+
+        
+		<div class="content">
 			<h2 style="text-align: center;"> News</h2>
 			<ul style="list-style-type: none; "> 
 				<li style="margin-bottom: 10px;"> <b style="color: var(--PI-darkred);">Mar 31 - Apr 4, 2025</b> Abhi, David F. and Giulia present their work at the <a href = "https://goettingen25.dpg-tagungen.de">DPG Spring Meeting</a></li>
@@ -113,15 +134,9 @@ include($headerInc);
 					</div>
 			</ul>
 		</div>
-		<br>
-
-
-	<!-- Load Javascript to toggle buttons visibility -->
-	<script type="text/javascript" src="<?php echo $buttonsJs;?>"></script>
+		<br/>
 	</div>
+    <?php include($footerInc); ?>
+	<script type="text/javascript" src="<?php echo $buttonsJs;?>"></script>
 </body>
 </html>
-
-<?php
-include($footerInc); 
-?>
