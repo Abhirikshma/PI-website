@@ -26,72 +26,109 @@ include("header_common_he.php.inc")
         <h1 class="western">Theses Opportunities</h1> 
 
         <?php
-// Fetch the content from an external PHP file
-$url = "https://www.physi.uni-heidelberg.de/Jobs/jobs.php";
-$content = file_get_contents($url);
+        $url = "https://www.physi.uni-heidelberg.de/Jobs/jobs.php";
+        $raw_html_content = file_get_contents($url);
+        $output_html_for_theses = '';
 
-if ($content !== false) {
-    // Remove everything before the main content
-    $content = preg_replace('/.*?<h2>Bachelorarbeiten<\/h2>/s', '<body><h2>Bachelor Theses</h2>', $content);
-    $content = preg_replace('/.<\/div><h2>Master Arbeiten<\/h2>/s', '</div><h2>Master Theses</h2>', $content);
+        if ($raw_html_content !== false) {
+            $doc = new DOMDocument();
+            // Use @ to suppress warnings from potentially malformed HTML from the source
+            // Prepending XML encoding declaration can help with character encoding issues
+            @$doc->loadHTML('<?xml encoding="utf-8" ?>' . $raw_html_content);
+            $xpath = new DOMXPath($doc);
 
-    // Modify the table to remove width and set the border color to white
-    $content = preg_replace('/<table border=\'1\' style=\'border-collapse: collapse\' bordercolor=\'#000\' width=\'650\' cellpadding=\'5\' cellspacing=\'0\'>/s',
-        '<table style="border-collapse: collapse; border-color: white; width: auto;" cellpadding="4" cellspacing="0">', $content);
+            // Helper function to extract and format theses
+            function extractAndFormatThesesForProfessor(DOMXPath $xpath, $sourceSectionHeading, $displaySectionHeading, $professorKeyword) {
+                $thesesData = [];
+                $sectionOutput = '';
 
-    // Also remove any width attributes in <td> and ensure it adjusts dynamically
-    $content = preg_replace('/<td width=[\'"]?450[\'"]?>/s', '<td>', $content);
+                // Find the h2 heading for the section
+                $headingNodes = $xpath->query("//h2[contains(text(), '$sourceSectionHeading')]");
 
-    // Remove everything after the footer (closing body, scripts, additional HTML)
-    $content = preg_replace('/.<\/div><h2>Projektpraktika<\/h2>.*?<\/html>/s', '</div></body></html>', $content);
+                if ($headingNodes->length > 0) {
+                    $currentHeadingNode = $headingNodes->item(0);
+                    
+                    // The table is expected inside a <div style="overflow: auto;"> following the h2
+                    $tableContainerDiv = $xpath->query("following-sibling::div[contains(@style, 'overflow: auto')][1]", $currentHeadingNode)->item(0);
+                    $tableNode = null;
+                    if ($tableContainerDiv) {
+                        $tableNode = $xpath->query("./table[1]", $tableContainerDiv)->item(0);
+                    }
 
-    // Remove rows that do not contain "André Schöning"
-    $content = preg_replace_callback(
-        '/<tr>(.*?)<\/tr>/s',
-        function ($matches) {
-            // Check if "André Schöning" or variations appear inside the row
-            if (preg_match('/André Schöning|Andre Schöning/', $matches[1])) {
-                return "<tr>" . $matches[1] . "</tr>"; // Keep the row
+                    if ($tableNode) {
+                        $rows = $xpath->query(".//tr", $tableNode);
+                        foreach ($rows as $row) {
+                            $cells = $xpath->query(".//td", $row);
+                            $professorCellText = '';
+                            if ($cells->length > 1) { // Professor name is usually in the second cell
+                                $professorCellText = $cells->item(1)->nodeValue;
+                            }
+
+                            if (strpos($professorCellText, $professorKeyword) !== false) {
+                                $titleLinkNode = $xpath->query(".//a", $cells->item(0))->item(0);
+                                if ($titleLinkNode) {
+                                    $title = trim($titleLinkNode->nodeValue);
+                                    $href = trim($titleLinkNode->getAttribute('href'));
+                                    // Ensure URL is absolute
+                                    if (!preg_match('/^https?:\/\//i', $href)) {
+                                        $href = 'http://www.physi.uni-heidelberg.de' . (substr($href, 0, 1) === '/' ? '' : '/') . $href;
+                                    }
+                                    $thesesData[] = ['title' => $title, 'link' => $href];
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (!empty($thesesData)) {
+                    // This div.opportunity-section-box will now be inside .all-opportunities-box
+                    $sectionOutput .= '<div class="opportunity-section-box">'; 
+                    $sectionOutput .= '<h2 class="publication-section-title">' . htmlspecialchars($displaySectionHeading) . '</h2>';
+                    $sectionOutput .= '<ul class="opportunity-list">'; 
+                    foreach ($thesesData as $thesis) {
+                        $sectionOutput .= '<li><a href="' . htmlspecialchars($thesis['link']) . '">' . htmlspecialchars($thesis['title']) . '</a></li>';
+                    }
+                    $sectionOutput .= '</ul>';
+                    $sectionOutput .= '</div>'; 
+                }
+                return $sectionOutput;
             }
-            return ''; // Remove the row
-        },
-        $content
-    );
 
-    // Remove André Schöning's td from the rows (cleanup)
-    $content = preg_replace(
-        '/<td><a href=\'http:\/\/www\.physi\.uni-heidelberg\.de\/Mitarbeiter\/madetails\.php\?fakid=16010\'.*?>André Schöning<\/a>,?\s*<\/td>/s',
-        '',
-        $content
-    );
+            // Extract Bachelor Theses
+            $bachelor_theses_html = extractAndFormatThesesForProfessor($xpath, 'Bachelorarbeiten', 'Bachelor Theses', 'Schöning');
+            
+            // Extract Master Theses
+            $master_theses_html = extractAndFormatThesesForProfessor($xpath, 'Master Arbeiten', 'Master Theses', 'Schöning');
 
-    // Remove André Schöning's td for "Andre Schöning"
-    $content = preg_replace(
-        '/<td><a href=\'http:\/\/www\.physi\.uni-heidelberg\.de\/Mitarbeiter\/madetails\.php\?fakid=16208\'.*?>Andre Schöning<\/a>,?\s*<\/td>/s',
-        '',
-        $content
-    );
+            // If there's content for either, wrap them in the main box
+            if (!empty($bachelor_theses_html) || !empty($master_theses_html)) {
+                echo '<div class="all-opportunities-box">';
+                echo $bachelor_theses_html;
+                // Add a small separator if both sections have content and are displayed
+                if (!empty($bachelor_theses_html) && !empty($master_theses_html)) {
+                    // This could be a styled div or just rely on margins of .opportunity-section-box
+                }
+                echo $master_theses_html;
+                echo '</div>';
+            }
 
-    // Output the cleaned content
-    echo $content;
-} else {
-    echo "<p>Error fetching content.</p>";
-}
-?>
-s
+        } else {
+            echo "<p>Error fetching content for Theses Opportunities.</p>";
+        }
+        ?>
 
-<div class="publications-container">
-    <div id="past-theses" class="publication-section">
-        <h2>Past Theses</h2>   
+        <div class="publications-container">
+            <div id="past-theses" class="publication-section">
+                <h2>Past Theses</h2>   
 
-        <ul class="publications">
-            <?php
-              physi_publications("gruppe='ATLAS' OR gruppe = 'mu3e' OR titel='Characterization of a Monolithic Pixel Sensor Prototype in HV-CMOS Technology for the High-Luminosity LHC' OR autor='Arthur E. Bolz' OR autor='Sebastian Dittmeier'
-              OR autor='Aleem Ahmad Tariq Sheikh'");
-            ?>
-        </ul>
-    </div>
-</div>
+                <ul class="publications">
+                    <?php
+                      physi_publications("gruppe='ATLAS' OR gruppe = 'mu3e' OR titel='Characterization of a Monolithic Pixel Sensor Prototype in HV-CMOS Technology for the High-Luminosity LHC' OR autor='Arthur E. Bolz' OR autor='Sebastian Dittmeier'
+                      OR autor='Aleem Ahmad Tariq Sheikh'");
+                    ?>
+                </ul>
+            </div>
+        </div>
 
 
 <!-- ++++++++++++++++++++ End Main Content of the page here! +++++++++++++++++++++ -->

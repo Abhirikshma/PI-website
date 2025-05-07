@@ -311,3 +311,90 @@ ul.publications li a:hover {
         font-size: 1.4rem;
     }
 }
+
+/* Styles for Theses Opportunities section (Bachelor/Master fetched content) */ 
+
+/* General style for publication section titles (used by Past Theses and potentially others) */
+/* This h2.publication-section-title is now primarily for the "Past Theses" section heading */
+/* and acts as a base for the one inside .opportunity-section-box */
+h2.publication-section-title {
+    color: var(--PI-darkred);
+    margin-top: 2.5rem; 
+    margin-bottom: 1rem; 
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--PI-sand); 
+    text-align: left; 
+}
+
+/* New: The main encompassing box for ALL scraped opportunities */
+.all-opportunities-box {
+    border: 1px solid #c5c5c5; /* Main border for the encompassing box */
+    border-radius: 6px; /* Rounded corners for the main box */
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    background-color: #f9f9f9; /* Light background for the whole area */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08); /* A slightly more pronounced shadow */
+    padding: 10px; /* Padding inside the main box, around the section boxes */
+}
+
+/* Adjustments for individual section boxes when inside the main box */
+.all-opportunities-box .opportunity-section-box {
+    border: none; /* Remove individual border, main box has it */
+    border-radius: 0; /* Remove individual radius */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Space between Bachelor and Master sections if both present */
+    background-color: transparent; /* Inherit background from parent or set to #fff if distinct inner bg needed */
+    box-shadow: none; /* Remove individual shadow */
+}
+.all-opportunities-box .opportunity-section-box:last-child {
+    margin-bottom: 0; /* No bottom margin for the last section box */
+}
+
+
+/* Styling for the h2 when it's a header of an opportunity box (inside all-opportunities-box) */
+.all-opportunities-box .opportunity-section-box h2.publication-section-title {
+    margin-top: 0; 
+    margin-bottom: 0; 
+    padding: 10px 15px; 
+    border-bottom: 1px solid #ddd; 
+    background-color: #efefef; /* Slightly different background for section headers */
+    border-top-left-radius: 4px; 
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0;
+    color: var(--PI-darkred); /* Ensure color consistency */
+}
+
+/* Styling for the list of links within the opportunity box */
+.all-opportunities-box .opportunity-section-box ul.opportunity-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 10px 15px 15px 15px; 
+    margin: 0;
+    background-color: #fff; /* White background for the list area */
+    border: 1px solid #ddd; /* Border around the list part */
+    border-top: none; /* Top border is handled by h2's bottom border */
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.all-opportunities-box .opportunity-section-box ul.opportunity-list li {
+    padding: 6px 0; 
+    border-bottom: 1px dotted #e8e8e8; 
+}
+
+.all-opportunities-box .opportunity-section-box ul.opportunity-list li:last-child {
+    border-bottom: none; 
+}
+
+.all-opportunities-box .opportunity-section-box ul.opportunity-list li a {
+    text-decoration: none;
+    color: var(--PI-red);
+    font-weight: normal; 
+    display: block; 
+    padding: 2px 0; /* Small padding for the link itself */
+}
+
+.all-opportunities-box .opportunity-section-box ul.opportunity-list li a:hover {
+    text-decoration: underline;
+    color: var(--PI-darkred);
+}
