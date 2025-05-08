@@ -1,0 +1,1030 @@
+# Journals
+- type: "Journal"
+  year: 2024
+  title: "A Triplet Track Trigger for the FCC-hh to improve the measurement of Di-Higgs production and the Higgs self-coupling"
+  authors: "T. Kar, A. Schöning"
+  links:
+    - text: "Nucl.Instrum.Meth.A 1072 (2025) 0168-9002"
+      url: "https://doi.org/10.1016/j.nima.2024.170085"
+    - text: "arXiv:2401.16046 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2401.16046"
+- type: "Journal"
+  year: 2023
+  title: "Intel Stratix 10 FPGA design for track reconstruction for the ATLAS experiment at the HL-LHC"
+  authors: "Alessandra Camplani, Sebastian Dittmeier, et al."
+  links:
+    - text: "A. Camplani et al 2023 JINST 18 P06029"
+      url: "https://doi.org/10.1088/1748-0221/18/06/P06029"
+    - text: "arXiv:2302.13609 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2302.13609"
+- type: "Journal"
+  year: 2022
+  title: "Search for resonant pair production of Higgs bosons in the \\(b\\bar{b}b\\bar{b}\\) final state using pp collisions at \\(\\sqrt{s}=13\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "Phys. Rev. D 105, 092002"
+      url: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.092002"
+    - text: "arXiv:2202.07288 [hep-ex]"
+      url: "https://arxiv.org/abs/2202.07288"
+- type: "Journal"
+  year: 2021
+  title: "Better Latent Spaces for Better Autoencoders"
+  authors: "Barry M. Dillon, Tilman Plehn, Christof Sauer, Peter Sorrenson"
+  links:
+    - text: "SciPost Phys. 11, 061 (2021)"
+      url: "https://scipost.org/10.21468/SciPostPhys.11.3.061"
+    - text: "arxiv:2104.08291 [hep-ph]"
+      url: "https://arxiv.org/abs/2104.08291"
+- type: "Journal"
+  year: 2021
+  title: "The ATLAS Fast TracKer system"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "2021 JINST 16 P07006"
+      url: "https://iopscience.iop.org/article/10.1088/1748-0221/16/07/P07006"
+    - text: "arXiv:2101.05078 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2101.05078"
+- type: "Journal"
+  year: 2018
+  title: "Search for \\(W' \\rightarrow tb\\) in the hadronic final state with the ATLAS detector in \\(\\sqrt{s}=13\\) TeV pp collisions"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "arxiv:1801.07893 [hep-ex]"
+      url: "https://arxiv.org/abs/1801.07893"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EXOT-2017-02/"
+- type: "Journal"
+  year: 2018
+  title: "Effects of Proton Irradiation on 60 GHz CMOS Transceiver Chip for Multi-Gbps Communication in High-Energy Physics Experiments"
+  authors: "I. Aziz, R. Brenner, S. Dittmeier, A. Schöning, et al."
+  links:
+    - text: "J.Eng. (2019) 8, 5391-5396"
+      url: "https://doi.org/10.1049/joe.2018.5402"
+    - text: "arXiv:1810.11842 [physics.ins-det]"
+      url: "https://arxiv.org/abs/1810.11842"
+- type: "Journal"
+  year: 2017
+  title: "Determination of the strong coupling constant \\(\\alpha_{s}(M_Z)\\) in next-to-next-to-leading order QCD using H1 jet cross section measurements"
+  authors: "H1 Collaboration"
+  links:
+    - text: "arXiv:1709.07251 [hep-ex]"
+      url: "https://arxiv.org/abs/1709.07251"
+      note: "accepted by EPJC"
+    - text: "H1 Link"
+      url: "https://www-h1.desy.de/h1/www/publications/htmlsplit/DESY-17-137.long.poster.html"
+- type: "Journal"
+  year: 2016
+  title: "Precision measurement and interpretation of inclusive \\(W^+\\), \\(W^-\\) and \\(Z/\\gamma^*\\) production cross sections with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "arXiv:1612.03016 [hep-ex]"
+      url: "http://arxiv.org/abs/1612.03016"
+      note: "subm. to EPJC"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2012-20/"
+- type: "Journal"
+  year: 2016
+  title: "Measurement of the double-differential high-mass Drell-Yan cross section in pp collisions at \\(\\sqrt{s} = 8\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 08 (2016) 009"
+      url: "http://link.springer.com/article/10.1007%2FJHEP08(2016)009"
+    - text: "arXiv:1606.01736 [hep-ex]"
+      url: "http://arxiv.org/abs/1606.01736"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2014-06/"
+- type: "Journal"
+  year: 2016
+  title: "Measurement of the angular coefficients in Z-boson events using electron and muon pairs from data taken at \\(\\sqrt{s} = 8\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 08 (2016) 159"
+      url: "http://link.springer.com/article/10.1007/JHEP08(2016)159"
+    - text: "arXiv:1606.00689 [hep-ex]"
+      url: "http://arxiv.org/abs/1606.00689"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2014-10/"
+- type: "Journal"
+  year: 2016
+  title: "Measurement of \\(W^{\\pm}\\) and Z-boson production cross sections in pp collisions at \\(\\sqrt{s} = 13\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "Phys. Lett. B 759 (2016) 601"
+      url: "http://www.sciencedirect.com/science/article/pii/S0370269316302763"
+    - text: "arXiv:1603.09222 [hep-ex]"
+      url: "http://arxiv.org/abs/1603.09222"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2015-03/"
+- type: "Journal"
+  year: 2016
+  title: "Identification of high transverse momentum top quarks in pp collisions at \\(\\sqrt{s} = 8\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 06 (2016) 093"
+      url: "http://link.springer.com/article/10.1007%2FJHEP06%282016%29093"
+    - text: "arXiv:1603.03127"
+      url: "http://arxiv.org/abs/1603.03127"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2015-04/"
+- type: "Journal"
+  year: 2016
+  title: "Identification of boosted, hadronically decaying W bosons and comparisons with ATLAS data taken at \\(\\sqrt{s} = 8\\) TeV"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "EPJC 76(3), 1-47"
+      url: "http://link.springer.com/article/10.1140/epjc/s10052-016-3978-z"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2015-03/"
+- type: "Journal"
+  year: 2016
+  title: "Measurement of the transverse momentum and \\(\\phi_{\\eta}^*\\) distributions of Drell-Yan lepton pairs in proton-proton collisions at \\(\\sqrt{s} = 8\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "Eur. Phys. J. C76 (2016) 1-61"
+      url: "http://link.springer.com/article/10.1140/epjc/s10052-016-4070-4"
+    - text: "arXiv:1512.02192 [hep-ex]"
+      url: "http://arxiv.org/abs/1512.02192"
+    - text: "ATLAS Link"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/STDM-2014-12/"
+- type: "Journal"
+  year: 2016
+  title: "Feasibility studies for a wireless 60 GHz tracking detector readout"
+  authors: "S. Dittmeier, H.K. Soltveit, A. Schoening, D. Wiedner"
+  links:
+    - text: "Nucl.Instrum.Meth.A 830 (2016) 417-426"
+      url: "https://doi.org/10.1016/j.nima.2016.06.016"
+    - text: "arXiv:1604.06259 [physics.ins-det]"
+      url: "https://arxiv.org/abs/1604.06259"
+- type: "Journal"
+  year: 2015
+  title: "Combined analysis of charm-quark fragmentation-fraction measurements"
+  authors: "M. Lisovyi, A. Verbytskyi, O. Zenaiev"
+  links:
+    - text: "Eur. Phys. J. C76 (2016) 397"
+      url: "http://link.springer.com/article/10.1140%2Fepjc%2Fs10052-016-4246-y"
+    - text: "arXiv:1509.01061 [hep-ex]"
+      url: "http://arxiv.org/abs/1509.01061"
+- type: "Journal"
+  year: 2015
+  title: "The PDF4LHC report on PDFs and LHC data: Results from Run I and preparation for Run II"
+  authors: "Juan Rojo, Alberto Accardi, Richard D. Ball, Amanda Cooper-Sarkar, Albert de Roeck, Stephen Farry, James Ferrando, Stefano Forte, Jun Gao, Lucian Harland-Lang, Joey Huston, Alexander Glazov, Maxime Gouzevitch, Claire Gwenlan, Katerina Lipka, Mykhailo Lisovyi, Michelangelo Mangano, Pavel Nadolsky, Luca Perrozzi, Ringaile Placakyte, Voica Radescu, Gavin P. Salam, Robert Thorne"
+  links:
+    - text: "J.Phys. G42 (2015) 103103"
+      url: "http://iopscience.iop.org/article/10.1088/0954-3899/42/10/103103"
+    - text: "arXiv:1507.00556 [hep-ph]"
+      url: "http://arxiv.org/abs/1507.00556"
+- type: "Journal"
+  year: 2015
+  title: "Charm, Beauty and Top at HERA"
+  authors: "O. Behnke, A. Geiser, M. Lisovyi"
+  links:
+    - text: "Prog.Part.Nucl.Phys. 84 (2015) 1-72"
+      url: "http://www.sciencedirect.com/science/article/pii/S0146641015000447"
+    - text: "arXiv:1506.07519 [hep-ex]"
+      url: "http://arxiv.org/abs/1506.07519"
+- type: "Journal"
+  year: 2015
+  title: "Combination of Differential \\(D^{*\\pm}\\) Cross-Section Measurements in Deep-Inelastic \\(ep\\) Scattering at HERA"
+  authors: "H1, ZEUS Collaborations"
+  links:
+    - text: "JHEP 1509 (2015) 149"
+      url: "http://link.springer.com/article/10.1007%2FJHEP09%282015%29149"
+    - text: "arXiv:1503.06042 [hep-ex]"
+      url: "http://arxiv.org/abs/1503.06042"
+- type: "Journal"
+  year: 2015
+  title: "Boosted Top Quarks and Jet Structure"
+  authors: "S. Schätzel, Habilitationsschrift, Universität Heidelberg, 2013"
+  links:
+    - text: "Eur. Phys. J. C (2015) 75: 415"
+      url: "http://link.springer.com/article/10.1140%2Fepjc%2Fs10052-015-3636-x"
+    - text: "arXiv:1403.5176 [hep-ph]"
+      url: "http://arxiv.org/abs/1403.5176"
+- type: "Journal"
+  year: 2014
+  title: "Benchmarking an Even Better HEPTopTagger"
+  authors: "C. Anders, C. Bernaciak, G. Kasieczka, T. Plehn, T. Schell"
+  links:
+    - text: "Phys. Rev. D89 (2014) 074047"
+      url: "http://journals.aps.org/prd/abstract/10.1103/PhysRevD.89.074047"
+    - text: "arXiv:1312.1504 [hep-ph]"
+      url: "http://arxiv.org/abs/1312.1504"
+- type: "Journal"
+  year: 2014
+  title: "Tagging highly boosted top quarks"
+  authors: "S. Schätzel and M. Spannowsky"
+  links:
+    - text: "Phys. Rev. D89 (2014) 014007"
+      url: "http://prd.aps.org/abstract/PRD/v89/i1/e014007"
+    - text: "arXiv:1308.0540 [hep-ph]"
+      url: "http://arxiv.org/abs/1308.0540"
+- type: "Journal"
+  year: 2013
+  title: "Search for resonances decaying into top-quark pairs using fully hadronic decays in pp collisions with ATLAS at \\(\\sqrt{s} = 7\\) TeV"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 1301 (2013) 116"
+      url: "http://link.springer.com/article/10.1007%2FJHEP01%282013%29116"
+    - text: "arXiv:1211.2202 [hep-ex]"
+      url: "http://arxiv.org/abs/arXiv:1211.2202"
+- type: "Journal"
+  year: 2013
+  title: "Performance of jet substructure techniques for large-R jets in proton-proton collisions at \\(\\sqrt{s} = 7\\) TeV using the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 1309 (2013) 076"
+      url: "http://link.springer.com/article/10.1007/JHEP09(2013)076"
+    - text: "arXiv:1306.4945 [hep-ex]"
+      url: "http://arxiv.org/abs/arXiv:1306.4945"
+- type: "Journal"
+  year: 2012
+  title: "Determination of the strange quark density of the proton from ATLAS data on \\(W\\to \\ell\\nu\\) and \\(Z\\to\\ell\\ell\\) cross-sections"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "Phys.Rev.Lett. 109 (2012) 012001"
+      url: "http://prl.aps.org/abstract/PRL/v109/i1/e012001"
+    - text: "arXiv:1203.4051 [hep-ex]"
+      url: "http://arxiv.org/abs/1203.4051"
+- type: "Journal"
+  year: 2012
+  title: "Measurement of the inclusive \\(W^{\\pm}\\) and \\(Z/\\gamma\\) cross sections in the electron and muon decay channels in pp collisions at \\(\\sqrt{s} = 7\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "Phys.Rev. D85 (2012) 072004"
+      url: "http://prd.aps.org/abstract/PRD/v85/i7/e072004"
+    - text: "arXiv:1109.5141 [hep-ex]"
+      url: "http://arxiv.org/abs/arXiv:1109.5141"
+- type: "Journal"
+  year: 2010
+  title: "Measurement of the \\(W \\to \\ell\\nu\\) and \\(Z/\\gamma^* \\to \\ell\\ell\\) production cross sections in proton-proton collisions at \\( \\sqrt{s} = 7\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "JHEP 12 (2010) 060"
+      url: "http://link.springer.com/article/10.1007%2FJHEP12%282010%29060"
+    - text: "arXiv:1010.2130 [hep-ex]"
+      url: "http://arxiv.org/abs/arXiv:1010.2130"
+
+# Pre-prints, Proceedings, Conference and Pub Notes
+- type: "Proceeding"
+  year: 2023
+  title: "Track reconstruction for the ATLAS Phase-II High-Level Trigger using Graph Neural Networks on FPGAs"
+  authors: "Sachin Gupta on behalf of the ATLAS TDAQ collaboration"
+  links:
+    - text: "2023 CTD Proceedings"
+      url: "#tbd"
+    - text: "ATL-DAQ-PROC-2023-014"
+      url: "https://cds.cern.ch/record/2880336"
+  event: "2023 CTD Proceedings"
+  place: "TBD"
+  date: "2023"
+- type: "Proceeding"
+  year: 2023
+  title: "Track reconstruction for the ATLAS Phase-II Event Filter using GNNs on FPGAs"
+  authors: "Sebastian Dittmeier on behalf of the ATLAS TDAQ collaboration"
+  links:
+    - text: "2023 CHEP Proceedings"
+      url: "https://doi.org/10.1051/epjconf/202429502032"
+    - text: "ATL-DAQ-PROC-2023-006"
+      url: "https://cds.cern.ch/record/2870183"
+  event: "2023 CHEP Proceedings"
+  place: "TBD"
+  date: "2023"
+- type: "Proceeding"
+  year: 2022
+  title: "Linearized Track-Fitting on an FPGA"
+  authors: "Joachim Zinsser, Sebastian Dittmeier, André Schöning"
+  links:
+    - text: "2022 Connecting The Dots Proceedings"
+      url: "https://zenodo.org/record/8119737"
+  event: "2022 Connecting The Dots Proceedings"
+  place: "TBD"
+  date: "2022"
+- type: "Proceeding"
+  year: 2022
+  title: "The AM08 Associative Memory ASIC Design, Architecture and Evaluation methodology"
+  authors: "Andreas Vgenopoulos, Sebastian Dittmeier, Gunnar Föhner, Dirk Gottschalk, André Schöning et al."
+  links:
+    - text: "2022 MOCAST IEEE XPLORE Proceedings"
+      url: "https://doi.org/10.1109/MOCAST54814.2022.9837600"
+  event: "2022 MOCAST IEEE XPLORE Proceedings"
+  place: "TBD"
+  date: "2022"
+- type: "Preprint"
+  year: 2022
+  title: "Going off topics to demix quark and gluon jets in \\(\\alpha_S\\) extractions"
+  authors: "Matt LeBlanc, Benjamin Nachman and Christof Sauer"
+  links:
+    - text: "arXiv:2206.10642 [hep-ph]"
+      url: "https://arxiv.org/abs/2206.10642"
+  event: "arXiv Preprint"
+  place: "TBD"
+  date: "2022"
+- type: "PubNote"
+  year: 2022
+  title: "Search for non-resonant pair production of Higgs bosons in the \\(b\\bar{b}b\\bar{b}\\) final state in pp collisions at \\(\\sqrt{s} = 13\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2022-035"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2022-035/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2022"
+- type: "PubNote"
+  year: 2021
+  title: "Identification of hadronically-decaying top quarks using UFO jets with ATLAS in Run 2"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATL-PHYS-PUB-2021-028"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2021-028/"
+  event: "ATL-PHYS-PUB"
+  place: "TBD"
+  date: "2021"
+- type: "Proceeding"
+  year: 2019
+  title: "The ATLAS Hardware Track Trigger design towards first prototypes"
+  authors: "S. Dittmeier on behalf of the ATLAS TDAQ collaboration"
+  links:
+    - text: "PoS Vertex2019 (2020) 049"
+      url: "https://doi.org/10.22323/1.373.0049"
+    - text: "ATL-DAQ-PROC-2019-032"
+      url: "http://cds.cern.ch/record/2703174"
+  event: "PoS Vertex2019"
+  place: "TBD"
+  date: "2019"
+- type: "Proceeding"
+  year: 2019
+  title: "Triplet Track Trigger for Future High Rate Experiments"
+  authors: "T. Kar, D. E. F. de Lima, A. Schoening, J. Wang"
+  links:
+    - text: "PROC-CTD19-007"
+      url: "https://arxiv.org/abs/1910.06946"
+  event: "PROC-CTD19"
+  place: "TBD"
+  date: "2019"
+- type: "PubNote"
+  year: 2017
+  title: "Search for \\(W'\\rightarrow tb\\) in the hadronic final state with the ATLAS detector in \\(\\sqrt{s}=13\\) TeV pp collisions"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2017-082"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2017-082/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2017"
+- type: "PubNote"
+  year: 2017
+  title: "Performance of Top Quark and W Boson Tagging in Run 2 with ATLAS"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2017-064"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2017-064/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2017"
+- type: "PubNote"
+  year: 2017
+  title: "Identification of Hadronically-Decaying W Bosons and Top Quarks Using High-Level Features as Input to Boosted Decision Trees and Deep Neural Networks in ATLAS at \\(\\sqrt{s}=13\\) TeV"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATL-PHYS-PUB-2017-004"
+      url: "https://cds.cern.ch/record/2259646?ln=de"
+  event: "ATL-PHYS-PUB"
+  place: "TBD"
+  date: "2017"
+- type: "Proceeding"
+  year: 2017
+  title: "Wireless data transmission for high energy physics applications"
+  authors: "S. Dittmeier for the WADAPT consortium"
+  links:
+    - text: "EPJ Web Conf. 150 (2017) 00002"
+      url: "https://doi.org/10.1051/epjconf/201715000002"
+  event: "EPJ Web Conf."
+  place: "TBD"
+  date: "2017"
+- type: "Proceeding"
+  year: 2016
+  title: "Results on BSM Higgs boson searches at ATLAS"
+  authors: "M. Giulini"
+  links:
+    - text: "Conference Proceeding"
+      url: "https://cds.cern.ch/record/2223241"
+  event: "Conference Proceeding"
+  place: "TBD"
+  date: "2016"
+- type: "PubNote"
+  year: 2016
+  title: "Search for heavy particles decaying to pairs of highly-boosted top quarks using lepton-plus-jets events in proton--proton collisions at \\(\\sqrt{s} = 13\\) TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2016-014"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-014/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2016"
+- type: "PubNote"
+  year: 2016
+  title: "Search for single production of vector-like quarks decaying into \\(Wb\\) in \\(pp\\) collisions at \\(\\sqrt{s} =\\) 13 TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2016-072"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-072/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2016"
+- type: "PubNote"
+  year: 2016
+  title: "Studies of b-tagging performance and jet substructure in a high \\(p_T\\) \\(g\\rightarrow b\\bar{b}\\) rich sample of large-R jets from p p collisions at \\(\\sqrt{s}\\)=8 TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2016-002"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-002/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2016"
+- type: "PubNote"
+  year: 2016
+  title: "Measurement of large radius jet mass reconstruction performance at \\(\\sqrt{s}\\) = 8 TeV using the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2016-006"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2016-008/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2016"
+- type: "PubNote"
+  year: 2015
+  title: "Boosted hadronic top identification at ATLAS for early 13 TeV data"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2015-053"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2015-053/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2015
+  title: "Measurement of W and Z Boson Production Cross Sections in pp Collisions at sqrt(s)=13 TeV with the ATLAS Detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2015-039"
+      url: "https://cds.cern.ch/record/2045487"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2015
+  title: "Identification of high transverse momentum top quarks in pp collisions at \\(\\sqrt{s}\\) = 8 TeV with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2015-036"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2015-053/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2015
+  title: "Performance of jet substructure techniques in early \\(\\sqrt{s}\\)=13 TeV pp collisions with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2015-035"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2015-035/"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2015
+  title: "Identification of boosted, hadronically-decaying W and Z bosons in \\(\\sqrt{s}\\)=13 TeV Monte Carlo Simulations for ATLAS"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATL-PHYS-PUB-2015-033"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2015-033/"
+  event: "ATL-PHYS-PUB"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2015
+  title: "Expected Performance of Boosted Higgs \\((\\rightarrow b \\bar{b})\\) Boson Identification with the ATLAS Detector at \\(\\sqrt{s}=13\\) TeV"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATL-PHYS-PUB-2015-035"
+      url: "https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2015-035/"
+  event: "ATL-PHYS-PUB"
+  place: "TBD"
+  date: "2015"
+- type: "Preprint"
+  year: 2015
+  title: "Combination of Measurements of Inclusive Deep Inelastic \\(e^{\\pm}p\\) Scattering Cross Sections and QCD Analysis of HERA Data"
+  authors: "H1, ZEUS Collaborations"
+  links:
+    - text: "arXiv:1506.06042 [hep-ex]"
+      url: "http://arxiv.org/abs/1506.06042"
+  event: "arXiv Preprint"
+  place: "TBD"
+  date: "2015"
+- type: "Preprint"
+  year: 2015
+  title: "Production of exclusive dijets in diffractive deep inelastic scattering at HERA"
+  authors: "ZEUS Collaboration"
+  links:
+    - text: "arXiv:1505.05783 [hep-ex]"
+      url: "http://arxiv.org/abs/1505.05783"
+  event: "arXiv Preprint"
+  place: "TBD"
+  date: "2015"
+- type: "Preprint"
+  year: 2015
+  title: "Development of wireless techniques in data and power transmission − application for particle physics detectors"
+  authors: "WADAPT consortium"
+  links:
+    - text: "arXiv:1511.05807 [physics.ins-det]"
+      url: "https://arxiv.org/abs/1511.05807"
+    - text: "CDS"
+      url: "http://cds.cern.ch/record/2103848"
+  event: "arXiv Preprint"
+  place: "TBD"
+  date: "2015"
+- type: "PubNote"
+  year: 2014
+  title: "Performance of the Fast ATLAS Tracking Simulation (FATRAS) and the ATLAS Fast Calorimeter Simulation (FastCaloSim) with single particles"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATL-SOFT-PUB-2014-001"
+      url: "https://cds.cern.ch/record/1669341"
+  event: "ATL-SOFT-PUB"
+  place: "TBD"
+  date: "2014"
+- type: "PubNote"
+  year: 2014
+  title: "Performance of Boosted W Boson Identification with the ATLAS Detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2014-004"
+      url: "https://cds.cern.ch/record/1690048"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2014"
+- type: "Proceeding"
+  year: 2014
+  title: "60 GHz wireless data transfer for tracker readout systems-first studies and results"
+  authors: "S. Dittmeier, N. Berger, H.K. Soltveit, A. Schoening, D. Wiedner"
+  links:
+    - text: "2014 JINST 9 C11002"
+      url: "https://doi.org/10.1088/1748-0221/9/11/C11002"
+  event: "2014 JINST"
+  place: "TBD"
+  date: "2014"
+- type: "PubNote"
+  year: 2013
+  title: "Performance of boosted top quark identification in 2012 ATLAS data"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2013-084"
+      url: "http://cds.cern.ch/record/1571040"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2013"
+- type: "Proceeding"
+  year: 2013
+  title: "Towards Multi-Gigabit readout at 60 GHz for the ATLAS silicon microstrip detector"
+  authors: "H.K. Soltveit, S. Dittmeier, A. Schoening, D. Wiedner"
+  links:
+    - text: "10.1109/NSSMIC.2013.6829448"
+      url: "https://doi.org/10.1109/NSSMIC.2013.6829448"
+  event: "IEEE Conference"
+  place: "TBD"
+  date: "2013"
+- type: "PubNote"
+  year: 2012
+  title: "Search for Resonances Decaying into Top Quark Pairs Using Fully Hadronic Decays in pp Collisions with ATLAS at \\(\\sqrt{s} = 7\\) TeV"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2012-102"
+      url: "http://cdsweb.cern.ch/record/1463916"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2012"
+- type: "PubNote"
+  year: 2012
+  title: "Performance of large-R jets and jet substructure reconstruction with the ATLAS detector"
+  authors: "The ATLAS Collaboration"
+  links:
+    - text: "ATLAS-CONF-2012-065"
+      url: "http://cdsweb.cern.ch/record/1459530"
+  event: "ATLAS-CONF"
+  place: "TBD"
+  date: "2012"
+- type: "Proceeding"
+  year: 2012
+  title: "Multi-Gigabit Wireless data transfer at 60 GHz"
+  authors: "H.K. Soltveit, R. Brenner, A. Schoening, D. Wiedner"
+  links:
+    - text: "JINST 7 (2012) C12016"
+      url: "https://doi.org/10.1088/1748-0221/7/12/C12016"
+    - text: "arxiv:1206.2287 [physics.ins-det]"
+      url: "https://arxiv.org/abs/1206.2287"
+  event: "JINST"
+  place: "TBD"
+  date: "2012"
+
+# Conference and Invited Talks
+- type: "Conference Talk"
+  year: 2024
+  title: "A graph neural network based cosmic muon trigger for the Mu3e experiment"
+  authors: "D. Karres"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1338689/contributions/6015413/attachments/2952865/5191195/chep2024_karres.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"
+- type: "Conference Talk"
+  year: 2024
+  title: "Performance of the parallelized General Triplet Track Fit implemented on the GPU"
+  authors: "A. Nandi"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1338689/contributions/6018377/attachments/2952883/5191227/General_Triplet_Track_fit_CHEP24.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"
+- type: "Conference Talk"
+  year: 2024
+  title: "Online track reconstruction with graph neural networks on FPGAs for the ATLAS experiment"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1338689/contributions/6015383/attachments/2951232/5187787/202410_CHEP_GNN_final.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"
+- type: "Conference Talk"
+  year: 2024
+  title: "Track reconstruction for the ATLAS Phase-II Event Filter using GNNs on FPGAs"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://indico.desy.de/event/42884/contributions/159264/attachments/88982/119459/dpg2024_dittmeier_final.pdf"
+  event: "DPG-Frühjahrstagung 2024"
+  place: "Karlsruhe, Germany"
+  date: "2024.03"
+- type: "Conference Talk"
+  year: 2023
+  title: "Track reconstruction for the ATLAS Phase-II HLT using GNNs on FPGAs"
+  authors: "S. Gupta"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1290426/contributions/5582390/attachments/2733485/4752521/Satellite_CTD_SachinGupta.pdf"
+  event: "8th International Connecting the Dots Workshop − Mini-Workshop on Real Time Tracking"
+  place: "Toulouse, France"
+  date: "2023.10"
+- type: "Conference Talk"
+  year: 2023
+  title: "Track reconstruction for the ATLAS Phase-II HLT using GNNs on FPGAs"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://indico.jlab.org/event/459/contributions/11375/attachments/9434/13680/CHEP_GNNonFPGAforEFTracking.pdf"
+  event: "26th International Conference on Computing in High Energy & Nuclear Physics (CHEP2023)"
+  place: "Norfolk, USA"
+  date: "2023.05"
+- type: "Conference Talk"
+  year: 2022
+  title: "A Triplet Track Trigger for FCC-hh & its impact on measuring the Higgs self-coupling"
+  authors: "T. Kar"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1066234/contributions/4709010/attachments/2387936/4081953/TKar_FCCPhyWeek2022.pdf"
+  event: "5th FCC Physics Workshop"
+  place: "Liverpool (online), UK"
+  date: "2022.02"
+- type: "Conference Talk"
+  year: 2019
+  title: "The ATLAS Hardware Track Trigger design towards first prototypes"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://cds.cern.ch/record/2695028/files/ATL-DAQ-SLIDE-2019-791.pdf"
+  event: "Vertex 2019"
+  place: "Lopud Island, Croatia"
+  date: "2019.10"
+- type: "Conference Talk"
+  year: 2017
+  title: "Search for heavy resonances decaying to top quarks"
+  authors: "C. Anders"
+  links:
+    - text: "Slides"
+      url: "https://cds.cern.ch/record/2302602/files/ATL-PHYS-SLIDE-2018-067.pdf"
+  event: "SUSY 2017"
+  place: "Mumbai, India"
+  date: "2017.12"
+- type: "Conference Talk"
+  year: 2017
+  title: "W mass measurement with the ATLAS detector"
+  authors: "M. Lisovyi"
+  links:
+    - text: "Slides"
+      url: "https://cds.cern.ch/record/2280192/files/ATL-COM-PHYS-2017-1226.pdf"
+  event: "QCD@LHC 2017"
+  place: "Debrecen, Hungary"
+  date: "2017.08"
+- type: "Conference Talk"
+  year: 2017
+  title: "Experimental Overview"
+  authors: "C. Anders"
+  event: "BOOST 2017"
+  place: "Buffalo, USA"
+  date: "2017.07"
+- type: "Conference Talk"
+  year: 2017
+  title: "Boosted jet tagging techniques in ATLAS"
+  authors: "C. Anders"
+  event: "VBScan Kickoff meeting"
+  place: "Split, Croatia"
+  date: "2017.06"
+- type: "Conference Talk"
+  year: 2017
+  title: "Large R jets and boosted object tagging in ATLAS"
+  authors: "C. Anders"
+  event: "Graduiertenkollegseminar"
+  place: "Karlsruhe, Germany"
+  date: "2017.05"
+- type: "Conference Talk"
+  year: 2017
+  title: "Wireless data transmission for high energy physics applications"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/577003/contributions/2445863/attachments/1421952/2179841/slides_dittmeier_ctd_032017_v3.pdf"
+  event: "CTD/WIT17"
+  place: "LAL-Orsay, France"
+  date: "2017.03"
+- type: "Conference Talk"
+  year: 2017
+  title: "Suche nach neuen Phänomenen mit Jet-Substrukturmethoden und hochenergetischen Topquarks beim ATLAS Experiment"
+  authors: "C. Anders"
+  event: "DPG 2017"
+  place: "Münster, Germany"
+  date: "2017.03"
+- type: "Conference Talk"
+  year: 2016
+  title: "The Fast (but not furious) TracKer for ATLAS: a track trigger based on FPGAs and Associative Memory chips"
+  authors: "M. Lisovyi"
+  links:
+    - text: "Slides"
+      url: "https://indico.lal.in2p3.fr/event/3347/"
+  event: "Invited Talk"
+  place: "LAL Orsay, France"
+  date: "2016.12"
+- type: "Conference Talk"
+  year: 2016
+  title: "Hard diffraction at HERA"
+  authors: "A. Bolz"
+  links:
+    - text: "Slides"
+      url: "http://www-h1.desy.de/psfiles/talks/16/2016_ICHEP2016_Bolz.pdf"
+  event: "ICHEP 2016"
+  place: "Chicago, USA"
+  date: "2016"
+- type: "Conference Talk"
+  year: 2016
+  title: "Search for new resonances coupling to third generation quarks in pp collisions at 13 TeV at ATLAS"
+  authors: "D. Ferreira De Lima"
+  links:
+    - text: "Slides"
+      url: "http://indico.cern.ch/event/432527/contributions/2208689/"
+  event: "ICHEP 2016"
+  place: "Chicago, USA"
+  date: "2016.08"
+- type: "Conference Talk"
+  year: 2016
+  title: "W and Z inclusive and differential cross sections at ATLAS"
+  authors: "M. Lisovyi"
+  links:
+    - text: "Slides"
+      url: "http://indico.cern.ch/event/432527/contributions/1072028/"
+  event: "ICHEP 2016"
+  place: "Chicago, USA"
+  date: "2016.08"
+- type: "Conference Talk"
+  year: 2016
+  title: "Boosted top-tagging at ATLAS"
+  authors: "C. Anders"
+  links:
+    - text: "ATL-PHYS-SLIDE-2016-441"
+      url: "https://cds.cern.ch/record/2203588"
+  event: "Boost 2016"
+  place: "Zürich, Schweiz"
+  date: "2016.07"
+- type: "Conference Talk"
+  year: 2016
+  title: "ATLAS ttbar Resonance Searches"
+  authors: "David Sosa"
+  links:
+    - text: "ATL-PHYS-SLIDE-2016-401"
+      url: "http://cds.cern.ch/record/2199201?ln=en"
+  event: "SUSY 2016"
+  place: "Melbourne, Australia"
+  date: "2016.07"
+- type: "Invited Talk"
+  year: 2016
+  title: "Large R jets and boosted object tagging in ATLAS"
+  authors: "C. Anders"
+  event: "Invited Talk"
+  place: "Universität Freiburg, Germany"
+  date: "2016.06"
+- type: "Conference Talk"
+  year: 2016
+  title: "Results on BSM Higgs boson searches at ATLAS"
+  authors: "M. Giulini"
+  links:
+    - text: "ATL-PHYS-SLIDE-2016-283"
+      url: "https://cds.cern.ch/record/2159710"
+  event: "BLOIS 2016"
+  place: "Blois, France"
+  date: "2016.05"
+- type: "Conference Talk"
+  year: 2016
+  title: "Charm, Beauty and Top − WG4 Summary"
+  authors: "M. Lisovyi, M. Mulders, M. Stahlhofen"
+  links:
+    - text: "Slides"
+      url: "https://indico.desy.de/contributionDisplay.py?contribId=14&confId=12482"
+  event: "DIS 2016"
+  place: "Hamburg, Germany"
+  date: "2016.04"
+- type: "Invited Talk"
+  year: 2016
+  title: "Searches for new Physics with boosted objects"
+  authors: "C. Anders"
+  event: "Invited Talk"
+  place: "Universität Bonn, Germany"
+  date: "2016.01"
+- type: "Invited Talk"
+  year: 2015
+  title: "Boosted top quark reconstruction and searches with boosted objects at ATLAS"
+  authors: "C. Anders"
+  event: "Invited Talk"
+  place: "Universität Göttingen, Germany"
+  date: "2015.12"
+- type: "Conference Talk"
+  year: 2014
+  title: "ATLAS Measurements of Boosted Objects"
+  authors: "C. Anders"
+  links:
+    - text: "ATL-PHYS-SLIDE-2014-588"
+      url: "https://cds.cern.ch/record/1753360/files/ATL-PHYS-SLIDE-2014-588.pdf"
+  event: "Boost 2014"
+  place: "London, UK"
+  date: "2014.08"
+- type: "Conference Talk"
+  year: 2014
+  title: "60 GHz Wireless Data Transfer for Tracker Readout Systems − First Studies and Results"
+  authors: "S. Dittmeier"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/293354/contributions/672344/attachments/549126/756778/WIT2014_Dittmeier.pdf"
+  event: "WIT2014"
+  place: "Philadelphia, USA"
+  date: "2014.05"
+- type: "Invited Talk"
+  year: 2013
+  title: "Searching for top-quark pair resonances in the all-hadronic final state with ATLAS"
+  authors: "G. Kasieczka"
+  links:
+    - text: "HEPHY − SMI seminar on fundamental interactions and symmetries"
+      url: "https://www.smi.oeaw.ac.at/download/HEPHY-SMI-Seminar_07102013.pdf"
+  event: "HEPHY − SMI seminar on fundamental interactions and symmetries"
+  place: "Wien, Österreich"
+  date: "2013.10"
+- type: "Conference Talk"
+  year: 2013
+  title: "Top-tagging at High Jet Multiplicity"
+  authors: "S. Schätzel"
+  links:
+    - text: "Jet Substructure Workshop"
+      url: "http://physics.uoregon.edu/~soper/TeraJets2013/TeraJets2013Talks/schaetzel.pdf"
+  event: "Jet Substructure Workshop"
+  place: "Eugene, USA"
+  date: "2013.04"
+- type: "Invited Talk"
+  year: 2012
+  title: "<em>\\(t\\bar{t}\\)</em> Resonance Searches with ATLAS"
+  authors: "G. Kasieczka"
+  event: "Invited Talk"
+  place: "IPPP Durham, UK"
+  date: "2012.10"
+- type: "Conference Talk"
+  year: 2012
+  title: "Recent ATLAS Results on <em>\\(t\\bar{t}\\)</em> Resonance"
+  authors: "G. Kasieczka"
+  links:
+    - text: "ATL-PHYS-SLIDE-2012-688"
+      url: "https://cds.cern.ch/record/1491163"
+  event: "Boost 2012"
+  place: "Valencia, Spain"
+  date: "2012.07"
+- type: "Conference Talk"
+  year: 2012
+  title: "Studies on jet substructure at ATLAS"
+  authors: "S. Schätzel"
+  links:
+    - text: "ATL-PHYS-SLIDE-2012-689"
+      url: "http://cds.cern.ch/record/1491164/files/ATL-PHYS-SLIDE-2012-689.pdf"
+  event: "Boost 2012"
+  place: "Valencia, Spain"
+  date: "2012.07"
+- type: "Conference Talk"
+  year: 2012
+  title: "Search for Higgs Bosons Beyond the Standard Model with ATLAS"
+  authors: "C. Anders"
+  links:
+    - text: "ATL-PHYS-SLIDE-2012-275"
+      url: "https://cds.cern.ch/record/1450106"
+  event: "MCTP 12"
+  place: "Ann Arbor, USA"
+  date: "2012.04"
+- type: "Conference Talk"
+  year: 2012
+  title: "A self seeded first level track trigger for ATLAS"
+  authors: "A. Schöning"
+  links:
+    - text: "2012 JINST 7 C10010"
+      url: "http://iopscience.iop.org/1748-0221/7/10/C10010/"
+  event: "Workshop on Intelligent Trackers 2012"
+  place: "Pisa, Italy"
+  date: "2012.03"
+- type: "Conference Talk"
+  year: 2010
+  title: "A Fast Track Trigger for ATLAS"
+  authors: "S. Schmitt und A. Schöning"
+  links:
+    - text: "2010 JINST 5 C07013"
+      url: "http://iopscience.iop.org/1748-0221/5/07/C07013"
+  event: "Workshop on Intelligent Trackers 2010"
+  place: "Berkeley, USA"
+  date: "2010.02"
+
+# Posters
+- type: "Poster"
+  year: 2024
+  title: "FPGA implementation of the General Triplet Track Fit"
+  authors: "K. Tastepe"
+  links:
+    - text: "Poster"
+      url: "https://indico.cern.ch/event/1338689/contributions/6015445/attachments/2950576/5186496/Heidelberg_PI-FPGA_Implementation_of_the_GTTF_POSTER.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"
+- type: "Poster"
+  year: 2022
+  title: "Linearized Track-Fitting on an FPGA"
+  authors: "J. Zinsser"
+  links:
+    - text: "Abstract and Video"
+      url: "https://indico.cern.ch/event/1103637/contributions/4825738/"
+    - text: "Poster"
+      url: "https://zenodo.org/record/8119441"
+  event: "7th International Connecting the Dots Workshop"
+  place: "Princeton University, Princeton, USA"
+  date: "2022.05"
+- type: "Poster"
+  year: 2019
+  title: "Triplet Track Trigger for Future Hadron Collider Experiments"
+  authors: "T. Kar"
+  links:
+    - text: "FCC-Week-Kar-2019"
+      url: "https://indico.cern.ch/event/727555/contributions/3427917/"
+  event: "FCC Week 2019"
+  place: "Brussels, Belgium"
+  date: "2019.06"
+- type: "Poster"
+  year: 2019
+  title: "Triplet Track Trigger for Future High Rate Experiments"
+  authors: "T. Kar"
+  links:
+    - text: "CTD-WIT-Kar-2019"
+      url: "https://indico.cern.ch/event/742793/contributions/3298741/"
+  event: "Connecting The Dots / Intelligent Trackers 2019"
+  place: "Valencia, Spain"
+  date: "2019.04"
+- type: "Poster"
+  year: 2016
+  title: "The ATLAS Fast Tracker Processing Units − input and output data preparation"
+  authors: "A. Bolz"
+  links:
+    - text: "ATL-DAQ-SLIDE-2016-502"
+      url: "https://cds.cern.ch/record/2209342?ln=en"
+  event: "ICHEP 2016"
+  place: "Chicago, USA"
+  date: "2016"
+- type: "Poster"
+  year: 2011
+  title: "Preparing the ATLAS Jet Trigger for High Luminosity"
+  authors: "G. Kasieczka"
+  links:
+    - text: "ATL-DAQ-SLIDE-2011-259"
+      url: "http://cds.cern.ch/record/1357586?ln=en"
+  event: "PLHC 11"
+  place: "Perugia, Italy"
+  date: "2011"
+

@@ -21,6 +21,8 @@ include($headerInc);
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
         </script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- js-yaml library for parsing YAML -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     </head>
     <body lang="en-US" dir="ltr" style="text-align:left;">
         <div class="sub-body">
@@ -33,78 +35,48 @@ include($headerInc);
                 <!-- Main Page Heading -->
                 <h1 class="page-title">HV-MAPS Publications</h1>
 
-                <!-- JOURNAL PUBLICATIONS -->
-                <div id="journal-publications" class="publication-section">
-                    <h2>Journals</h2>
-                    <p class="subtitle">(with significant contributions from members of our group)</p>
-                
-                    <div class="publication-year">
-                        <h3>2024</h3>
-                    </div>
-                    <ul class="publications">
-
-                    </ul>
-                </div>
-                
-                <!-- PREPRINTS, PROCEEDINGS, PUB NOTES -->
-                <div id="preprints-proceedings-pubnotes" class="publication-section">
-                    <h2>Pre-prints, Proceedings and Pub Notes</h2>
-                
-                    <div class="publication-year">
-                        <h3>2023</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">Track reconstruction for the ATLAS Phase-II Event Filter using GNNs on FPGAs</p>
-                            Sebastian Dittmeier on behalf of the ATLAS TDAQ collaboration<br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1051/epjconf/202429502032">2023 CHEP Proceedings</a>
-                                <a href="https://cds.cern.ch/record/2870183">ATL-DAQ-PROC-2023-006</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- CONFERENCE AND INVITED TALKS -->
-                <div id="conference-invited-talks" class="publication-section">
-                    <h2>Conference and Invited Talks</h2>
-                
-                    <div class="publication-year">
-                        <h3>2024</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">A graph neural network based cosmic muon trigger for the Mu3e experiment</p>
-                            D. Karres</br>
-                            <div class="publication-links">
-                                <a href="https://indico.cern.ch/event/1338689/contributions/6015413/attachments/2952865/5191195/chep2024_karres.pdf">Slides</a>
-                            </div>
-                            (27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024), Krakow, Poland, October 2024)
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- POSTERS -->
-                <div id="posters" class="publication-section">
-                    <h2>Posters</h2>
-                
-                    <div class="publication-year">
-                        <h3>2024</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">FPGA implementation of the General Triplet Track Fit</p>
-                            K. Tastepe</br>
-                            <div class="publication-links">
-                                <a href="https://indico.cern.ch/event/1338689/contributions/6015445/attachments/2950576/5186496/Heidelberg_PI-FPGA_Implementation_of_the_GTTF_POSTER.pdf">Poster</a>
-                            </div>
-                            (27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024), Krakow, Poland, October 2024)
-                        </li>
-                    </ul>
+                <!-- This container will be populated by JavaScript -->
+                <div id="dynamic-publications-content">
+                    <p>Loading publications...</p> 
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript" src="<?php echo $pub_loaderJs;?>"></script>
         <script type="text/javascript" src="<?php echo $pub_navJs;?>"></script>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                const hvmapsPageSections = [
+                    { 
+                        id: 'journal-publications', 
+                        title: 'Journals', 
+                        subtitle: '(with significant contributions from members of our group)', 
+                        types: ['Journal'] 
+                    },
+                    { 
+                        id: 'preprints-proceedings-pubnotes', 
+                        title: 'Pre-prints, Proceedings and Pub Notes', 
+                        types: ['Proceeding', 'Preprint', 'PubNote'] 
+                    },
+                    { 
+                        id: 'conference-invited-talks', 
+                        title: 'Conference and Invited Talks', 
+                        types: ['Conference Talk', 'Invited Talk'] 
+                    },
+                    { 
+                        id: 'posters', 
+                        title: 'Posters', 
+                        types: ['Poster'] 
+                    }
+                ];
+
+                // Path to the YAML file for HV-MAPS publications
+                const yamlFilePath = '<?php echo $subpath; ?>/data/hvmaps_publications.yaml'; 
+                
+                loadPublications(yamlFilePath, 'dynamic-publications-content', hvmapsPageSections);
+            });
+        </script>
     </body>
 </html>
 

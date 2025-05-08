@@ -58,7 +58,7 @@
 /* Separator between links - as separate element */
 .pub-nav-separator {
     color: #aaa;
-    padding: 0 0.25rem;
+    padding: 0  0.25rem;
 }
 
 .pub-nav-links a:hover {
@@ -108,9 +108,12 @@
         padding: 0;
     }
     
-    /* Hide the wrapper completely */
+    /* pub-nav-wrapper is now a sibling of the toggle button. */
+    /* It no longer needs to be hidden, as nav-links inside it is display:none by default. */
     .pub-nav-wrapper {
-        display: none;
+        /* It can be display: block or rely on default block behavior. */
+        /* If it needs specific layout for some reason (e.g. centering navLinks if it were static), style here. */
+        /* For now, no specific style is needed as nav-links is absolute. */
     }
     
     /* Show toggle button */
@@ -141,8 +144,8 @@
         pointer-events: none;
     }
     
-    /* Show dropdown with animation */
-    .pub-nav-links.mobile-expanded {
+    /* Show dropdown with animation - Use .mobile-expanded class */
+    .pub-nav-links.mobile-expanded { /* CHANGED from .active */
         display: flex;
         transform: translateY(0);
         opacity: 1;
@@ -274,7 +277,6 @@ ul.publications li a {
 
 /* But keep the links themselves in normal style */
 .publication-links .link-wrapper a {
-    margin-right: 1em;
     font-style: normal;
 }
 

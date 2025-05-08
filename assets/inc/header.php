@@ -114,7 +114,7 @@
     let pageTitleElement = null;
     let navbarCollapse = null;
     let navbarToggler = null;
-    let targetH2Elements = []; // Changed from h1Elements
+    let targetH2Elements = []; // Initialized as empty, populated by refreshHeaderTargets
 
     // --- State Variables ---
     let currentVisibleH2Element = null; // Changed from currentH1Element
@@ -199,6 +199,15 @@
     // --- Throttled Scroll Handler ---
     const throttledScrollHandler = throttle(handleScrollActions, THROTTLE_LIMIT);
 
+    // --- Function to refresh H2 targets and update header title ---
+    function refreshHeaderTargets() {
+        // Ensure essential elements are available if called before full DOMContentLoaded init
+        // (though in our flow, stickyElement and pageTitleElement will be set by the time this is called)
+        if (!document.body) return; 
+        targetH2Elements = document.querySelectorAll('h2');
+        handleScrollActions(); // Immediately update title based on new targets and current scroll
+    }
+
     // --- Initialization and Event Listeners ---
     document.addEventListener('DOMContentLoaded', () => {
         // Assign DOM Elements
@@ -206,7 +215,7 @@
         pageTitleElement = document.getElementById('navbar-page-title');
         navbarCollapse = document.getElementById('navbarNavDropdown');
         navbarToggler = document.querySelector('.navbar-toggler');
-        targetH2Elements = document.querySelectorAll('h2'); // Changed from h1Elements and querySelectorAll('h1')
+        // targetH2Elements will be populated by the refreshHeaderTargets call below
 
         // Add click listener to the title placeholder
         if (pageTitleElement) {
@@ -272,8 +281,10 @@
 
         // Initial calls to set state correctly on load
         updateHeaderShrinkState(); // Set initial shrink state immediately
-        setTimeout(handleScrollActions, 50); // Set initial title/menu state after short delay
+        refreshHeaderTargets();    // Perform initial scan for H2s and update title
 
+        // Expose the refresh function globally
+        window.refreshHeaderTargets = refreshHeaderTargets;
     });
 
 </script>

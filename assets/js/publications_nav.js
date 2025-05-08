@@ -12,182 +12,195 @@ if (window.location.hash) {
     history.replaceState({}, document.title, window.location.pathname);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all publication sections and container
+function initializePublicationNavigation() {
     const sections = document.querySelectorAll('.publication-section');
     const navContainer = document.getElementById('pub-nav-container');
     
-    if (!navContainer || !sections.length) return;
+    if (!navContainer) return;
+
+    // Clear previous nav if any, before rebuilding
+    navContainer.innerHTML = ''; 
+
+    if (!sections.length) {
+        return;
+    }
     
-    // Create navigation elements
     const navWrapper = document.createElement('div');
     navWrapper.className = 'pub-nav-wrapper';
     
     const navLinks = document.createElement('div');
     navLinks.className = 'pub-nav-links';
     
-    // Create toggle button
     const toggleButton = document.createElement('button');
     toggleButton.className = 'pub-nav-toggle';
     toggleButton.type = 'button';
     toggleButton.setAttribute('aria-expanded', 'false');
-    toggleButton.innerHTML = '<i class="fas fa-list"></i>';
+    toggleButton.innerHTML = '<i class="fas fa-list"></i>'; // Icon from original code
     
-    // Function to close dropdown menu
     function closeDropdown() {
         navLinks.classList.remove('mobile-expanded');
         toggleButton.setAttribute('aria-expanded', 'false');
         
-        // Hide after animation completes
+        // Hide after animation completes (assuming 250ms animation from original CSS)
         setTimeout(() => {
             if (!navLinks.classList.contains('mobile-expanded')) {
-                navLinks.style.display = 'none';
+                // Only hide if it's still closed, relevant for mobile
+                if (window.innerWidth <= 870) { 
+                    navLinks.style.display = 'none';
+                }
             }
         }, 250);
     }
     
-    // Process each section and create navigation links
     sections.forEach((section, index) => {
         const id = section.getAttribute('id');
-        const title = section.querySelector('h2').textContent; // Changed from h1 to h2
+        const titleElement = section.querySelector('h2');
         
-        // Create link
-        const link = document.createElement('a');
-        link.href = '#' + id;
-        link.textContent = title;
-        
-        // Add smooth scrolling
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 100;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                history.pushState(null, null, this.getAttribute('href'));
-                closeDropdown();
+        if (titleElement && id) {
+            const title = titleElement.textContent;
+            const link = document.createElement('a');
+            link.href = '#' + id;
+            link.textContent = title;
+            link.setAttribute('role', 'menuitem');
+            
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 100; // Fallback
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // history.pushState(null, null, this.getAttribute('href')); // Optional: update URL hash
+                    closeDropdown();
+                }
+            });
+            
+            navLinks.appendChild(link);
+            
+            if (index < sections.length - 1) {
+                const separator = document.createElement('span');
+                separator.className = 'pub-nav-separator';
+                separator.innerHTML = '&bull;'; // Separator from original code
+                navLinks.appendChild(separator);
             }
-        });
-        
-        // Add to container
-        navLinks.appendChild(link);
-        
-        // Add separator if not the last item
-        if (index < sections.length - 1) {
-            const separator = document.createElement('span');
-            separator.className = 'pub-nav-separator';
-            separator.innerHTML = '&bull;';
-            navLinks.appendChild(separator);
         }
     });
     
-    // Toggle button click handler
     toggleButton.addEventListener('click', function(e) {
         e.stopPropagation();
-        
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
         
         if (isExpanded) {
             closeDropdown();
         } else {
-            navLinks.style.display = 'flex';
-            setTimeout(() => navLinks.classList.add('mobile-expanded'), 10);
+            navLinks.style.display = 'flex'; // Make it visible before adding class for animation
+            setTimeout(() => navLinks.classList.add('mobile-expanded'), 10); // Add class for animation
             this.setAttribute('aria-expanded', 'true');
         }
     });
     
-    // Close dropdown when clicking outside
     document.addEventListener('click', function(e) {
         if (navLinks.classList.contains('mobile-expanded') && 
             !navLinks.contains(e.target) && 
-            e.target !== toggleButton) {
+            !toggleButton.contains(e.target)) { // Check toggleButton too
             closeDropdown();
         }
     });
     
-    // Close dropdown when scrolling
+    let scrollTimeout;
     window.addEventListener('scroll', function() {
+        if (navLinks.classList.contains('mobile-expanded')) {
+            // Debounce or throttle this if it causes performance issues
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(closeDropdown, 100); 
+        }
+    });
+    
+    navWrapper.appendChild(navLinks);
+    navContainer.appendChild(navWrapper);
+    navContainer.appendChild(toggleButton); // Toggle button appended to navContainer as per original
+    
+    function adjustLayout() {
+        const viewportWidth = window.innerWidth;
+        const isNarrow = viewportWidth <= 870;
+
+        // Always ensure dropdown is closed when layout changes
         if (navLinks.classList.contains('mobile-expanded')) {
             closeDropdown();
         }
-    });
-    
-    // Append all elements
-    navWrapper.appendChild(navLinks);
-    navContainer.appendChild(navWrapper);
-    navContainer.appendChild(toggleButton);
-    
-    // Handle responsive layout
-    function adjustLayout() {
-        // Check viewport width directly
-        const viewportWidth = window.innerWidth;
-        const isNarrow = viewportWidth <= 870; // Match the CSS breakpoint
         
-        // Always ensure dropdown is closed when layout changes
-        navLinks.classList.remove('mobile-expanded');
-        toggleButton.setAttribute('aria-expanded', 'false');
-        
-        // Important: Always force display none first to prevent flashing during transition
-        navLinks.style.display = 'none';
-        
+        // Important: Set initial display state based on viewport
         if (isNarrow) {
-            // Narrow layout: Move links out of wrapper
             if (navWrapper.contains(navLinks)) {
-                navWrapper.removeChild(navLinks);
-                navContainer.appendChild(navLinks);
+                // This logic might be too complex if navLinks is always child of navWrapper
+                // For simplicity, we assume navLinks is child of navWrapper, and toggle controls its visibility
             }
-            navWrapper.style.display = 'none';
-            toggleButton.style.display = 'block'; // Show toggle in mobile view
-            
-            // Keep navLinks hidden in mobile until toggle is clicked
-        } else {
-            // Wide layout: Move links back to wrapper
-            if (navContainer.contains(navLinks) && !navWrapper.contains(navLinks)) {
-                navContainer.removeChild(navLinks);
-                navWrapper.appendChild(navLinks);
-            }
-            // In desktop, set display after a short delay to ensure smooth transition
-            setTimeout(() => {
-                if (window.innerWidth > 870) { // Double-check we're still in desktop mode
-                    navLinks.style.display = 'flex'; 
-                    navWrapper.style.display = 'flex';
-                }
-            }, 50);
-            toggleButton.style.display = 'none'; // Hide toggle in desktop view
+            navWrapper.style.display = 'block'; // Wrapper should be block to allow absolute positioning of links
+            navLinks.style.display = 'none'; // Links hidden by default on mobile
+            toggleButton.style.display = 'block';
+        } else { // Desktop
+            navWrapper.style.display = 'flex';
+            navLinks.style.display = 'flex'; // Links visible by default on desktop
+            toggleButton.style.display = 'none';
+            navLinks.classList.remove('mobile-expanded'); // Ensure no mobile styles apply
+            toggleButton.setAttribute('aria-expanded', 'false');
         }
     }
     
-    // Set initial layout
     adjustLayout();
     
-    // Handle resize and prevent menu flash during resize
     let resizeTimer;
     const handleResize = () => {
-        // During resize, ensure the menu is hidden to prevent flashing
-        navLinks.style.display = 'none';
+        // During resize, ensure the menu is reset correctly
         navLinks.classList.remove('mobile-expanded');
-        
+        toggleButton.setAttribute('aria-expanded', 'false');
+        // Temporarily hide to prevent flash, then readjust
+        navLinks.style.display = 'none'; 
+
+
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             adjustLayout();
-        }, 100);
+        }, 150); // Slightly longer timeout for resize
     };
 
     window.addEventListener('resize', handleResize);
     
-    // Replace the previous ResizeObserver with our improved handler
+    // The ResizeObserver for sub-body might not be strictly necessary
+    // if the main window resize handles layout sufficiently.
+    // Kept for closer adherence to original if sub-body changes can occur independently.
     if (typeof ResizeObserver !== 'undefined') {
-        const resizeObserver = new ResizeObserver(() => {
-            handleResize();
-        });
         const subBodyElement = document.querySelector('.sub-body');
         if (subBodyElement) {
-            resizeObserver.observe(subBodyElement);
+            const subBodyResizeObserver = new ResizeObserver(() => {
+                 // We can call handleResize or adjustLayout directly
+                 // handleResize is more robust as it includes the timer logic
+                handleResize();
+            });
+            subBodyResizeObserver.observe(subBodyElement);
         }
     }
+}
+
+// Expose the initialization function to be called by publications_loader.js
+window.initializePublicationNavigation = initializePublicationNavigation;
+
+// Fallback call on DOMContentLoaded if publications_loader.js doesn't handle it
+document.addEventListener('DOMContentLoaded', function() {
+    const dynamicContent = document.getElementById('dynamic-publications-content');
+    // Check if the loader might not run (e.g., not a page with dynamic publications)
+    // or if the nav container exists but loader hasn't populated sections yet.
+    // This fallback is tricky. The loader should ideally always call it.
+    // For now, let's assume the loader will call it.
+    // If you have pages with static .publication-section elements and no loader,
+    // then a direct call here would be needed.
+    // Example: if (document.getElementById('pub-nav-container') && (!dynamicContent || dynamicContent.children.length <= 1)) {
+    //     initializePublicationNavigation();
+    // }
 });

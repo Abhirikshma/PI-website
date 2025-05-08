@@ -1,0 +1,50 @@
+# Journals
+# No journal entries were present in the static HTML for HV-MAPS.
+# Add them here if they exist, e.g.:
+# - type: "Journal"
+#   year: 2024
+#   title: "Example HV-MAPS Journal Title"
+#   authors: "Author A, Author B"
+#   links:
+#     - text: "DOI Link"
+#       url: "https://doi.org/..."
+#     - text: "arXiv Link"
+#       url: "https://arxiv.org/..."
+
+# Pre-prints, Proceedings, Pub Notes
+- type: "Proceeding" # Deduced from "2023 CHEP Proceedings"
+  year: 2023 # Year of the event/publication
+  title: "Track reconstruction for the ATLAS Phase-II Event Filter using GNNs on FPGAs"
+  authors: "Sebastian Dittmeier on behalf of the ATLAS TDAQ collaboration"
+  links:
+    - text: "2023 CHEP Proceedings" # This was the link text
+      url: "https://doi.org/10.1051/epjconf/202429502032"
+    - text: "ATL-DAQ-PROC-2023-006"
+      url: "https://cds.cern.ch/record/2870183"
+  event: "CHEP 2023" # Deduced from link text
+  place: "Norfolk, USA" # Assuming CHEP 2023 location, may need verification
+  date: "2023" # Year of event
+
+# Conference and Invited Talks
+- type: "Conference Talk"
+  year: 2024
+  title: "A graph neural network based cosmic muon trigger for the Mu3e experiment" # Note: This seems Mu3e related, verify if it belongs to HV-MAPS
+  authors: "D. Karres"
+  links:
+    - text: "Slides"
+      url: "https://indico.cern.ch/event/1338689/contributions/6015413/attachments/2952865/5191195/chep2024_karres.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"
+
+# Posters
+- type: "Poster"
+  year: 2024
+  title: "FPGA implementation of the General Triplet Track Fit" # Note: This seems general/ATLAS, verify if it belongs to HV-MAPS
+  authors: "K. Tastepe"
+  links:
+    - text: "Poster"
+      url: "https://indico.cern.ch/event/1338689/contributions/6015445/attachments/2950576/5186496/Heidelberg_PI-FPGA_Implementation_of_the_GTTF_POSTER.pdf"
+  event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
+  place: "Krakow, Poland"
+  date: "2024.10"

@@ -21,6 +21,8 @@ include($headerInc);
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
         </script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- js-yaml library for parsing YAML -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
     </head>
     <body lang="en-US" dir="ltr" style="text-align:left;">
         <div class="sub-body">
@@ -33,182 +35,48 @@ include($headerInc);
                 <!-- Main Page Heading -->
                 <h1 class="page-title">Mu3e Publications</h1>
 
-                <!-- JOURNAL PUBLICATIONS -->
-                <div id="journal-publications" class="publication-section">
-                    <h2>Journals</h2>
-                    <p class="subtitle">(with significant contributions from members of our group)</p>
-                
-                    <div class="publication-year">
-                        <h3>2021</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">Technical design of the phase I Mu3e experiment</p>
-                            The Mu3e Collaboration<br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2021.165679">Nucl.Instrum.Meth.A 1014 (2021) 165679</a>
-                                <a href="https://arxiv.org/abs/2009.11690">arXiv:2009.11690 [physics.ins-det]</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <p class="title">The Mu3e Data Acquisition</p>
-                            Augustin H. and others, for the Mu3e Collaboration<br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1109/TNS.2021.3084060">IEEE Trans. Nucl. Sci. 68 (2021) 1833-1840</a>
-                            </div>
-                        </li>
-                    </ul>
-                
-                    <div class="publication-year">
-                        <h3>2020</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">The MuPix sensor for the Mu3e experiment</p>
-                            Augustin, H. and Peric, I. and Schoening, A. and Weber, A.<br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2020.164441">Nucl.Instrum.Meth.A 979 (2020) 164441</a>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="publication-year">
-                        <h3>2019</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">MuPix8 &#8722 Large area monolithic HVCMOS pixel detector for the Mu3e experiment</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2018.09.095">Nucl.Instrum.Meth.A 936 (2019) 681-683</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <p class="title">Performance of the large scale HV-CMOS pixel sensor MuPix8</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1088/1748-0221/14/10/C10011">JINST 14 (2019) C10011</a>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="publication-year">
-                        <h3>2018</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">Irradiation study of a fully monolithic HV-CMOS pixel sensor design in AMS 180 nm</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2018.07.044">Nucl.Instrum.Meth.A 905 (2018) 53-60</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <p class="title">Efficiency and timing performance of the MuPix7 high-voltage monolithic active pixel sensor</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2018.06.049">Nucl.Instrum.Meth.A 902 (2018) 158-163</a>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="publication-year">
-                        <h3>2017</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">The MuPix System-on-Chip for the Mu3e Experiment</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.nima.2016.06.095">Nucl.Instrum.Meth.A 845 (2017) 194-198</a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <p class="title">The MuPix Telescope: A Thin, high Rate Tracking Telescope</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="http://dx.doi.org/10.1088/1748-0221/12/01/C01087">JINST 12 (2017) C01087</a>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="publication-year">
-                        <h3>2016</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">MuPix7 − A fast monolithic HV-CMOS pixel chip for Mu3e</p>
-                            Augustin, H. and others <br/>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1088/1748-0221/11/11/C11029">JINST 11 (2016) C11029</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- PREPRINTS, PROCEEDINGS, PUB NOTES -->
-                <div id="preprints-proceedings-pubnotes" class="publication-section">
-                    <h2>Pre-prints, Proceedings and Pub Notes</h2>
-                
-                    <div class="publication-year">
-                        <h3>2020</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">MuPix10: First Results from the Final Design</p>
-                            Augustin H. and others for the Mu3e Collaboration<br/>
-                            <div class="publication-links">
-                                <a href="https://journals.jps.jp/doi/abs/10.7566/JPSCP.34.010012">JPS Conf. Proc. 34, 010012 (2021)</a>
-                            </div>
-                            (Proceedings of the 29th International Workshop on Vertex Detectors (VERTEX2020))
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- CONFERENCE AND INVITED TALKS -->
-                <div id="conference-invited-talks" class="publication-section">
-                    <h2>Conference and Invited Talks</h2>
-                
-                    <div class="publication-year">
-                        <h3>2024</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">A graph neural network based cosmic muon trigger for the Mu3e experiment</p>
-                            D. Karres</br>
-                            <div class="publication-links">
-                                <a href="https://indico.cern.ch/event/1338689/contributions/6015413/attachments/2952865/5191195/chep2024_karres.pdf">Slides</a>
-                            </div>
-                            (27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024), Krakow, Poland, October 2024)
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- POSTERS -->
-                <div id="posters" class="publication-section">
-                    <h2>Posters</h2>
-                
-                    <div class="publication-year">
-                        <h3>2024</h3>
-                    </div>
-                    <ul class="publications">
-                        <li>
-                            <p class="title">FPGA implementation of the General Triplet Track Fit</p>
-                            K. Tastepe</br>
-                            <div class="publication-links">
-                                <a href="https://indico.cern.ch/event/1338689/contributions/6015445/attachments/2950576/5186496/Heidelberg_PI-FPGA_Implementation_of_the_GTTF_POSTER.pdf">Poster</a>
-                            </div>
-                            (27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024), Krakow, Poland, October 2024)
-                        </li>
-                    </ul>
+                <!-- This container will be populated by JavaScript -->
+                <div id="dynamic-publications-content">
+                    <p>Loading publications...</p> 
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript" src="<?php echo $pub_loaderJs;?>"></script>
         <script type="text/javascript" src="<?php echo $pub_navJs;?>"></script>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                const mu3ePageSections = [
+                    { 
+                        id: 'journal-publications', 
+                        title: 'Journals', 
+                        subtitle: '(with significant contributions from members of our group)', 
+                        types: ['Journal'] 
+                    },
+                    { 
+                        id: 'preprints-proceedings-pubnotes', 
+                        title: 'Pre-prints, Proceedings and Pub Notes', 
+                        types: ['Proceeding', 'Preprint', 'PubNote'] // Added Preprint and PubNote for future flexibility
+                    },
+                    { 
+                        id: 'conference-invited-talks', 
+                        title: 'Conference and Invited Talks', 
+                        types: ['Conference Talk', 'Invited Talk'] 
+                    },
+                    { 
+                        id: 'posters', // Changed ID to match existing HTML structure if needed, or can be 'poster-publications'
+                        title: 'Posters', 
+                        types: ['Poster'] 
+                    }
+                ];
+
+                // Path to the YAML file for Mu3e publications
+                const yamlFilePath = '<?php echo $subpath; ?>/data/mu3e_publications.yaml'; 
+                
+                loadPublications(yamlFilePath, 'dynamic-publications-content', mu3ePageSections);
+            });
+        </script>
     </body>
 </html>
 
