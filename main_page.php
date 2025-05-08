@@ -43,7 +43,7 @@ include($headerInc);
 			<div class="col-md-4 mb-4">
 				<a href="<?php echo dirname($subpath);?>/research/mu3e/mu3e_mainpage.php" class="card-link">
 					<div class="card h-100 research-card">
-						<img class="card-img-top" src="<?php echo $figures;?>/mu3e.jpg" alt="mu3e-exp">
+						<img class="card-img-top" src="<?php echo $figures;?>/mu3e/vertex.jpg" alt="mu3e-exp">
 						<div class="card-body">
 							<h5 class="card-title">Mu3e</h5>
 							<p class="card-text">
@@ -90,7 +90,7 @@ include($headerInc);
 			<div class="col-md-4 mb-4">
 				<a href="<?php echo dirname($subpath);?>/research/HV-Maps/HV-Maps_mainpage.php" class="card-link">
 					<div class="card h-100 research-card">
-						<img class="card-img-top" src="<?php echo $figures;?>/HV-Maps/hybrid_monolithic.png" alt="hvmaps-exp">
+						<img class="card-img-top" src="<?php echo $figures;?>/mu3e/mupix10.jpg" alt="hvmaps-exp">
 						<div class="card-body">
 							<h5 class="card-title">HV-MAPS</h5>
 							<p class="card-text">
