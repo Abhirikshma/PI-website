@@ -1,34 +1,93 @@
 # Journals
-# No journal entries were present in the static HTML for HV-MAPS.
-# Add them here if they exist, e.g.:
-# - type: "Journal"
-#   year: 2024
-#   title: "Example HV-MAPS Journal Title"
-#   authors: "Author A, Author B"
-#   links:
-#     - text: "DOI Link"
-#       url: "https://doi.org/..."
-#     - text: "arXiv Link"
-#       url: "https://arxiv.org/..."
+- type: "Journal"
+  year: 2021
+  title: "Technical design of the phase I Mu3e experiment"
+  authors: "The Mu3e Collaboration"
+  links:
+    - text: "Nucl.Instrum.Meth.A 1014 (2021) 165679"
+      url: "https://doi.org/10.1016/j.nima.2021.165679"
+    - text: "arXiv:2009.11690 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2009.11690"
+- type: "Journal"
+  year: 2021
+  title: "The Mu3e Data Acquisition"
+  authors: "Augustin H. et al., for the Mu3e Collaboration"
+  links:
+    - text: "IEEE Trans. Nucl. Sci. 68 (2021) 1833-1840"
+      url: "https://doi.org/10.1109/TNS.2021.3084060"
+- type: "Journal"
+  year: 2020
+  title: "The MuPix sensor for the Mu3e experiment"
+  authors: "Augustin, H., Peric, I., Schoening, A., Weber, A."
+  links:
+    - text: "Nucl.Instrum.Meth.A 979 (2020) 164441"
+      url: "https://doi.org/10.1016/j.nima.2020.164441"
+- type: "Journal"
+  year: 2019
+  title: "MuPix8 &#8722 Large area monolithic HVCMOS pixel detector for the Mu3e experiment"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "Nucl.Instrum.Meth.A 936 (2019) 681-683"
+      url: "https://doi.org/10.1016/j.nima.2018.09.095"
+- type: "Journal"
+  year: 2019
+  title: "Performance of the large scale HV-CMOS pixel sensor MuPix8"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "JINST 14 (2019) C10011"
+      url: "https://doi.org/10.1088/1748-0221/14/10/C10011"
+- type: "Journal"
+  year: 2018
+  title: "Irradiation study of a fully monolithic HV-CMOS pixel sensor design in AMS 180 nm"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "Nucl.Instrum.Meth.A 905 (2018) 53-60"
+      url: "https://doi.org/10.1016/j.nima.2018.07.044"
+- type: "Journal"
+  year: 2018
+  title: "Efficiency and timing performance of the MuPix7 high-voltage monolithic active pixel sensor"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "Nucl.Instrum.Meth.A 902 (2018) 158-163"
+      url: "https://doi.org/10.1016/j.nima.2018.06.049"
+- type: "Journal"
+  year: 2017
+  title: "The MuPix System-on-Chip for the Mu3e Experiment"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "Nucl.Instrum.Meth.A 845 (2017) 194-198"
+      url: "https://doi.org/10.1016/j.nima.2016.06.095"
+- type: "Journal"
+  year: 2017
+  title: "The MuPix Telescope: A Thin, high Rate Tracking Telescope"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "JINST 12 (2017) C01087"
+      url: "http://dx.doi.org/10.1088/1748-0221/12/01/C01087"
+- type: "Journal"
+  year: 2016
+  title: "MuPix7 − A fast monolithic HV-CMOS pixel chip for Mu3e"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "JINST 11 (2016) C11029"
+      url: "https://doi.org/10.1088/1748-0221/11/11/C11029"
 
 # Pre-prints, Proceedings, Pub Notes
-- type: "Proceeding" # Deduced from "2023 CHEP Proceedings"
-  year: 2023 # Year of the event/publication
-  title: "Track reconstruction for the ATLAS Phase-II Event Filter using GNNs on FPGAs"
-  authors: "Sebastian Dittmeier on behalf of the ATLAS TDAQ collaboration"
+- type: "Proceeding"
+  year: 2020 # Year of the proceeding, event was 2020, published 2021
+  title: "MuPix10: First Results from the Final Design"
+  authors: "Augustin H. et al. for the Mu3e Collaboration"
   links:
-    - text: "2023 CHEP Proceedings" # This was the link text
-      url: "https://doi.org/10.1051/epjconf/202429502032"
-    - text: "ATL-DAQ-PROC-2023-006"
-      url: "https://cds.cern.ch/record/2870183"
-  event: "CHEP 2023" # Deduced from link text
-  place: "Norfolk, USA" # Assuming CHEP 2023 location, may need verification
-  date: "2023" # Year of event
+    - text: "JPS Conf. Proc. 34, 010012 (2021)"
+      url: "https://journals.jps.jp/doi/abs/10.7566/JPSCP.34.010012"
+  event: "29th International Workshop on Vertex Detectors (VERTEX2020)"
+  place: "Online" # Assuming online due to 2020/2021 timeframe for proceedings
+  date: "2020"
 
 # Conference and Invited Talks
 - type: "Conference Talk"
   year: 2024
-  title: "A graph neural network based cosmic muon trigger for the Mu3e experiment" # Note: This seems Mu3e related, verify if it belongs to HV-MAPS
+  title: "A graph neural network based cosmic muon trigger for the Mu3e experiment"
   authors: "D. Karres"
   links:
     - text: "Slides"
@@ -40,7 +99,7 @@
 # Posters
 - type: "Poster"
   year: 2024
-  title: "FPGA implementation of the General Triplet Track Fit" # Note: This seems general/ATLAS, verify if it belongs to HV-MAPS
+  title: "FPGA implementation of the General Triplet Track Fit"
   authors: "K. Tastepe"
   links:
     - text: "Poster"
