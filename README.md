@@ -139,8 +139,10 @@ For example, to include the decay of a muon into three electrons, you can use:
 \( \mu^+ \rightarrow e^+ e^- e^+ \)
 ```
 
-## Authors:
-- Tamasi Kar (<a href="mailto:kar@physi.uni-heidelberg.de">kar@physi.uni-heidelberg.de</a>)
-- Giulia Fazzino (<a href="mailto:gfazzino@physi.uni-heidelberg.de">gfazzino@physi.uni-heidelberg.de</a>)
+## Contributors:
 - Abhi Nandi (<a href="mailto:nandi@physi.uni-heidelberg.de">nandi@physi.uni-heidelberg.de</a>)
+- Afiq Bin Rishinsa (<a href="mailto:binrishinsa@physi.uni-heidelberg.de">binrishinsa@physi.uni-heidelberg.de</a>)
 - David Fritz (<a href="mailto:fritz@physi.uni-heidelberg.de">fritz@physi.uni-heidelberg.de</a>)
+- Giulia Fazzino (<a href="mailto:gfazzino@physi.uni-heidelberg.de">gfazzino@physi.uni-heidelberg.de</a>)
+- Lukas Mandok (<a href="mailto:mandok@physi.uni-heidelberg.de">mandok@physi.uni-heidelberg.de</a>)
+- Tamasi Kar (<a href="mailto:kar@physi.uni-heidelberg.de">kar@physi.uni-heidelberg.de</a>)
