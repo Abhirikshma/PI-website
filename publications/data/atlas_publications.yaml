@@ -1,10 +1,10 @@
 # Journals
 - type: "Journal"
-  year: 2024
+  year: 2025
   title: "A Triplet Track Trigger for the FCC-hh to improve the measurement of Di-Higgs production and the Higgs self-coupling"
   authors: "T. Kar, A. Schöning"
   links:
-    - text: "Nucl.Instrum.Meth.A 1072 (2025) 0168-9002"
+    - text: "Nucl.Instrum.Meth.A 1072 (2025) 170085"
       url: "https://doi.org/10.1016/j.nima.2024.170085"
     - text: "arXiv:2401.16046 [physics.ins-det]"
       url: "https://arxiv.org/abs/2401.16046"
