@@ -20,14 +20,14 @@ You can fork this repository and create a pull request for your changes.
 │   ├── ATLAS
 │   ├── HV-MAPS
 │   └── mu3e
-├── <b><i>index.php</i></b>
+├── <b><i>main_page.php</i></b>
 ├── people.php
 ├── positions.php
 └── teaching.php
 </code>
 </pre>
 
-- The home page is under index.php
+- The home page is under main_page.php
 - Other files at the same level (level = 1): teaching.php, people.php
 - The style, java script and some important include files are located under assets
 - Some *path variables* are defined under `assets/inc/config.php`
