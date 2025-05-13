@@ -1,5 +1,39 @@
 # Journals
 - type: "Journal"
+  year: 2025
+  title: "A general track fit based on triplets"
+  authors: "Schöning, A."
+  links:
+    - text: "Nucl.Instrum.Meth.A 1075 (2025) 170391"
+      url: "https://doi.org/10.1016/j.nima.2025.170391"
+    - text: "arXiv:2406.05240 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2406.05240"
+- type: "Journal"
+  year: 2024
+  title: "MuPix: an HV−MAPS for the Mu3e experiment"
+  authors: "Augustin, H. et al."
+  links:
+    - text: "JPS Conf. Proc. 42, 011020 (2024)"
+      url: "https://10.7566/JPSCP.42.011020"
+- type: "Journal"
+  year: 2023
+  title: "An ultra-light helium cooled pixel detector for the Mu3e experiment"
+  authors: "Rudzki, T., Augustin, H., Immig, D., Kolb, R., Mandok, L."
+  links:
+    - text: "JINST 18 (2023) C10022"
+      url: "https://doi.org/10.1088/1748-0221/18/10/C10022"
+    - text: "arXiv:2307.14803 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2307.14803"
+- type: "Journal"
+  year: 2023
+  title: "Successful cooling of a pixel tracker using gaseous helium: Studies with a mock-up and a detector prototype"
+  authors: "Rudzki, T., Meier, F., Deflorin, M., Flucher, N."
+  links:
+    - text: "Nucl.Instrum.Meth.A 1054 (2023) 168405"
+      url: "https://doi.org/10.1016/j.nima.2023.168405"
+    - text: "arXiv:2301.13813 [physics.ins-det]"
+      url: "https://arxiv.org/abs/2301.13813"
+- type: "Journal"
   year: 2021
   title: "Technical design of the phase I Mu3e experiment"
   authors: "The Mu3e Collaboration"
@@ -87,6 +121,16 @@
 # Conference and Invited Talks
 - type: "Conference Talk"
   year: 2024
+  title: "First experience with the Mu3e Vertex detector construction"
+  authors: "L. Vigani"
+  links:
+    - text: "Slides"
+      url: "https://indico.in2p3.fr/event/32425/contributions/142759/attachments/89019/134676/Vigani_Pixel24%20(2).pdf"
+  event: "The Eleventh International Workshop on Semiconductor Pixel Detectors for Particles and Imaging (Pixel2024)"
+  place: "Strasbourg, France"
+  date: "2024.11"
+- type: "Conference Talk"
+  year: 2024
   title: "A graph neural network based cosmic muon trigger for the Mu3e experiment"
   authors: "D. Karres"
   links:
@@ -94,6 +138,16 @@
       url: "https://indico.cern.ch/event/1338689/contributions/6015413/attachments/2952865/5191195/chep2024_karres.pdf"
   event: "27th International Conference on Computing in High Energy & Nuclear Physics (CHEP2024)"
   place: "Krakow, Poland"
+  date: "2024.10"
+- type: "Conference Talk"
+  year: 2024
+  title: "First experience with the Mu3e Vertex detector construction"
+  authors: "T. Rudzki"
+  links:
+    - text: "Slides"
+      url: "https://conference-indico.kek.jp/event/268/contributions/5582/attachments/3775/5194/EBSMPwM_Rudzki_Mu3e_2024-1%20Thomas%20Rudzki.pdf"
+  event: "Exploring BSM physics with muons"
+  place: "PSI, Switzerland"
   date: "2024.10"
 
 # Posters
