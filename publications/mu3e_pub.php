@@ -60,6 +60,11 @@ include($headerInc);
                         types: ['Proceeding', 'Preprint', 'PubNote'] // Added Preprint and PubNote for future flexibility
                     },
                     { 
+                        id: 'all-mu3e-papers-section', 
+                        title: 'All Mu3e Papers',
+                        types: [] // This section is handled specially by the loader
+                    },
+                    { 
                         id: 'conference-invited-talks', 
                         title: 'Conference and Invited Talks', 
                         types: ['Conference Talk', 'Invited Talk'] 

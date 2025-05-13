@@ -59,6 +59,19 @@ function loadPublications(yamlFilePath, containerId, pageSections) {
                     return; // Skip further processing for this special section
                 }
 
+                if (sectionConfig.id === 'all-mu3e-papers-section') {
+                    // Special handling for "All Mu3e Papers" link
+                    const p = document.createElement('p');
+                    const a = document.createElement('a');
+                    a.href = "https://www.psi.ch/en/mu3e/publications";
+                    a.textContent = "List of all Mu3e papers (psi.ch)";
+                    a.target = "_blank"; // Open in new tab
+                    p.appendChild(a);
+                    sectionDiv.appendChild(p);
+                    fragment.appendChild(sectionDiv);
+                    return; // Skip further processing for this special section
+                }
+
                 let sectionHasContent = false;
                 const publicationsForSection = [];
                 sectionConfig.types.forEach(type => {
