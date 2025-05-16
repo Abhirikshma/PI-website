@@ -43,6 +43,7 @@
         <!-- End table -->
     </div>
 </footer>
+&copy Copyright Universität Heidelberg. <a href="https://www.uni-heidelberg.de/de/impressum">Impressum</a> | <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung">Datenschutzerklärung.</a>
 
 </body>
 </html>
