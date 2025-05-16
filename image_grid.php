@@ -1,6 +1,6 @@
 <?php
 // filepath: /home/mue/mandok/git/PI-website/assets/inc/image_grid.php
-// This file assumes $subpath and $figures are defined in the including file (e.g., main_page.php)
+// This file assumes $subpath and $figures are defined in the including file (e.g., index.php)
 ?>
 <!-- Wrap the image row in a Bootstrap container -->
 <div class="container">

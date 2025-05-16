@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto mb-2"> <!-- Keep ms-auto and mb-2 for now -->
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo dirname($subpath);?>/main_page.php">Home</a>
+                        <a class="nav-link" href="<?php echo dirname($subpath);?>/index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="-1" aria-disabled="true"> <!-- Added tabindex and aria-disabled -->
