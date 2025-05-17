@@ -84,11 +84,11 @@
 @media (max-width: 480px) {
     .contact-role {
         min-width: 90px;
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .contact-email {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .contact-email-icon {

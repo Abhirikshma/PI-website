@@ -43,8 +43,8 @@
         <!-- End table -->
     </div>
 </footer>
-<ul style="text-align: center">
+<p style="text-align: center; font-size: 12px">
 &copy Copyright Universität Heidelberg. <a href="https://www.uni-heidelberg.de/de/impressum">Impressum</a> | <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung">Datenschutzerklärung.</a>
-</ul>
+</p>
 </body>
 </html>
