@@ -1,9 +1,9 @@
 @import "common_vars.css";
 
-/* Publication page common styling */
+/* people page common styling */
 
-/* Publication container */
-.publications-container {
+/* people container */
+.people-container {
     max-width: 100%;
     margin: 0 auto;
 }
@@ -16,7 +16,7 @@
     padding-bottom: 0.5rem;
 }
 
-/* Subtitle for publication sections */
+/* Subtitle for people sections */
 .subtitle {
     font-weight: bold;
     color: #555;
@@ -24,8 +24,8 @@
     margin-bottom: 1.5rem;;
 }
 
-/* Simple Publication Navigation */
-.pub-nav-container {
+/* Simple people Navigation */
+.pep-nav-container {
     margin: 1rem 0 2rem 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -33,13 +33,13 @@
     position: relative; /* For absolute positioning of toggle button */
 }
 
-.pub-nav-wrapper {
+.pep-nav-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.pub-nav-links {
+.pep-nav-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
     align-items: center;
 }
 
-.pub-nav-links a {
+.pep-nav-links a {
     color: var(--PI-darkred);
     text-decoration: none;
     padding: 0.5rem 0.75rem;
@@ -56,22 +56,22 @@
 }
 
 /* Separator between links - as separate element */
-.pub-nav-separator {
+.pep-nav-separator {
     color: #aaa;
     padding: 0  0.25rem;
 }
 
-.pub-nav-links a:hover {
+.pep-nav-links a:hover {
     color: var(--PI-red);
 }
 
-.pub-nav-links a:active {
+.pep-nav-links a:active {
     font-weight: 700;
     color: var(--PI-red);
 }
 
 /* Toggle button styles */
-.pub-nav-toggle {
+.pep-nav-toggle {
     display: none;
     background: transparent;
     color: #777;
@@ -87,13 +87,13 @@
     z-index: 20;
 }
 
-.pub-nav-toggle:hover {
+.pep-nav-toggle:hover {
     color: var(--PI-darkred);
     border-color: var(--PI-darkred);
 }
 
 /* Add shadow when dropdown is open */
-.pub-nav-toggle[aria-expanded="true"] {
+.pep-nav-toggle[aria-expanded="true"] {
     box-shadow: 0 0 6px rgba(0,0,0,0.2);
     border-color: var(--PI-darkred);
     color: var(--PI-darkred);
@@ -102,27 +102,27 @@
 /* Mobile navigation */
 @media (max-width: 870.98px) {
     /* Container styling for mobile */
-    .pub-nav-container {
+    .pep-nav-container {
         border-bottom: none;
         margin: 0;
         padding: 0;
     }
     
-    /* pub-nav-wrapper is now a sibling of the toggle button. */
+    /* pep-nav-wrapper is now a sibling of the toggle button. */
     /* It no longer needs to be hidden, as nav-links inside it is display:none by default. */
-    .pub-nav-wrapper {
+    .pep-nav-wrapper {
         /* It can be display: block or rely on default block behavior. */
         /* If it needs specific layout for some reason (e.g. centering navLinks if it were static), style here. */
         /* For now, no specific style is needed as nav-links is absolute. */
     }
     
     /* Show toggle button */
-    .pub-nav-toggle {
+    .pep-nav-toggle {
         display: block;
     }
     
     /* Dropdown menu positioning and styling */
-    .pub-nav-links {
+    .pep-nav-links {
         display: none;
         position: absolute;
         right: 0;
@@ -145,37 +145,37 @@
     }
     
     /* Show dropdown with animation - Use .mobile-expanded class */
-    .pub-nav-links.mobile-expanded { /* CHANGED from .active */
+    .pep-nav-links.mobile-expanded { /* CHANGED from .active */
         display: flex;
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
     
-    .pub-nav-links a {
+    .pep-nav-links a {
         padding: 0.5rem;
         width: 100%;
         text-align: left;
         border-radius: 3px;
     }
     
-    .pub-nav-links a:hover {
+    .pep-nav-links a:hover {
         background-color: #f5f5f5;
     }
     
     /* Hide separators in mobile view */
-    .pub-nav-separator {
+    .pep-nav-separator {
         display: none;
     }
 }
 
 /* Ensure nav is always visible in desktop view */
 @media (min-width: 871px) {
-    .pub-nav-wrapper {
+    .pep-nav-wrapper {
         display: flex !important; /* Force display in desktop mode */
     }
     
-    .pub-nav-links {
+    .pep-nav-links {
         display: flex !important;
         opacity: 1 !important;
         position: static !important;
@@ -183,44 +183,44 @@
         pointer-events: auto !important;
     }
     
-    .pub-nav-toggle {
+    .pep-nav-toggle {
         display: none !important; /* Always hide toggle in desktop */
     }
 }
 
-/* Publication section header */
-.publication-section {
+/* people section header */
+.people-section {
     padding-bottom: 0.5rem;
     scroll-margin-top: 100px; /* Add space for scrolling to section */
 }
 
-.publication-section h2 {
+.people-section h2 {
     color: var(--PI-darkred);
     margin-bottom: 0;
     padding-bottom: 0.5rem;
 }
 
 /* Year dividers */
-.publication-year {
+.people-year {
     margin: 1.3rem 0 1rem 0;
     background-color: var(--PI-sand);
     padding: 8px 15px;
     border-radius: 4px;
 }
 
-.publication-year h3 {
+.people-year h3 {
     margin: 0;
     color: var(--PI-darkred);
 }
 
-/* Publication list */
-ul.publications {
+/* people list */
+ul.people {
     list-style-type: none;
     padding: 0;
     margin: 0 10px;
 }
 
-ul.publications li {
+ul.people li {
     margin-bottom: 1rem;
     padding: 5px 15px;
     background-color: #fff;
@@ -229,12 +229,12 @@ ul.publications li {
     transition: all 0.3s ease;
 }
 
-ul.publications li:hover {
+ul.people li:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     border-left-color: var(--PI-darkred);
 }
 
-/* Publication title */
+/* people title */
 p.title {
     font-weight: bold;
     font-size: 1.1rem;
@@ -244,7 +244,7 @@ p.title {
 }
 
 /* Authors and links */
-ul.publications li a {
+ul.people li a {
     display: inline-block;
     margin-top: 5px;
     color: var(--PI-red);
@@ -253,8 +253,8 @@ ul.publications li a {
     transition: all 0.2s;
 }
 
-/* Publication link styling for inline display */
-.publication-links {
+/* people link styling for inline display */
+.people-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em 2em; /* row-gap column-gap */
@@ -263,25 +263,25 @@ ul.publications li a {
     align-items: flex-end; /* Align items to bottom */
 }
 
-/* New approach: Make each direct child of publication-links a relative container */
-.publication-links > * {
+/* New approach: Make each direct child of people-links a relative container */
+.people-links > * {
     position: relative;
     display: inline-flex;
     align-items: flex-end; /* Align contents to bottom */
 }
 
 /* Make the link-wrapper italic by default */
-.publication-links .link-wrapper {
+.people-links .link-wrapper {
     font-style: italic;
 }
 
 /* But keep the links themselves in normal style */
-.publication-links .link-wrapper a {
+.people-links .link-wrapper a {
     font-style: normal;
 }
 
 /* Add separator after each direct child except the last one */
-.publication-links > *:not(:last-child)::after {
+.people-links > *:not(:last-child)::after {
     content: "|";
     position: absolute;
     right: -1.1em; /* Position more centrally between items */
@@ -289,7 +289,7 @@ ul.publications li a {
     color: #999;
 }
 
-ul.publications li a:hover {
+ul.people li a:hover {
     color: var(--PI-darkred);
     text-decoration: underline;
 }
@@ -297,10 +297,10 @@ ul.publications li a:hover {
 /* Responsive tweaks */
 @media (max-width: 768px) {
     
-    ul.publications {
+    ul.people {
         margin: 0 0px;
     }
-    ul.publications li {
+    ul.people li {
         padding: 5px 10px;
         font-size: 0.9rem;
     }
@@ -309,17 +309,17 @@ ul.publications li a:hover {
         font-size: 1.00rem;
     }
     
-    .publication-year h3 {
+    .people-year h3 {
         font-size: 1.4rem;
     }
 }
 
 /* Styles for Theses Opportunities section (Bachelor/Master fetched content) */ 
 
-/* General style for publication section titles (used by Past Theses and potentially others) */
-/* This h2.publication-section-title is now primarily for the "Past Theses" section heading */
+/* General style for people section titles (used by Past Theses and potentially others) */
+/* This h2.people-section-title is now primarily for the "Past Theses" section heading */
 /* and acts as a base for the one inside .opportunity-section-box */
-h2.publication-section-title {
+h2.people-section-title {
     color: var(--PI-darkred);
     margin-top: 2.5rem; 
     margin-bottom: 1rem; 
@@ -354,7 +354,7 @@ h2.publication-section-title {
 
 
 /* Styling for the h2 when it's a header of an opportunity box (inside all-opportunities-box) */
-.all-opportunities-box .opportunity-section-box h2.publication-section-title {
+.all-opportunities-box .opportunity-section-box h2.people-section-title {
     margin-top: 0; 
     margin-bottom: 0; 
     padding: 10px 15px; 

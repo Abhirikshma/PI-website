@@ -88,6 +88,14 @@ The rest of the variables are then correctly taken care in config.php.
 href="<?php echo $designCss;?>
 ```
 
+### Adding New Group Members
+
+- Portrais of members are stored in `/assets/figs/group_members/`.
+- The file name has to consist only of the **last name with the first letter capitalized**, e.g. Müller.png, Smith.jpg.
+- If the name consists of multiple last names, the file name has to contain all names without spaces and each capitalized, e.g. VanGogh.png.
+- The information about group members is read from the PI internal file management system and then the picture is matched using the last name.
+- PostDocs are automatically sorted, if the name contains a Dr. infront. All other group members are sorted into students.
+
 ### Common CSS Classes for Content Formatting
 
 For consistent formatting across the website, use these standard CSS classes:
