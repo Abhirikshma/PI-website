@@ -5,6 +5,7 @@ $assets = dirname($subpath) . "/assets";
 $figures = $assets . "/figs";
 $designCss = $assets . "/css/design.css";
 $publicationCss = $assets . "/css/publication.css";
+$peopleCss = $assets . "/css/people.css";
 $headerCss = $assets . "/css/header.css";
 $footerCss = $assets . "/css/footer.css";
 $buttonsJs = $assets . "/js/buttons.js";
