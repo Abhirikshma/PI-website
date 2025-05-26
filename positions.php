@@ -23,7 +23,8 @@ include("header_common_he.php.inc")
 
 <!-- ++++++++++++++++++++ Start Main Content of the page here! +++++++++++++++++++++ -->
         
-        <h1 class="western">Theses Opportunities</h1> 
+        <div class="publications-container">
+            <h1 class="page-title">Theses Opportunities</h1>
 
         <?php
         $url = "https://www.physi.uni-heidelberg.de/Jobs/jobs.php";
@@ -128,6 +129,7 @@ include("header_common_he.php.inc")
                     ?>
                 </ul>
             </div>
+        </div>
         </div>
 
 
