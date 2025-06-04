@@ -47,7 +47,7 @@ header('Content-Type: text/html; charset=utf-8');
                 return $names;
             }
 
-            function getDrButNotProfNames($content) {
+            function getPostDocs($content) {
                 $names = [];
             
                 $doc = new DOMDocument();
@@ -68,7 +68,7 @@ header('Content-Type: text/html; charset=utf-8');
                 return $names;
             }
 
-            function getNamesWithoutTitles($content) {
+            function getPhdStudents($content) {
                 $names = [];
             
                 $doc = new DOMDocument();
@@ -81,7 +81,49 @@ header('Content-Type: text/html; charset=utf-8');
             
                 foreach ($rows as $row) {
                     $name = trim($row->nodeValue);
-                    if (stripos($name, 'Dr.') === false && stripos($name, 'Prof.') === false) {
+                    if (stripos($name, 'Dr.') === false && stripos($name, 'Prof.') === false && stripos($name, 'M.Sc.') !== false) {
+                        $names[] = $name;
+                    }
+                }
+            
+                return $names;
+            }
+
+            function getMasterStudents($content) {
+                $names = [];
+            
+                $doc = new DOMDocument();
+                libxml_use_internal_errors(true);
+                $doc->loadHTML($content);
+                libxml_clear_errors();
+            
+                $xpath = new DOMXPath($doc);
+                $rows = $xpath->query('//tr[td]/td[1]/a');
+            
+                foreach ($rows as $row) {
+                    $name = trim($row->nodeValue);
+                    if (stripos($name, 'Dr.') === false && stripos($name, 'Prof.') === false && stripos($name, 'M.Sc.') === false && stripos($name, 'B.Sc.') !== false) {
+                        $names[] = $name;
+                    }
+                }
+            
+                return $names;
+            }
+
+            function getBachelorStudents($content) {
+                $names = [];
+            
+                $doc = new DOMDocument();
+                libxml_use_internal_errors(true);
+                $doc->loadHTML($content);
+                libxml_clear_errors();
+            
+                $xpath = new DOMXPath($doc);
+                $rows = $xpath->query('//tr[td]/td[1]/a');
+            
+                foreach ($rows as $row) {
+                    $name = trim($row->nodeValue);
+                    if (stripos($name, 'Dr.') === false && stripos($name, 'Prof.') === false && stripos($name, 'M.Sc.') === false && stripos($name, 'B.Sc.') === false) {
                         $names[] = $name;
                     }
                 }
@@ -89,7 +131,33 @@ header('Content-Type: text/html; charset=utf-8');
                 return $names;
             }
             
-            
+            function inActiveMembers($names) {
+                // List of last names to exclude
+                $excludedLastNames = [
+                    'Bees',
+                    'Meneses González',
+                    'Hammerich',
+                    'Holtherm',
+                    'Hematty',
+                    'Höfer',
+                    'Huidobro Rodriguez',
+                    'Manoussos',
+                    'Menzel',
+                    'Schlötzer',
+                    'Schmidt',
+                    'Stoll',
+                    'Suresh Babu'
+                ];
+
+                return array_filter($names, function($name) use ($excludedLastNames) {
+                    // Get the last name (assumed to be before the first comma)
+                    $lastName = explode(',', $name)[0] ?? '';
+                    $lastName = trim($lastName);
+
+                    return !in_array($lastName, $excludedLastNames);
+                });
+            }
+
             
             function getPersonDetails($content, $name) {
                 $details = '';
@@ -221,24 +289,66 @@ header('Content-Type: text/html; charset=utf-8');
                 <h3>Postdocs</h3>
             </div>';
 
-            $postDocs = getDrButNotProfNames($content);
-            foreach ($postDocs as $postDoc) {
+            $postDocs = getPostDocs($content);
+
+            // Filter out inactives
+            $ActivePostDocs = inActiveMembers($postDocs);
+
+            // Display only active postdocs
+            foreach ($ActivePostDocs as $postDoc) {
                 $details = getPersonDetails($content, $postDoc);
                 echo $details;
             }
 
             echo '<!-- Year divider -->
             <div class="people-year">
-                <h3>Students</h3>
+                <h3>PhD Students</h3>
             </div>';
 
-            $Students = getNamesWithoutTitles($content);
-            foreach ($Students as $Student) {
+            $PhdStudents = getPhdStudents($content);
+
+            // Filter out inactives
+            $ActivePhdStudents = inActiveMembers($PhdStudents);
+
+            // Display only active PhD students
+            foreach ($ActivePhdStudents as $Student) {
                 $details = getPersonDetails($content, $Student);
                 echo $details;
             }
 
-            // Echo or manipulate $content as needed
+            echo '<!-- Year divider -->
+            <div class="people-year">
+                <h3>Master Students</h3>
+            </div>';
+
+            $MasterStudents = getMasterStudents($content);
+
+            // Filter out inactives
+            $ActiveMasterStudents = inActiveMembers($MasterStudents);
+
+            // Display only active master students
+            foreach ($ActiveMasterStudents as $Student) {
+                $details = getPersonDetails($content, $Student);
+                echo $details;
+            }
+
+            echo '<!-- Year divider -->
+            <div class="people-year">
+                <h3>Bachelor Students</h3>
+            </div>';
+
+            $BachelorStudents = getBachelorStudents($content);
+
+            // Filter out inactives
+            $ActiveBachelorStudents = inActiveMembers($BachelorStudents);
+
+            // Display only active bachelor students
+            foreach ($ActiveBachelorStudents as $Student) {
+                $details = getPersonDetails($content, $Student);
+                echo $details;
+            }
+
+
             ?>
         <br/>
         <h2 class="western">Former Group Members</h2>   
@@ -250,7 +360,6 @@ header('Content-Type: text/html; charset=utf-8');
         Dr. Jens Kroeger <br>
         Dr. Alena Weber <br>
         Dr. Adrian Herkert <br>
-        Dr. Tamasi Kar <br>
         Dr. Arthur Bolz <br>
         Dr. Mathis Kolb <br>
         Dr. Lennart Huth <br>
@@ -272,25 +381,22 @@ header('Content-Type: text/html; charset=utf-8');
         Dohun Kim <br>
         Jan Hammerich <br>
         Lars Noehte <br>
-        Christof Sauer <br>
         Lukas Gerritzen <br>
         Caren Kresse <br>
         Jonathan Phillip <br>
         Jan Patrick Hammerich <br>
-        Arthur Bolz <br>
-        Mathis Kolb <br>
-        Sebastian Dittmeier <br>
-        David Sosa <br>
 
         <h3>Bachelor</h3>
+        Jan-Willem Holtherm <br>
+        Jan Höfer <br>
         David Karres <br>
+        Laura Bees <br>
         Aleem Sheikh <br>
         Jakob Stricker <br>
         Stephan Lachnit <br>
         Florian Frauen <br>
         Marius Menzel <br>
         Sebastian Preuss <br>
-        Lukas Mandok <br>
         Konstantin Neureither <br>
         Christoph Blattgerste <br>
         Michele Blago <br>
