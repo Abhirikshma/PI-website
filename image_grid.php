@@ -37,7 +37,7 @@
                 const gapWidth = 5;
                 const baseImageUnitWidth = baseImageWidth + gapWidth;
                 let maxCols = Math.floor((availableWidth + gapWidth) / baseImageUnitWidth);
-                const minCols = 3;
+                const minCols = 5;
 
                 let calculatedImageWidth = baseImageWidth; // Start with base
                 let calculatedImageHeight = baseImageHeight;
