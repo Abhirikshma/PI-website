@@ -355,6 +355,7 @@ header('Content-Type: text/html; charset=utf-8');
 
          <h3>PhD Students</h3>
 
+        Dr. Annie Meneses González <br>
         Dr. Christof Sauer <br>
         Dr. Marta Czurylo <br>
         Dr. Jens Kroeger <br>
@@ -379,6 +380,7 @@ header('Content-Type: text/html; charset=utf-8');
         Poppy Hicks <br>
         Sachin Gupta <br>
         Dohun Kim <br>
+        Damini Suresh Babu <br>
         Jan Hammerich <br>
         Lars Noehte <br>
         Lukas Gerritzen <br>
@@ -391,6 +393,8 @@ header('Content-Type: text/html; charset=utf-8');
         Jan Höfer <br>
         David Karres <br>
         Laura Bees <br>
+        Alexander Schmidt <br>
+        Florian Schlötzer <br>
         Aleem Sheikh <br>
         Jakob Stricker <br>
         Stephan Lachnit <br>
